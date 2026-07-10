@@ -29,6 +29,27 @@
 4. 保存后启用该配置。
 5. 确认节点、策略组和规则均已正确加载。
 
+### 移动端去广告配置
+
+基于移动端基础配置叠加广告域名/IP 拒绝规则，订阅地址：
+
+```text
+https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/shadowrocket_gpt_maintain-mobile-adblock.conf
+```
+
+广告规则集地址：
+
+```text
+https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/rules/adblock.list
+```
+
+`rules/adblock.list` 由 `scripts/sync_johnshall_adblock.py` 从
+`Johnshall/Shadowrocket-ADBlock-Rules-Forever` 的 `sr_ad_only.conf` 规范化生成，
+只保留 `Reject` 规则并由父配置统一应用 `REJECT` 策略。上游内容采用 CC BY-SA 4.0 许可。
+
+该配置不使用 HTTPS 解密、脚本或 URL Rewrite。域名/IP 拦截无法保证去除所有广告，
+也可能出现误杀；遇到异常时应先结合 Shadowrocket 日志确认命中的规则。
+
 ### 更新配置
 
 如果使用远程配置 URL 导入，可以在 Shadowrocket 中手动刷新配置。
