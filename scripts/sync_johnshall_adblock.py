@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a Shadowrocket RULE-SET list from Johnshall's ad-only config."""
+"""Refresh the adblock RULE-SET and rebuild the derived mobile config."""
 
 from __future__ import annotations
 
@@ -24,6 +24,32 @@ ALLOWED_RULE_TYPES = {
     "IP-CIDR6",
 }
 USER_AGENT = "shadowrocket-config-adblock-sync/1.0"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_LIST = REPO_ROOT / "rules" / "adblock.list"
+DEFAULT_BASE_CONFIG = REPO_ROOT / "shadowrocket_gpt_maintain-mobile.conf"
+DEFAULT_ADBLOCK_CONFIG = REPO_ROOT / "shadowrocket_gpt_maintain-mobile-adblock.conf"
+ADBLOCK_RULE_URL = (
+    "https://raw.githubusercontent.com/buyunhao/shadowrocket-config/"
+    "main/rules/adblock.list"
+)
+ADBLOCK_RULE = f"RULE-SET,{ADBLOCK_RULE_URL},REJECT"
+BILIBILI_HEADING = "# 3. Bilibili direct: keep domestic CDN fast."
+DOMESTIC_HEADING = (
+    "# 4. Main domestic services direct. "
+    "Keep explicit app/domain rules above the mobile GEOIP fallback."
+)
+FALLBACK_HEADING = "# 5. Mobile-friendly fallback."
+ADBLOCK_BLOCK = [
+    "# 3. Ad blocking: critical services and LAN rules above take precedence.",
+    "# The normalized list is generated from Johnshall/Shadowrocket-ADBlock-Rules-Forever.",
+    ADBLOCK_RULE,
+    "",
+]
+HEADING_REPLACEMENTS = {
+    BILIBILI_HEADING: "# 4. Bilibili direct: keep domestic CDN fast.",
+    DOMESTIC_HEADING: DOMESTIC_HEADING.replace("# 4.", "# 5."),
+    FALLBACK_HEADING: "# 6. Mobile-friendly fallback.",
+}
 
 
 def request(url: str, *, method: str = "GET", byte_range: str | None = None):
@@ -144,10 +170,58 @@ def render(source_bytes: bytes, etag: str, rules: list[str]) -> str:
     return "\n".join([*header, *rules, ""])
 
 
+def render_adblock_config(base_text: str) -> str:
+    """Rebuild the adblock config from the maintained mobile base config."""
+    trailing = "\n" if base_text.endswith("\n") else ""
+    lines = base_text.splitlines()
+    if not lines or not lines[0].startswith("# Shadowrocket mobile: "):
+        raise RuntimeError("移动端基础配置缺少预期的版本标题")
+    if ADBLOCK_RULE in lines:
+        raise RuntimeError("移动端基础配置不应直接包含广告 RULE-SET")
+    if lines.count(BILIBILI_HEADING) != 1:
+        raise RuntimeError("移动端基础配置缺少唯一的 Bilibili 规则区段锚点")
+
+    lines[0] = "# Shadowrocket mobile adblock"
+    lines.insert(
+        1,
+        "# Generated from shadowrocket_gpt_maintain-mobile.conf; do not edit manually.",
+    )
+
+    for old_heading, new_heading in HEADING_REPLACEMENTS.items():
+        if lines.count(old_heading) != 1:
+            raise RuntimeError(f"移动端基础配置区段异常：{old_heading}")
+        index = lines.index(old_heading)
+        lines[index] = new_heading
+
+    insert_at = lines.index(HEADING_REPLACEMENTS[BILIBILI_HEADING])
+    lines[insert_at:insert_at] = ADBLOCK_BLOCK
+    result = "\n".join(lines) + trailing
+
+    if result.count(ADBLOCK_RULE) != 1:
+        raise RuntimeError("派生配置中的广告 RULE-SET 数量异常")
+    result_lines = result.splitlines()
+    if result_lines.count("[Rule]") != 1 or result_lines.count("FINAL,PROXY") != 1:
+        raise RuntimeError("派生配置的核心区段或兜底规则异常")
+    return result
+
+
+def write_atomic(path: Path, content: str) -> bool:
+    """Write a file atomically and report whether its content changed."""
+    path = path.resolve()
+    if path.exists() and path.read_text(encoding="utf-8") == content:
+        return False
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(content, encoding="utf-8")
+    temporary.replace(path)
+    return True
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    default_output = Path(__file__).resolve().parents[1] / "rules" / "adblock.list"
-    parser.add_argument("--output", type=Path, default=default_output)
+    parser.add_argument("--output", type=Path, default=DEFAULT_LIST)
+    parser.add_argument("--base-config", type=Path, default=DEFAULT_BASE_CONFIG)
+    parser.add_argument("--adblock-config", type=Path, default=DEFAULT_ADBLOCK_CONFIG)
     parser.add_argument(
         "--allow-large-shrink",
         action="store_true",
@@ -169,13 +243,16 @@ def main() -> int:
             f"规则数量从 {old_count} 降至 {len(rules)}，超过 30%，已停止覆盖"
         )
 
-    output = args.output.resolve()
-    output.parent.mkdir(parents=True, exist_ok=True)
-    temporary = output.with_suffix(output.suffix + ".tmp")
-    temporary.write_text(render(source_bytes, etag, rules), encoding="utf-8")
-    temporary.replace(output)
+    list_content = render(source_bytes, etag, rules)
+    base_text = args.base_config.resolve().read_text(encoding="utf-8")
+    config_content = render_adblock_config(base_text)
+    list_changed = write_atomic(args.output, list_content)
+    config_changed = write_atomic(args.adblock_config, config_content)
 
-    print(f"已生成 {output}")
+    print(f"已同步 {args.output.resolve()} changed={str(list_changed).lower()}")
+    print(
+        f"已同步 {args.adblock_config.resolve()} changed={str(config_changed).lower()}"
+    )
     print(f"上游大小：{len(source_bytes)} 字节")
     print(f"去重后规则：{len(rules)} 条")
     return 0

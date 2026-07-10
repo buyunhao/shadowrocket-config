@@ -21,6 +21,15 @@
 
 ## 使用方法
 
+### 配置文件
+
+- `shadowrocket_gpt_maintain.conf`：桌面基础配置，不包含广告拦截。
+- `shadowrocket_gpt_maintain-mobile.conf`：移动端基础配置，不包含广告拦截。
+- `shadowrocket_gpt_maintain-mobile-adblock.conf`：从移动端基础配置生成，并叠加独立广告规则集。
+
+日常增删域名路由规则时，三个配置应同步更新；广告规则刷新时，只更新
+`rules/adblock.list` 并从移动端基础配置重新生成 mobile-adblock 配置。
+
 ### 导入配置
 
 1. 打开 Shadowrocket。
@@ -46,6 +55,20 @@ https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/rules/adbloc
 `rules/adblock.list` 由 `scripts/sync_johnshall_adblock.py` 从
 `Johnshall/Shadowrocket-ADBlock-Rules-Forever` 的 `sr_ad_only.conf` 规范化生成，
 只保留 `Reject` 规则并由父配置统一应用 `REJECT` 策略。上游内容采用 CC BY-SA 4.0 许可。
+
+手动同步命令：
+
+```bash
+python3 scripts/sync_johnshall_adblock.py
+```
+
+该命令会同时完成两件事：
+
+1. 刷新并校验 `rules/adblock.list`。
+2. 以 `shadowrocket_gpt_maintain-mobile.conf` 为唯一基础，重新生成 `shadowrocket_gpt_maintain-mobile-adblock.conf`。
+
+不要直接维护派生配置中的公共规则，以免下次重新生成时被覆盖。也可以在 Codex 中输入快捷指令
+`更新广告拦截规则`，自动执行同步、检查变更、提交并推送。
 
 该配置不使用 HTTPS 解密、脚本或 URL Rewrite。域名/IP 拦截无法保证去除所有广告，
 也可能出现误杀；遇到异常时应先结合 Shadowrocket 日志确认命中的规则。
