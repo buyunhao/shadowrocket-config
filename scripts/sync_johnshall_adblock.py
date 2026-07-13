@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Refresh the adblock RULE-SET and rebuild the derived mobile config."""
+"""Build the adblock RULE-SET and rebuild the derived mobile config.
+
+The generated list is the normalized upstream plus local custom rules, minus
+exactly matching local exceptions. Local input files are validated but never
+rewritten by this script.
+"""
 
 from __future__ import annotations
 
@@ -26,6 +31,8 @@ ALLOWED_RULE_TYPES = {
 USER_AGENT = "shadowrocket-config-adblock-sync/1.0"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_LIST = REPO_ROOT / "rules" / "adblock.list"
+DEFAULT_CUSTOM_LIST = REPO_ROOT / "rules" / "adblock-custom.list"
+DEFAULT_EXCEPTIONS_LIST = REPO_ROOT / "rules" / "adblock-exceptions.list"
 DEFAULT_BASE_CONFIG = REPO_ROOT / "shadowrocket_gpt_maintain-mobile.conf"
 DEFAULT_ADBLOCK_CONFIG = REPO_ROOT / "shadowrocket_gpt_maintain-mobile-adblock.conf"
 ADBLOCK_RULE_URL = (
@@ -40,8 +47,9 @@ DOMESTIC_HEADING = (
 )
 FALLBACK_HEADING = "# 5. Mobile-friendly fallback."
 ADBLOCK_BLOCK = [
-    "# 3. Ad blocking: critical services and LAN rules above take precedence.",
-    "# The normalized list is generated from Johnshall/Shadowrocket-ADBlock-Rules-Forever.",
+    "# 3. Ad blocking: earlier account, LAN, and explicitly preserved data-service rules take precedence.",
+    "# Eastmoney stock-data APIs intentionally remain DIRECT above this block.",
+    "# The generated list combines Johnshall upstream rules with local custom rules and exact exceptions.",
     ADBLOCK_RULE,
     "",
 ]
@@ -145,6 +153,90 @@ def normalize_rules(source: str) -> list[str]:
     return rules
 
 
+def normalize_local_rules(path: Path) -> list[str]:
+    """Read a policy-free local rule list and return unique normalized rules."""
+    path = path.resolve()
+    if not path.is_file():
+        raise RuntimeError(f"本地规则文件不存在：{path}")
+
+    rules: list[str] = []
+    seen: set[str] = set()
+    for line_number, raw_line in enumerate(
+        path.read_text(encoding="utf-8-sig").splitlines(), start=1
+    ):
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("[") and line.endswith("]"):
+            raise RuntimeError(
+                f"{path} 第 {line_number} 行不应包含配置区段：{line}"
+            )
+
+        parts = [part.strip() for part in line.split(",")]
+        if len(parts) < 2:
+            raise RuntimeError(f"{path} 第 {line_number} 行不是完整规则：{line}")
+
+        rule_type = parts[0].upper()
+        value = parts[1]
+        modifiers = parts[2:]
+        if rule_type not in ALLOWED_RULE_TYPES:
+            raise RuntimeError(
+                f"{path} 第 {line_number} 行包含未知规则类型：{rule_type}"
+            )
+        if not value:
+            raise RuntimeError(f"{path} 第 {line_number} 行缺少匹配值")
+        if any(not modifier for modifier in modifiers):
+            raise RuntimeError(f"{path} 第 {line_number} 行包含空修饰符：{line}")
+        if modifiers and modifiers[0].upper() in {"DIRECT", "PROXY", "REJECT"}:
+            raise RuntimeError(
+                f"{path} 第 {line_number} 行不应包含策略字段；"
+                "最终 adblock.list 由父配置统一应用 REJECT"
+            )
+
+        if rule_type.startswith("DOMAIN"):
+            value = value.lower()
+        normalized = ",".join([rule_type, value, *modifiers])
+        if normalized not in seen:
+            seen.add(normalized)
+            rules.append(normalized)
+
+    return rules
+
+
+def merge_rules(
+    upstream_rules: list[str],
+    custom_rules: list[str],
+    exception_rules: list[str],
+) -> tuple[list[str], int, int, int]:
+    """Merge ordered inputs and apply exact normalized exceptions.
+
+    Returns the final rules, custom rules newly added beyond upstream, matched
+    exceptions, and unmatched exceptions.
+    """
+    upstream_set = set(upstream_rules)
+    custom_new_count = len(set(custom_rules) - upstream_set)
+    combined = [*upstream_rules, *custom_rules]
+    combined_set = set(combined)
+    exception_set = set(exception_rules)
+    matched_exception_count = len(combined_set & exception_set)
+    unmatched_exception_count = len(exception_set - combined_set)
+
+    final_rules: list[str] = []
+    seen: set[str] = set()
+    for rule in combined:
+        if rule in exception_set or rule in seen:
+            continue
+        seen.add(rule)
+        final_rules.append(rule)
+
+    return (
+        final_rules,
+        custom_new_count,
+        matched_exception_count,
+        unmatched_exception_count,
+    )
+
+
 def existing_rule_count(path: Path) -> int:
     if not path.exists():
         return 0
@@ -155,7 +247,15 @@ def existing_rule_count(path: Path) -> int:
     )
 
 
-def render(source_bytes: bytes, etag: str, rules: list[str]) -> str:
+def render(
+    source_bytes: bytes,
+    etag: str,
+    rules: list[str],
+    *,
+    custom_count: int,
+    exception_count: int,
+    matched_exception_count: int,
+) -> str:
     digest = hashlib.sha256(source_bytes).hexdigest()
     header = [
         "# Generated file. Do not edit manually.",
@@ -164,6 +264,11 @@ def render(source_bytes: bytes, etag: str, rules: list[str]) -> str:
         f"# Source-SHA256: {digest}",
         "# Source project: Johnshall/Shadowrocket-ADBlock-Rules-Forever",
         f"# Source license: CC BY-SA 4.0 ({SOURCE_LICENSE})",
+        "# Local custom source: rules/adblock-custom.list",
+        "# Local exact exceptions: rules/adblock-exceptions.list",
+        "# Generated result: normalized upstream + custom - exact exceptions.",
+        f"# Local custom rules: {custom_count}",
+        f"# Local exceptions: {exception_count} ({matched_exception_count} matched)",
         "# Policy is supplied by the parent RULE-SET as REJECT.",
         "",
     ]
@@ -220,6 +325,10 @@ def write_atomic(path: Path, content: str) -> bool:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=DEFAULT_LIST)
+    parser.add_argument("--custom-list", type=Path, default=DEFAULT_CUSTOM_LIST)
+    parser.add_argument(
+        "--exceptions-list", type=Path, default=DEFAULT_EXCEPTIONS_LIST
+    )
     parser.add_argument("--base-config", type=Path, default=DEFAULT_BASE_CONFIG)
     parser.add_argument("--adblock-config", type=Path, default=DEFAULT_ADBLOCK_CONFIG)
     parser.add_argument(
@@ -229,9 +338,17 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    custom_rules = normalize_local_rules(args.custom_list)
+    exception_rules = normalize_local_rules(args.exceptions_list)
     source_bytes, etag = fetch_source()
     source = source_bytes.decode("utf-8-sig")
-    rules = normalize_rules(source)
+    upstream_rules = normalize_rules(source)
+    (
+        rules,
+        custom_new_count,
+        matched_exception_count,
+        unmatched_exception_count,
+    ) = merge_rules(upstream_rules, custom_rules, exception_rules)
 
     old_count = existing_rule_count(args.output)
     if (
@@ -243,7 +360,14 @@ def main() -> int:
             f"规则数量从 {old_count} 降至 {len(rules)}，超过 30%，已停止覆盖"
         )
 
-    list_content = render(source_bytes, etag, rules)
+    list_content = render(
+        source_bytes,
+        etag,
+        rules,
+        custom_count=len(custom_rules),
+        exception_count=len(exception_rules),
+        matched_exception_count=matched_exception_count,
+    )
     base_text = args.base_config.resolve().read_text(encoding="utf-8")
     config_content = render_adblock_config(base_text)
     list_changed = write_atomic(args.output, list_content)
@@ -254,7 +378,16 @@ def main() -> int:
         f"已同步 {args.adblock_config.resolve()} changed={str(config_changed).lower()}"
     )
     print(f"上游大小：{len(source_bytes)} 字节")
-    print(f"去重后规则：{len(rules)} 条")
+    print(f"上游去重规则：{len(upstream_rules)} 条")
+    print(
+        f"自定义规则：{len(custom_rules)} 条"
+        f"（新增 {custom_new_count} 条，其余与上游重复）"
+    )
+    print(
+        f"精确例外：{len(exception_rules)} 条"
+        f"（命中 {matched_exception_count} 条，未命中 {unmatched_exception_count} 条）"
+    )
+    print(f"最终规则：{len(rules)} 条")
     return 0
 
 

@@ -4,6 +4,11 @@
 # Source-SHA256: 1709b8e59f35d1bb00e3c5625b68f8d1e6bf25a9548a60cb3ca3d5bc7b8c13a2
 # Source project: Johnshall/Shadowrocket-ADBlock-Rules-Forever
 # Source license: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+# Local custom source: rules/adblock-custom.list
+# Local exact exceptions: rules/adblock-exceptions.list
+# Generated result: normalized upstream + custom - exact exceptions.
+# Local custom rules: 0
+# Local exceptions: 0 (0 matched)
 # Policy is supplied by the parent RULE-SET as REJECT.
 
 DOMAIN-SUFFIX,ad.12306.cn

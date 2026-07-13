@@ -27,8 +27,9 @@
 - `shadowrocket_gpt_maintain-mobile.conf`：移动端基础配置，不包含广告拦截。
 - `shadowrocket_gpt_maintain-mobile-adblock.conf`：从移动端基础配置生成，并叠加独立广告规则集。
 
-日常增删域名路由规则时，三个配置应同步更新；广告规则刷新时，只更新
-`rules/adblock.list` 并从移动端基础配置重新生成 mobile-adblock 配置。
+日常增删域名路由规则时，三个配置应同步更新。广告规则刷新时，脚本会读取手工维护的
+`rules/adblock-custom.list` 和 `rules/adblock-exceptions.list`，重新生成
+`rules/adblock.list`，再从移动端基础配置生成 mobile-adblock 配置。
 
 ### 导入配置
 
@@ -53,8 +54,23 @@ https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/rules/adbloc
 ```
 
 `rules/adblock.list` 由 `scripts/sync_johnshall_adblock.py` 从
-`Johnshall/Shadowrocket-ADBlock-Rules-Forever` 的 `sr_ad_only.conf` 规范化生成，
-只保留 `Reject` 规则并由父配置统一应用 `REJECT` 策略。上游内容采用 CC BY-SA 4.0 许可。
+`Johnshall/Shadowrocket-ADBlock-Rules-Forever` 的 `sr_ad_only.conf` 规范化生成。
+生成过程会先合并本地自定义规则，再应用精确例外；最终规则由父配置统一应用
+`REJECT` 策略。上游内容采用 CC BY-SA 4.0 许可。
+
+两份本地输入文件的用途如下：
+
+- `rules/adblock-custom.list`：补充已经通过日志或实际测试确认、但上游尚未收录的广告规则。
+- `rules/adblock-exceptions.list`：从“上游 + 自定义规则”的结果中排除确认误杀的规则。
+
+本地输入使用无策略格式，例如 `DOMAIN,ads.example.com`、
+`DOMAIN-SUFFIX,example.com` 或 `IP-CIDR,192.0.2.0/24,no-resolve`。允许空行和以
+`#` 开头的注释，不要填写 `DIRECT`、`PROXY` 或 `REJECT`，因为策略由父配置提供。
+
+例外只按规范化后的完整规则精确匹配，并且优先于自定义规则。例如，
+`DOMAIN,api.example.com` 不能局部覆盖 `DOMAIN-SUFFIX,example.com`；要排除后者，例外表中
+必须填写完全相同的 `DOMAIN-SUFFIX,example.com`。例外不会生成额外的 `DIRECT` 规则，
+因此不会改变该域名原本的代理路径。
 
 手动同步命令：
 
@@ -62,13 +78,20 @@ https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/rules/adbloc
 python3 scripts/sync_johnshall_adblock.py
 ```
 
-该命令会同时完成两件事：
+该命令会完成以下工作：
 
-1. 刷新并校验 `rules/adblock.list`。
-2. 以 `shadowrocket_gpt_maintain-mobile.conf` 为唯一基础，重新生成 `shadowrocket_gpt_maintain-mobile-adblock.conf`。
+1. 下载、规范化并校验 Johnshall 上游规则。
+2. 校验并合并 `adblock-custom.list`，再应用 `adblock-exceptions.list` 的精确排除。
+3. 生成 `rules/adblock.list`。
+4. 以 `shadowrocket_gpt_maintain-mobile.conf` 为唯一基础，重新生成 `shadowrocket_gpt_maintain-mobile-adblock.conf`。
 
-不要直接维护派生配置中的公共规则，以免下次重新生成时被覆盖。也可以在 Codex 中输入快捷指令
+不要直接编辑生成的 `rules/adblock.list` 或派生配置；自定义拦截和误杀修正应分别写入
+`adblock-custom.list` 与 `adblock-exceptions.list`。也可以在 Codex 中输入快捷指令
 `更新广告拦截规则`，自动执行同步、检查变更、提交并推送。
+
+东财股票数据接口的 `DIRECT` 规则有意保留在广告层之前，以保证股票信息完整获取。
+这意味着东财子域名优先直连，即使其中个别域名也出现在广告表中；这是明确的可用性取舍，
+不是待修复的规则顺序问题。
 
 该配置不使用 HTTPS 解密、脚本或 URL Rewrite。域名/IP 拦截无法保证去除所有广告，
 也可能出现误杀；遇到异常时应先结合 Shadowrocket 日志确认命中的规则。

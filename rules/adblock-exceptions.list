@@ -1,0 +1,8 @@
+# Manual input for scripts/sync_johnshall_adblock.py. This file is not generated.
+# Add false-positive rules that must be removed from the generated adblock.list.
+# Matching is exact after normalization; this file does not create DIRECT rules.
+# Format: TYPE,value[,modifier]. Do not include DIRECT, PROXY, or REJECT.
+# Supported types: DOMAIN, DOMAIN-KEYWORD, DOMAIN-SUFFIX, IP-CIDR, IP-CIDR6.
+# A DOMAIN exception cannot partially override a broader DOMAIN-SUFFIX rule.
+# Example (keep examples commented):
+# DOMAIN-SUFFIX,example.com

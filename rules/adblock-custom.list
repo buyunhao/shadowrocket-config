@@ -1,0 +1,6 @@
+# Manual input for scripts/sync_johnshall_adblock.py. This file is not generated.
+# Add locally verified ad rules that are missing from the upstream source.
+# Format: TYPE,value[,modifier]. Do not include DIRECT, PROXY, or REJECT.
+# Supported types: DOMAIN, DOMAIN-KEYWORD, DOMAIN-SUFFIX, IP-CIDR, IP-CIDR6.
+# Example (keep examples commented):
+# DOMAIN,ads.example.com
