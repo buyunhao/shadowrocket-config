@@ -4,10 +4,11 @@
 # Source-SHA256: cdf8259fdd36a5a862702c06d4c523f18de241a24b5af10b9f2e0ad1614e5693
 # Source project: Johnshall/Shadowrocket-ADBlock-Rules-Forever
 # Source license: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-# Local custom source: rules/adblock-custom.list
+# Secondary source: AWAvenue Ads Rule (managed in rules/adblock-custom.list)
+# Local custom source: rules/adblock-custom.list (content outside the AWAvenue block)
 # Local exact exceptions: rules/adblock-exceptions.list
-# Generated result: normalized upstream + custom - exact exceptions.
-# Local custom rules: 771
+# Generated result: normalized Johnshall + AWAvenue complement + custom - exact exceptions.
+# Custom-list rules (including AWAvenue complement): 771
 # Local exceptions: 0 (0 matched)
 # Policy is supplied by the parent RULE-SET as REJECT.
 

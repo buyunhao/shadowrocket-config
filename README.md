@@ -27,9 +27,10 @@
 - `shadowrocket_gpt_maintain-mobile.conf`：移动端基础配置，不包含广告拦截。
 - `shadowrocket_gpt_maintain-mobile-adblock.conf`：从移动端基础配置生成，并叠加独立广告规则集。
 
-日常增删域名路由规则时，三个配置应同步更新。广告规则刷新时，脚本会读取手工维护的
-`rules/adblock-custom.list` 和 `rules/adblock-exceptions.list`，重新生成
-`rules/adblock.list`，再从移动端基础配置生成 mobile-adblock 配置。
+日常增删域名路由规则时，三个配置应同步更新。广告规则刷新时，脚本会同时更新
+Johnshall 主规则和 `adblock-custom.list` 中受标记管理的 AWAvenue 补充区块，合并
+手工自定义规则和 `rules/adblock-exceptions.list` 后重新生成 `rules/adblock.list`，
+再从移动端基础配置生成 mobile-adblock 配置。
 
 ### 导入配置
 
@@ -54,19 +55,21 @@ https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/rules/adbloc
 ```
 
 `rules/adblock.list` 由 `scripts/sync_johnshall_adblock.py` 从
-`Johnshall/Shadowrocket-ADBlock-Rules-Forever` 的 `sr_ad_only.conf` 规范化生成。
-生成过程会先合并本地自定义规则，再应用精确例外；最终规则由父配置统一应用
-`REJECT` 策略。上游内容采用 CC BY-SA 4.0 许可。
+`Johnshall/Shadowrocket-ADBlock-Rules-Forever` 的 `sr_ad_only.conf` 规范化生成，并补充
+AWAvenue Ads Rule 中尚未被 Johnshall 覆盖的规则。生成过程会再合并本地手工规则并应用
+精确例外；最终规则由父配置统一应用 `REJECT` 策略。两份上游内容分别沿用其
+CC BY-SA 4.0 和 GPL-3.0 许可。
 
 两份本地输入文件的用途如下：
 
-- `rules/adblock-custom.list`：补充已经通过日志或实际测试确认、但上游尚未收录的广告规则。
+- `rules/adblock-custom.list`：脚本管理其中的 AWAvenue 补充区块；区块之外用于手工补充
+  已经通过日志或实际测试确认、但两份上游尚未收录的广告规则。
 - `rules/adblock-exceptions.list`：从“上游 + 自定义规则”的结果中排除确认误杀的规则。
 
-`adblock-custom.list` 还包含 AWAvenue Ads Rule 的 QuantumultX 域名规则快照。导入时会按
-Johnshall 当前主规则的实际覆盖范围做语义去重，并保留 AWAvenue 原始的 `DOMAIN`、
+每次同步都会刷新 `adblock-custom.list` 中两个标记之间的 AWAvenue QuantumultX 规则，
+按 Johnshall 当次主规则的实际覆盖范围做语义去重，并保留 AWAvenue 原始的 `DOMAIN`、
 `DOMAIN-SUFFIX` 和 `DOMAIN-KEYWORD` 匹配类型。具体来源版本、文件哈希及 GPL-3.0
-许可信息记录在 `adblock-custom.list` 文件头中。
+许可信息记录在自动生成区块中；区块外的手工规则和注释不会被改写。
 
 本地输入使用无策略格式，例如 `DOMAIN,ads.example.com`、
 `DOMAIN-SUFFIX,example.com` 或 `IP-CIDR,192.0.2.0/24,no-resolve`。允许空行和以
@@ -85,10 +88,11 @@ python3 scripts/sync_johnshall_adblock.py
 
 该命令会完成以下工作：
 
-1. 下载、规范化并校验 Johnshall 上游规则。
-2. 校验并合并 `adblock-custom.list`，再应用 `adblock-exceptions.list` 的精确排除。
-3. 生成 `rules/adblock.list`。
-4. 以 `shadowrocket_gpt_maintain-mobile.conf` 为唯一基础，重新生成 `shadowrocket_gpt_maintain-mobile-adblock.conf`。
+1. 下载、规范化并校验 Johnshall 和 AWAvenue 两份上游规则。
+2. 将 AWAvenue 与当次 Johnshall 主规则语义去重，刷新 `adblock-custom.list` 的受管区块。
+3. 合并区块外的手工规则，再应用 `adblock-exceptions.list` 的精确排除。
+4. 生成 `rules/adblock.list`。
+5. 以 `shadowrocket_gpt_maintain-mobile.conf` 为唯一基础，重新生成 `shadowrocket_gpt_maintain-mobile-adblock.conf`。
 
 不要直接编辑生成的 `rules/adblock.list` 或派生配置；自定义拦截和误杀修正应分别写入
 `adblock-custom.list` 与 `adblock-exceptions.list`。也可以在 Codex 中输入快捷指令

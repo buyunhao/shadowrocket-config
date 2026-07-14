@@ -1,20 +1,22 @@
-# Local custom input for scripts/sync_johnshall_adblock.py. This file is not generated.
-# Add verified or intentionally imported ad rules that are missing from the primary upstream source.
+# Local custom input for scripts/sync_johnshall_adblock.py.
+# Add manually maintained rules outside the generated AWAvenue block; they are preserved on refresh.
 # Format: TYPE,value[,modifier]. Do not include DIRECT, PROXY, or REJECT.
 # Supported types: DOMAIN, DOMAIN-KEYWORD, DOMAIN-SUFFIX, IP-CIDR, IP-CIDR6.
 #
+# BEGIN AUTO-GENERATED AWAvenue RULES
+# Managed by scripts/sync_johnshall_adblock.py. Do not edit this block manually.
 # Imported source: AWAvenue Ads Rule (QuantumultX format)
 # Source project: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
 # Source file: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list
-# Source commit: e0ee1783c906d557adccab6aecca1c55d3b93417
-# Source version: 1.6.9-release (rule data updated 2026-06-15 21:32:00 UTC+8)
-# Source SHA256: 89dd1ca167b7da9f98ac999dc2da6cf395605499084c3dd50691696522f0700c
+# Source version: 1.6.9-release
+# Source updated: 2026-06-15 21:32:00 UTC+8
+# Source-ETag: 5eeaf77802d37a51d4894862ce8c90cd687c909f7f33530039aad58a03c7a1cc
+# Source-SHA256: 89dd1ca167b7da9f98ac999dc2da6cf395605499084c3dd50691696522f0700c
 # Source license: GPL-3.0 (https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE)
-# Imported on: 2026-07-14
-# Johnshall comparison SHA256: cdf8259fdd36a5a862702c06d4c523f18de241a24b5af10b9f2e0ad1614e5693
-# Deduplication: removed exact duplicates and AWAvenue domain rules already covered by a broader
-# Johnshall DOMAIN-SUFFIX or DOMAIN-KEYWORD rule; AWAvenue match types were otherwise preserved.
-# Imported rules: 771 (755 DOMAIN, 11 DOMAIN-SUFFIX, 5 DOMAIN-KEYWORD).
+# Deduplication: exact duplicates and rules semantically covered by a broader
+# Johnshall DOMAIN-SUFFIX or DOMAIN-KEYWORD rule are omitted.
+# Source rules: 905
+# Imported rules: 771 (755 DOMAIN, 5 DOMAIN-KEYWORD, 11 DOMAIN-SUFFIX).
 
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
@@ -787,3 +789,4 @@ DOMAIN-KEYWORD,-ad.video.yximgs.com
 DOMAIN-KEYWORD,-ad.wtzw.com
 DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
 DOMAIN-KEYWORD,-normal.zijieapi.com
+# END AUTO-GENERATED AWAvenue RULES
