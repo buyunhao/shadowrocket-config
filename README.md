@@ -63,6 +63,11 @@ https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/rules/adbloc
 - `rules/adblock-custom.list`：补充已经通过日志或实际测试确认、但上游尚未收录的广告规则。
 - `rules/adblock-exceptions.list`：从“上游 + 自定义规则”的结果中排除确认误杀的规则。
 
+`adblock-custom.list` 还包含 AWAvenue Ads Rule 的 QuantumultX 域名规则快照。导入时会按
+Johnshall 当前主规则的实际覆盖范围做语义去重，并保留 AWAvenue 原始的 `DOMAIN`、
+`DOMAIN-SUFFIX` 和 `DOMAIN-KEYWORD` 匹配类型。具体来源版本、文件哈希及 GPL-3.0
+许可信息记录在 `adblock-custom.list` 文件头中。
+
 本地输入使用无策略格式，例如 `DOMAIN,ads.example.com`、
 `DOMAIN-SUFFIX,example.com` 或 `IP-CIDR,192.0.2.0/24,no-resolve`。允许空行和以
 `#` 开头的注释，不要填写 `DIRECT`、`PROXY` 或 `REJECT`，因为策略由父配置提供。
