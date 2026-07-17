@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Refresh upstream ad rules and rebuild the derived mobile config.
 
-The generated list is the normalized Johnshall upstream plus an AWAvenue
-complement and local custom rules, minus exactly matching local exceptions.
-Only the marked AWAvenue block in the custom list is rewritten.
+The generated list is the normalized Johnshall upstream plus AWAvenue and
+anti-AD complements and local custom rules, minus exactly matching local
+exceptions. Only marked managed blocks in the custom list are rewritten.
 """
 
 from __future__ import annotations
@@ -27,9 +27,18 @@ AWAVENUE_SOURCE_PROJECT = "https://github.com/TG-Twilight/AWAvenue-Ads-Rule"
 AWAVENUE_SOURCE_LICENSE = (
     "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE"
 )
+ANTI_AD_SOURCE_URL = (
+    "https://raw.githubusercontent.com/privacy-protection-tools/"
+    "anti-AD/master/anti-ad-surge.txt"
+)
+ANTI_AD_SOURCE_PROJECT = "https://github.com/privacy-protection-tools/anti-AD"
+ANTI_AD_SOURCE_LICENSE = (
+    "https://github.com/privacy-protection-tools/anti-AD/blob/master/LICENSE"
+)
 CHUNK_SIZE = 512 * 1024
 MIN_RULE_COUNT = 10_000
 AWAVENUE_MIN_RULE_COUNT = 500
+ANTI_AD_MIN_RULE_COUNT = 50_000
 ALLOWED_RULE_TYPES = {
     "DOMAIN",
     "DOMAIN-KEYWORD",
@@ -42,6 +51,7 @@ AWAVENUE_ALLOWED_RULE_TYPES = {
     "DOMAIN-KEYWORD",
     "DOMAIN-SUFFIX",
 }
+ANTI_AD_ALLOWED_RULE_TYPES = {"DOMAIN-SUFFIX"}
 USER_AGENT = "shadowrocket-config-adblock-sync/1.0"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_LIST = REPO_ROOT / "rules" / "adblock.list"
@@ -56,6 +66,8 @@ ADBLOCK_RULE_URL = (
 ADBLOCK_RULE = f"RULE-SET,{ADBLOCK_RULE_URL},REJECT"
 AWAVENUE_BLOCK_BEGIN = "# BEGIN AUTO-GENERATED AWAvenue RULES"
 AWAVENUE_BLOCK_END = "# END AUTO-GENERATED AWAvenue RULES"
+ANTI_AD_BLOCK_BEGIN = "# BEGIN AUTO-GENERATED anti-AD RULES"
+ANTI_AD_BLOCK_END = "# END AUTO-GENERATED anti-AD RULES"
 BILIBILI_HEADING = "# 3. Bilibili direct: keep domestic CDN fast."
 DOMESTIC_HEADING = (
     "# 4. Main domestic services direct. "
@@ -65,7 +77,7 @@ FALLBACK_HEADING = "# 5. Mobile-friendly fallback."
 ADBLOCK_BLOCK = [
     "# 3. Ad blocking: earlier account, LAN, and explicitly preserved data-service rules take precedence.",
     "# Eastmoney stock-data APIs intentionally remain DIRECT above this block.",
-    "# The generated list combines Johnshall, the AWAvenue complement, local custom rules, and exact exceptions.",
+    "# The generated list combines Johnshall, AWAvenue and anti-AD complements, local custom rules, and exact exceptions.",
     ADBLOCK_RULE,
     "",
 ]
@@ -125,6 +137,14 @@ def fetch_source() -> tuple[bytes, str]:
 def fetch_awavenue_source() -> tuple[bytes, str]:
     """Download the smaller AWAvenue source; rule validation guards truncation."""
     with request(AWAVENUE_SOURCE_URL) as response:
+        content = response.read()
+        etag = response.headers.get("ETag", "").strip('"')
+    return content, etag
+
+
+def fetch_anti_ad_source() -> tuple[bytes, str]:
+    """Download anti-AD Surge rules; metadata validation guards truncation."""
+    with request(ANTI_AD_SOURCE_URL) as response:
         content = response.read()
         etag = response.headers.get("ETag", "").strip('"')
     return content, etag
@@ -242,25 +262,87 @@ def normalize_awavenue_rules(source: str) -> tuple[list[str], dict[str, str]]:
     return rules, metadata
 
 
-def deduplicate_awavenue_rules(
-    johnshall_rules: list[str], awavenue_rules: list[str]
-) -> tuple[list[str], int]:
-    """Remove AWAvenue rules already covered by Johnshall match semantics."""
-    johnshall_exact = set(johnshall_rules)
-    johnshall_suffixes: set[str] = set()
-    johnshall_keywords: set[str] = set()
+def normalize_anti_ad_rules(source: str) -> tuple[list[str], dict[str, str]]:
+    """Normalize and validate the anti-AD Surge rule source."""
+    metadata: dict[str, str] = {}
+    rules: list[str] = []
+    seen: set[str] = set()
+    source_rule_count = 0
 
-    for rule in johnshall_rules:
+    for line_number, raw_line in enumerate(source.splitlines(), start=1):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if line.startswith("#"):
+            key, separator, value = line[1:].partition("=")
+            if separator:
+                metadata[key.strip().lower()] = value.strip()
+            continue
+        if line.startswith("[") and line.endswith("]"):
+            raise RuntimeError(f"anti-AD 第 {line_number} 行不应包含配置区段：{line}")
+
+        source_rule_count += 1
+        parts = [part.strip() for part in line.split(",")]
+        if len(parts) != 2:
+            raise RuntimeError(f"anti-AD 第 {line_number} 行不是完整规则：{line}")
+
+        rule_type = parts[0].upper()
+        value = parts[1].lower()
+        if rule_type not in ANTI_AD_ALLOWED_RULE_TYPES:
+            raise RuntimeError(
+                f"anti-AD 第 {line_number} 行包含未知规则类型：{rule_type}"
+            )
+        if not value:
+            raise RuntimeError(f"anti-AD 第 {line_number} 行缺少匹配值")
+
+        normalized = f"{rule_type},{value}"
+        if normalized not in seen:
+            seen.add(normalized)
+            rules.append(normalized)
+
+    if metadata.get("title") != "anti-AD":
+        raise RuntimeError("anti-AD 上游缺少预期的标题")
+    if metadata.get("url") != ANTI_AD_SOURCE_PROJECT:
+        raise RuntimeError("anti-AD 上游缺少预期的项目地址")
+    try:
+        declared_count = int(metadata["total_lines"])
+    except (KeyError, ValueError) as error:
+        raise RuntimeError("anti-AD 上游缺少有效的 TOTAL_LINES") from error
+    if declared_count != source_rule_count:
+        raise RuntimeError(
+            f"anti-AD 规则数量与声明不符：声明 {declared_count} 条，"
+            f"实际 {source_rule_count} 条"
+        )
+    if len(rules) < ANTI_AD_MIN_RULE_COUNT:
+        raise RuntimeError(
+            f"anti-AD 规则数量异常：仅 {len(rules)} 条，"
+            f"低于安全阈值 {ANTI_AD_MIN_RULE_COUNT}"
+        )
+    if not metadata.get("ver"):
+        raise RuntimeError("anti-AD 上游缺少版本")
+
+    return rules, metadata
+
+
+def deduplicate_rules(
+    base_rules: list[str], candidate_rules: list[str]
+) -> tuple[list[str], int]:
+    """Remove candidate rules already covered by earlier match semantics."""
+    base_exact = set(base_rules)
+    base_suffixes: set[str] = set()
+    base_keywords: set[str] = set()
+
+    for rule in base_rules:
         parts = rule.split(",")
         if len(parts) != 2:
             continue
         if parts[0] == "DOMAIN-SUFFIX":
-            johnshall_suffixes.add(parts[1])
+            base_suffixes.add(parts[1])
         elif parts[0] == "DOMAIN-KEYWORD":
-            johnshall_keywords.add(parts[1])
+            base_keywords.add(parts[1])
 
     def covered(rule: str) -> bool:
-        if rule in johnshall_exact:
+        if rule in base_exact:
             return True
 
         parts = rule.split(",")
@@ -270,17 +352,17 @@ def deduplicate_awavenue_rules(
         if rule_type in {"DOMAIN", "DOMAIN-SUFFIX"}:
             labels = value.split(".")
             if any(
-                ".".join(labels[index:]) in johnshall_suffixes
+                ".".join(labels[index:]) in base_suffixes
                 for index in range(len(labels))
             ):
                 return True
-            return any(keyword in value for keyword in johnshall_keywords)
+            return any(keyword in value for keyword in base_keywords)
         if rule_type == "DOMAIN-KEYWORD":
-            return any(keyword in value for keyword in johnshall_keywords)
+            return any(keyword in value for keyword in base_keywords)
         return False
 
-    deduplicated = [rule for rule in awavenue_rules if not covered(rule)]
-    return deduplicated, len(awavenue_rules) - len(deduplicated)
+    deduplicated = [rule for rule in candidate_rules if not covered(rule)]
+    return deduplicated, len(candidate_rules) - len(deduplicated)
 
 
 def render_awavenue_block(
@@ -319,19 +401,74 @@ def render_awavenue_block(
     return "\n".join([*header, *imported_rules, AWAVENUE_BLOCK_END])
 
 
-def replace_awavenue_block(custom_text: str, block: str) -> str:
-    """Replace exactly one generated block while preserving manual content."""
-    if custom_text.count(AWAVENUE_BLOCK_BEGIN) != 1:
-        raise RuntimeError("adblock-custom.list 缺少唯一的 AWAvenue 起始标记")
-    if custom_text.count(AWAVENUE_BLOCK_END) != 1:
-        raise RuntimeError("adblock-custom.list 缺少唯一的 AWAvenue 结束标记")
+def render_anti_ad_block(
+    source_bytes: bytes,
+    etag: str,
+    metadata: dict[str, str],
+    source_rules: list[str],
+    imported_rules: list[str],
+) -> str:
+    """Render the generated anti-AD complement inside the custom list."""
+    digest = hashlib.sha256(source_bytes).hexdigest()
+    header = [
+        ANTI_AD_BLOCK_BEGIN,
+        "# Managed by scripts/sync_johnshall_adblock.py. Do not edit this block manually.",
+        "# Imported source: anti-AD (Surge format)",
+        f"# Source project: {ANTI_AD_SOURCE_PROJECT}",
+        f"# Source file: {ANTI_AD_SOURCE_URL}",
+        f"# Source version: {metadata['ver']}",
+        f"# Source-ETag: {etag or 'unknown'}",
+        f"# Source-SHA256: {digest}",
+        f"# Source license: MIT ({ANTI_AD_SOURCE_LICENSE})",
+        "# Deduplication: exact duplicates and rules semantically covered by a broader",
+        "# Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.",
+        f"# Source rules: {len(source_rules)}",
+        f"# Imported rules: {len(imported_rules)} DOMAIN-SUFFIX.",
+        "",
+    ]
+    return "\n".join([*header, *imported_rules, ANTI_AD_BLOCK_END])
 
-    start = custom_text.index(AWAVENUE_BLOCK_BEGIN)
-    end_start = custom_text.index(AWAVENUE_BLOCK_END)
+
+def replace_managed_block(
+    custom_text: str,
+    block: str,
+    *,
+    begin_marker: str,
+    end_marker: str,
+    source_name: str,
+) -> str:
+    """Replace exactly one generated block while preserving manual content."""
+    if custom_text.count(begin_marker) != 1:
+        raise RuntimeError(f"adblock-custom.list 缺少唯一的 {source_name} 起始标记")
+    if custom_text.count(end_marker) != 1:
+        raise RuntimeError(f"adblock-custom.list 缺少唯一的 {source_name} 结束标记")
+
+    start = custom_text.index(begin_marker)
+    end_start = custom_text.index(end_marker)
     if end_start < start:
-        raise RuntimeError("adblock-custom.list 的 AWAvenue 标记顺序异常")
-    end = end_start + len(AWAVENUE_BLOCK_END)
+        raise RuntimeError(f"adblock-custom.list 的 {source_name} 标记顺序异常")
+    end = end_start + len(end_marker)
     return custom_text[:start] + block + custom_text[end:]
+
+
+def replace_awavenue_block(custom_text: str, block: str) -> str:
+    return replace_managed_block(
+        custom_text,
+        block,
+        begin_marker=AWAVENUE_BLOCK_BEGIN,
+        end_marker=AWAVENUE_BLOCK_END,
+        source_name="AWAvenue",
+    )
+
+
+def replace_anti_ad_block(custom_text: str, block: str) -> str:
+    return replace_managed_block(
+        custom_text,
+        block,
+        begin_marker=ANTI_AD_BLOCK_BEGIN,
+        end_marker=ANTI_AD_BLOCK_END,
+        source_name="anti-AD",
+    )
 
 
 def normalize_local_rule_text(source: str, source_name: str) -> list[str]:
@@ -450,10 +587,11 @@ def render(
         "# Source project: Johnshall/Shadowrocket-ADBlock-Rules-Forever",
         f"# Source license: CC BY-SA 4.0 ({SOURCE_LICENSE})",
         "# Secondary source: AWAvenue Ads Rule (managed in rules/adblock-custom.list)",
-        "# Local custom source: rules/adblock-custom.list (content outside the AWAvenue block)",
+        "# Secondary source: anti-AD (managed in rules/adblock-custom.list)",
+        "# Local custom source: rules/adblock-custom.list (content outside managed blocks)",
         "# Local exact exceptions: rules/adblock-exceptions.list",
-        "# Generated result: normalized Johnshall + AWAvenue complement + custom - exact exceptions.",
-        f"# Custom-list rules (including AWAvenue complement): {custom_count}",
+        "# Generated result: normalized Johnshall + AWAvenue + anti-AD complements + custom - exact exceptions.",
+        f"# Custom-list rules (including managed complements): {custom_count}",
         f"# Local exceptions: {exception_count} ({matched_exception_count} matched)",
         "# Policy is supplied by the parent RULE-SET as REJECT.",
         "",
@@ -531,8 +669,17 @@ def main() -> int:
     awavenue_source_bytes, awavenue_etag = fetch_awavenue_source()
     awavenue_source = awavenue_source_bytes.decode("utf-8-sig")
     awavenue_rules, awavenue_metadata = normalize_awavenue_rules(awavenue_source)
-    awavenue_custom_rules, awavenue_covered_count = deduplicate_awavenue_rules(
+    awavenue_custom_rules, awavenue_covered_count = deduplicate_rules(
         upstream_rules, awavenue_rules
+    )
+    anti_ad_source_bytes, anti_ad_etag = fetch_anti_ad_source()
+    anti_ad_source = anti_ad_source_bytes.decode("utf-8-sig")
+    anti_ad_rules, anti_ad_metadata = normalize_anti_ad_rules(anti_ad_source)
+    anti_ad_after_johnshall, anti_ad_johnshall_covered_count = deduplicate_rules(
+        upstream_rules, anti_ad_rules
+    )
+    anti_ad_custom_rules, anti_ad_awavenue_covered_count = deduplicate_rules(
+        awavenue_custom_rules, anti_ad_after_johnshall
     )
 
     custom_path = args.custom_list.resolve()
@@ -549,6 +696,14 @@ def main() -> int:
     custom_content = replace_awavenue_block(
         existing_custom_content, awavenue_block
     )
+    anti_ad_block = render_anti_ad_block(
+        anti_ad_source_bytes,
+        anti_ad_etag,
+        anti_ad_metadata,
+        anti_ad_rules,
+        anti_ad_custom_rules,
+    )
+    custom_content = replace_anti_ad_block(custom_content, anti_ad_block)
     custom_rules = normalize_local_rule_text(custom_content, str(custom_path))
     (
         rules,
@@ -594,6 +749,12 @@ def main() -> int:
         f"AWAvenue 去重规则：{len(awavenue_rules)} 条"
         f"（写入 custom {len(awavenue_custom_rules)} 条，"
         f"由 Johnshall 覆盖 {awavenue_covered_count} 条）"
+    )
+    print(
+        f"anti-AD 去重规则：{len(anti_ad_rules)} 条"
+        f"（写入 custom {len(anti_ad_custom_rules)} 条，"
+        f"由 Johnshall 覆盖 {anti_ad_johnshall_covered_count} 条，"
+        f"由 AWAvenue 覆盖 {anti_ad_awavenue_covered_count} 条）"
     )
     print(
         f"custom 列表规则：{len(custom_rules)} 条"

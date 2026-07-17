@@ -100,7 +100,7 @@ DOMAIN-KEYWORD,-sponsor-,reject
                 sync.normalize_awavenue_rules(source)
 
     def test_semantic_deduplication_uses_johnshall_suffixes_and_keywords(self):
-        imported, covered = sync.deduplicate_awavenue_rules(
+        imported, covered = sync.deduplicate_rules(
             [
                 "DOMAIN,exact.example",
                 "DOMAIN-SUFFIX,example.com",
@@ -162,6 +162,83 @@ DOMAIN-KEYWORD,-sponsor-,reject
 
         with self.assertRaisesRegex(RuntimeError, "标记顺序异常"):
             sync.replace_awavenue_block(existing, "block")
+
+
+class AntiAdRuleTests(unittest.TestCase):
+    SOURCE = """\
+#TITLE=anti-AD
+#VER=20260717033840
+#URL=https://github.com/privacy-protection-tools/anti-AD
+#TOTAL_LINES=3
+DOMAIN-SUFFIX,Ads.Example.com
+DOMAIN-SUFFIX,Tracker.Example
+DOMAIN-SUFFIX,ads.example.com
+"""
+
+    def test_normalize_anti_ad_rules_validates_metadata_and_deduplicates(self):
+        with patch.object(sync, "ANTI_AD_MIN_RULE_COUNT", 2):
+            rules, metadata = sync.normalize_anti_ad_rules(self.SOURCE)
+
+        self.assertEqual(
+            rules,
+            [
+                "DOMAIN-SUFFIX,ads.example.com",
+                "DOMAIN-SUFFIX,tracker.example",
+            ],
+        )
+        self.assertEqual(metadata["ver"], "20260717033840")
+
+    def test_normalize_anti_ad_rules_rejects_declared_count_mismatch(self):
+        source = self.SOURCE.replace("#TOTAL_LINES=3", "#TOTAL_LINES=4")
+
+        with patch.object(sync, "ANTI_AD_MIN_RULE_COUNT", 2):
+            with self.assertRaisesRegex(RuntimeError, "规则数量与声明不符"):
+                sync.normalize_anti_ad_rules(source)
+
+    def test_anti_ad_is_deduplicated_after_johnshall_and_awavenue(self):
+        anti_ad_rules = [
+            "DOMAIN-SUFFIX,ads.example.com",
+            "DOMAIN-SUFFIX,sub.tracker.example",
+            "DOMAIN-SUFFIX,keep.example",
+        ]
+        after_johnshall, johnshall_covered = sync.deduplicate_rules(
+            ["DOMAIN-SUFFIX,example.com"], anti_ad_rules
+        )
+        imported, awavenue_covered = sync.deduplicate_rules(
+            ["DOMAIN-SUFFIX,tracker.example"], after_johnshall
+        )
+
+        self.assertEqual(imported, ["DOMAIN-SUFFIX,keep.example"])
+        self.assertEqual(johnshall_covered, 1)
+        self.assertEqual(awavenue_covered, 1)
+
+    def test_replace_anti_ad_block_preserves_other_content(self):
+        existing = "\n".join(
+            [
+                sync.AWAVENUE_BLOCK_BEGIN,
+                "DOMAIN,awavenue.example",
+                sync.AWAVENUE_BLOCK_END,
+                sync.ANTI_AD_BLOCK_BEGIN,
+                "DOMAIN-SUFFIX,old.example",
+                sync.ANTI_AD_BLOCK_END,
+                "DOMAIN,manual.example",
+                "",
+            ]
+        )
+        replacement = "\n".join(
+            [
+                sync.ANTI_AD_BLOCK_BEGIN,
+                "DOMAIN-SUFFIX,new.example",
+                sync.ANTI_AD_BLOCK_END,
+            ]
+        )
+
+        result = sync.replace_anti_ad_block(existing, replacement)
+
+        self.assertIn("DOMAIN,awavenue.example", result)
+        self.assertIn("DOMAIN-SUFFIX,new.example", result)
+        self.assertIn("DOMAIN,manual.example", result)
+        self.assertNotIn("DOMAIN-SUFFIX,old.example", result)
 
 
 class DerivedConfigTests(unittest.TestCase):
