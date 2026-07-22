@@ -9,14 +9,14 @@
 # Source project: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
 # Source file: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list
 # Source version: 1.6.9-release
-# Source updated: 2026-06-15 21:32:00 UTC+8
-# Source-ETag: 5eeaf77802d37a51d4894862ce8c90cd687c909f7f33530039aad58a03c7a1cc
-# Source-SHA256: 89dd1ca167b7da9f98ac999dc2da6cf395605499084c3dd50691696522f0700c
+# Source updated: 2026-07-21 15:28:43 UTC+8
+# Source-ETag: efeca0237b2d00d731485f215da4d55ae19cbaedc206a232d58dc0dee5be4cb2
+# Source-SHA256: 1522b0371ec6b4705297dcb233a13cb1cdc0a0a2153da92d8ab6b5610f602b2a
 # Source license: GPL-3.0 (https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE)
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall DOMAIN-SUFFIX or DOMAIN-KEYWORD rule are omitted.
-# Source rules: 905
-# Imported rules: 771 (755 DOMAIN, 5 DOMAIN-KEYWORD, 11 DOMAIN-SUFFIX).
+# Source rules: 903
+# Imported rules: 769 (753 DOMAIN, 5 DOMAIN-KEYWORD, 11 DOMAIN-SUFFIX).
 
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
@@ -306,7 +306,6 @@ DOMAIN,data.mistat.rus.xiaomi.com
 DOMAIN,data.mistat.xiaomi.com
 DOMAIN,datacollection.uve.weibo.com
 DOMAIN,dc.sigmob.cn
-DOMAIN,dig.bdurl.net
 DOMAIN,dlogs.bwton.com
 DOMAIN,dm.toutiao.com
 DOMAIN,domain.aishengji.com
@@ -471,7 +470,6 @@ DOMAIN,m.shenshiads.com
 DOMAIN,mapi.m.jd.com
 DOMAIN,masdkv6.3g.qq.com
 DOMAIN,mazu.m.qq.com
-DOMAIN,mcs.zijieapi.com
 DOMAIN,medproad.com
 DOMAIN,metrics.data.hicloud.com
 DOMAIN,metrics2.data.hicloud.com
@@ -803,7 +801,7 @@ DOMAIN-KEYWORD,-normal.zijieapi.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 100272
-# Imported rules: 55249 DOMAIN-SUFFIX.
+# Imported rules: 55248 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -55975,7 +55973,6 @@ DOMAIN-SUFFIX,abc.zuiairead.com
 DOMAIN-SUFFIX,info.zuidema.nl
 DOMAIN-SUFFIX,vgf.zuihuixuan.com
 DOMAIN-SUFFIX,ad.zuimeitianqi.com
-DOMAIN-SUFFIX,bd1.zuimeitianqi.com
 DOMAIN-SUFFIX,bd2.zuimeitianqi.com
 DOMAIN-SUFFIX,hwad.zuimeitianqi.com
 DOMAIN-SUFFIX,stat.zuimeitianqi.com
