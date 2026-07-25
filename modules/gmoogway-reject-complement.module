@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/buyunhao/shadowrocket-config
-#!desc=Rules:79604 Created:2026-07-24 Source:GMOogway@eed7c1bcabdfceca40fa85d47a61a0c235bca953 Local@1cac48f33a5c6991b42443a57aede1d230442eeb Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:79615 Created:2026-07-25 Source:GMOogway@84aae33c733b32179f20179b9b301710e96f4482 Local@355f60a7edba6c49a114c310ac1ddea6574ab18a Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -7533,6 +7533,7 @@ DOMAIN-SUFFIX,ateofakist.cfd,REJECT
 DOMAIN-SUFFIX,atfcj.buypetals.com,REJECT
 DOMAIN-SUFFIX,athena.accsc.com.au,REJECT
 DOMAIN-SUFFIX,athena.api.kwalee.com,REJECT
+DOMAIN-SUFFIX,athena.archive.org,REJECT
 DOMAIN-SUFFIX,athena.nederlandseloterij.nl,REJECT
 DOMAIN-SUFFIX,athena.toto.nl,REJECT
 DOMAIN-SUFFIX,athenea.fr,REJECT
@@ -10928,6 +10929,7 @@ DOMAIN-SUFFIX,choicedealz.com,REJECT
 DOMAIN-SUFFIX,choicesurveypanel.com,REJECT
 DOMAIN-SUFFIX,choisimoncode.fr,REJECT
 DOMAIN-SUFFIX,chokertraffic.com,REJECT
+DOMAIN-SUFFIX,chorumebbbbgoza.xyz,REJECT
 DOMAIN-SUFFIX,chovayfecredit.com,REJECT
 DOMAIN-SUFFIX,chovaynhanh.online,REJECT
 DOMAIN-SUFFIX,chovaytiengopsg.com,REJECT
@@ -20939,6 +20941,7 @@ DOMAIN-SUFFIX,fqosmc.yoderleather.com,REJECT
 DOMAIN-SUFFIX,fqpzf.thefloristsupplyshop.com,REJECT
 DOMAIN-SUFFIX,fqqok.zipstring.com,REJECT
 DOMAIN-SUFFIX,fqrghb.hotcircle.net,REJECT
+DOMAIN-SUFFIX,fqrukpjaahukp.com,REJECT
 DOMAIN-SUFFIX,fquqhe.com,REJECT
 DOMAIN-SUFFIX,fqvvn.getlemonhead.com,REJECT
 DOMAIN-SUFFIX,fqwgcx.catawiki.fr,REJECT
@@ -27889,6 +27892,7 @@ DOMAIN-SUFFIX,impruads.com,REJECT
 DOMAIN-SUFFIX,impzl.barrioqueen.com,REJECT
 DOMAIN-SUFFIX,imran.techmentorbd.com,REJECT
 DOMAIN-SUFFIX,imrhyzgb.revelo.bg,REJECT
+DOMAIN-SUFFIX,imri-jewelry.co.il,REJECT
 DOMAIN-SUFFIX,ims.relationshipone.com,REJECT
 DOMAIN-SUFFIX,ims.tescoinsurance.com,REJECT
 DOMAIN-SUFFIX,ims2.tescotravelmoney.com,REJECT
@@ -40677,6 +40681,7 @@ DOMAIN-SUFFIX,nhatnamgroups.com,REJECT
 DOMAIN-SUFFIX,nhddn.cloudninehair.com,REJECT
 DOMAIN-SUFFIX,nhecom.ninahome.com.br,REJECT
 DOMAIN-SUFFIX,nhglm.everydayyoga.com,REJECT
+DOMAIN-SUFFIX,nhgmymxth.com,REJECT
 DOMAIN-SUFFIX,nhids.farmacybeauty.com,REJECT
 DOMAIN-SUFFIX,nhkzk.getsunflow.com,REJECT
 DOMAIN-SUFFIX,nhn.dk,REJECT
@@ -43545,6 +43550,7 @@ DOMAIN-SUFFIX,player.collectiveaudience.co,REJECT
 DOMAIN-SUFFIX,player.gupload.xyz,REJECT
 DOMAIN-SUFFIX,player.stats.live-video.net,REJECT
 DOMAIN-SUFFIX,player.urdupoint.com,REJECT
+DOMAIN-SUFFIX,playerscache.com,REJECT
 DOMAIN-SUFFIX,playgap.b-cdn.net,REJECT
 DOMAIN-SUFFIX,playgirl.com,REJECT
 DOMAIN-SUFFIX,playgooglevn.vip,REJECT
@@ -44275,6 +44281,7 @@ DOMAIN-SUFFIX,provenfeedback.com,REJECT
 DOMAIN-SUFFIX,providence.voxmedia.com,REJECT
 DOMAIN-SUFFIX,provider.giize.com,REJECT
 DOMAIN-SUFFIX,providers.mhc.net,REJECT
+DOMAIN-SUFFIX,provingmagic.com,REJECT
 DOMAIN-SUFFIX,provize.3dfitness.cz,REJECT
 DOMAIN-SUFFIX,provize.brilas.cz,REJECT
 DOMAIN-SUFFIX,provize.dzumdzum.cz,REJECT
@@ -45139,6 +45146,7 @@ DOMAIN-SUFFIX,ra.rockcontent.com,REJECT
 DOMAIN-SUFFIX,rabbit.kilowatt.media,REJECT
 DOMAIN-SUFFIX,rabbit.radicalxchange.org,REJECT
 DOMAIN-SUFFIX,rabbit.upwardhomes.net,REJECT
+DOMAIN-SUFFIX,rabbitboots.com,REJECT
 DOMAIN-SUFFIX,rabiul.petalcalyx.com,REJECT
 DOMAIN-SUFFIX,rabiul.sohikhadi.com,REJECT
 DOMAIN-SUFFIX,racingfamilyvillage.com,REJECT
@@ -53918,6 +53926,7 @@ DOMAIN-SUFFIX,signup.advance.net,REJECT
 DOMAIN-SUFFIX,sihca.elevenaustralia.com,REJECT
 DOMAIN-SUFFIX,siivqn.bricoman.it,REJECT
 DOMAIN-SUFFIX,silcom.com,REJECT
+DOMAIN-SUFFIX,silentsingle.com,REJECT
 DOMAIN-SUFFIX,siliconf.fr,REJECT
 DOMAIN-SUFFIX,silkworm.boxmood.be,REJECT
 DOMAIN-SUFFIX,silkworm.preventingsuicideinsussex.org,REJECT
@@ -76359,6 +76368,7 @@ DOMAIN-SUFFIX,www.blueridgecpp.com,REJECT
 DOMAIN-SUFFIX,www.bmrneswk.com,REJECT
 DOMAIN-SUFFIX,www.bnnr.nl,REJECT
 DOMAIN-SUFFIX,www.board-ly.com,REJECT
+DOMAIN-SUFFIX,www.bocastyle.com,REJECT
 DOMAIN-SUFFIX,www.bodog.eu,REJECT
 DOMAIN-SUFFIX,www.bonuxsarrive.com,REJECT
 DOMAIN-SUFFIX,www.bookstadium.com,REJECT
@@ -77214,6 +77224,7 @@ DOMAIN-SUFFIX,www.romanticdemands.bond,REJECT
 DOMAIN-SUFFIX,www.romanticmaui.net,REJECT
 DOMAIN-SUFFIX,www.roofcoins.com,REJECT
 DOMAIN-SUFFIX,www.roulettebotplus.com,REJECT
+DOMAIN-SUFFIX,www.roundtopbooks.com,REJECT
 DOMAIN-SUFFIX,www.rpepin.plus.com,REJECT
 DOMAIN-SUFFIX,www.rplconnect.com,REJECT
 DOMAIN-SUFFIX,www.rtcode.com,REJECT
