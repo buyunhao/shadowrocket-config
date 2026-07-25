@@ -801,7 +801,7 @@ DOMAIN-KEYWORD,-normal.zijieapi.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 100731
-# Imported rules: 55272 DOMAIN-SUFFIX.
+# Imported rules: 55275 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -27524,6 +27524,7 @@ DOMAIN-SUFFIX,smart-789.kakamobi.cn
 DOMAIN-SUFFIX,kyson.kakao.com
 DOMAIN-SUFFIX,stat.tiara.kakao.com
 DOMAIN-SUFFIX,track.tiara.kakao.com
+DOMAIN-SUFFIX,videostats.kakao.com
 DOMAIN-SUFFIX,play.kakao.com
 DOMAIN-SUFFIX,a8clk.kake-barai.com
 DOMAIN-SUFFIX,stats.kaladyaudiology.com
@@ -45467,6 +45468,7 @@ DOMAIN-SUFFIX,smetrics.starhub.com
 DOMAIN-SUFFIX,web-beacon.starii-rover.com
 DOMAIN-SUFFIX,data.marketing.stark.dk
 DOMAIN-SUFFIX,smetrics.stark.dk
+DOMAIN-SUFFIX,starkscale.com
 DOMAIN-SUFFIX,plausible.starlegacyfoundation.org
 DOMAIN-SUFFIX,nixie.starlightnet.work
 DOMAIN-SUFFIX,alwayscare.starmountlife.com
@@ -50385,6 +50387,7 @@ DOMAIN-SUFFIX,userlook.com
 DOMAIN-SUFFIX,usermaven.com
 DOMAIN-SUFFIX,eq.userneeds.com
 DOMAIN-SUFFIX,userneeds.dk
+DOMAIN-SUFFIX,userreplay.net
 DOMAIN-SUFFIX,userreport.com
 DOMAIN-SUFFIX,users-api.com
 DOMAIN-SUFFIX,usertracks.live
