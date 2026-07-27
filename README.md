@@ -26,6 +26,7 @@
 - `shadowrocket_gpt_maintain.conf`：桌面基础配置，不包含广告拦截。
 - `shadowrocket_gpt_maintain-mobile.conf`：移动端基础配置，不包含广告拦截。
 - `shadowrocket_gpt_maintain-mobile-adblock.conf`：从移动端基础配置生成，并叠加独立广告规则集。
+- `shadowrocket_adblock-only.conf`：不含任何代理策略、以 `FINAL,DIRECT` 兜底的去广告专用基础配置。
 
 日常增删域名路由规则时，三个配置应同步更新。广告规则刷新时，脚本会同时更新
 Johnshall 主规则，以及 `adblock-custom.list` 中受标记管理的 AWAvenue 与 anti-AD
@@ -102,6 +103,41 @@ python3 scripts/sync_johnshall_adblock.py
 东财股票数据接口的 `DIRECT` 规则有意保留在广告层之前，以保证股票信息完整获取。
 这意味着东财子域名优先直连，即使其中个别域名也出现在广告表中；这是明确的可用性取舍，
 不是待修复的规则顺序问题。
+
+### 全直连去广告配置与组合模块
+
+不需要代理服务、只希望使用 Shadowrocket 本地规则拦截功能的设备，应导入以下基础配置：
+
+```text
+https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/shadowrocket_adblock-only.conf
+```
+
+并安装以下远程模块：
+
+```text
+https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/modules/adblock-only-combined.module
+```
+
+基础配置不包含 `PROXY` 策略、代理节点、MITM、脚本或 URL Rewrite；模块只包含
+`REJECT` 规则。启用基础配置与模块后，将 Shadowrocket 的“全局路由”设为“配置”：
+命中模块的请求会被拒绝，其余流量由 `FINAL,DIRECT` 直连。
+
+组合模块由当前 `rules/adblock.list` 与当前
+`modules/gmoogway-reject-complement.module` 生成。生成时保留完整三源列表，并删除
+已经被三源 `DOMAIN-SUFFIX` 或 `DOMAIN-KEYWORD` 规则完整覆盖的 GMOogway 补集项。
+GMOogway 输入必须已经完成 DIRECT/PROXY 冲突过滤。
+模块头保留四个上游的来源与许可信息：Johnshall 为 CC BY-SA 4.0，AWAvenue 和
+GMOogway 为 GPL-3.0，anti-AD 为 MIT；各来源内容仍受其原许可约束。
+
+重新生成或检查模块：
+
+```bash
+python3 scripts/build_adblock_only_module.py
+python3 scripts/build_adblock_only_module.py --check
+```
+
+组合模块是确定性快照。三源列表或 GMOogway 补集更新后，应重新运行生成脚本并发布，
+避免出现重复或覆盖缺口。
 
 该配置不使用 HTTPS 解密、脚本或 URL Rewrite。域名/IP 拦截无法保证去除所有广告，
 也可能出现误杀；遇到异常时应先结合 Shadowrocket 日志确认命中的规则。
