@@ -801,7 +801,7 @@ DOMAIN-KEYWORD,-normal.zijieapi.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 101222
-# Imported rules: 55273 DOMAIN-SUFFIX.
+# Imported rules: 55272 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -18301,7 +18301,6 @@ DOMAIN-SUFFIX,tracking.exclusive-networks.com
 DOMAIN-SUFFIX,marketing.exclusive-networks.com.au
 DOMAIN-SUFFIX,exclusiveclicks.com
 DOMAIN-SUFFIX,exclusivepussy.com
-DOMAIN-SUFFIX,exdynsrv.com
 DOMAIN-SUFFIX,exe.bid
 DOMAIN-SUFFIX,click.execrank.com
 DOMAIN-SUFFIX,marketing.execshape.com
