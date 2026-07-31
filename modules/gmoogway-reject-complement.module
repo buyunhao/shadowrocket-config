@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/buyunhao/shadowrocket-config
-#!desc=Rules:79633 Created:2026-07-30 Source:GMOogway@1871c6ffdf3080c2ad1ef624f1b113659ef50559 Local@3fdd4f5bde4766bea8c2e95ac4ece0f861534406 Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:79640 Created:2026-07-31 Source:GMOogway@11362f3a12c880a2d728700724be1e9916818065 Local@affeb8be75190339d593d56e81df1a8b85f3e4f5 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -1689,6 +1689,7 @@ DOMAIN-SUFFIX,abo.maxboxbrasil.shop,REJECT
 DOMAIN-SUFFIX,abo.mercadodasplantas.online,REJECT
 DOMAIN-SUFFIX,abodealley.com,REJECT
 DOMAIN-SUFFIX,abourselfi.com,REJECT
+DOMAIN-SUFFIX,aboutcorgis.com,REJECT
 DOMAIN-SUFFIX,aboutharrypotter.fasthost.tv,REJECT
 DOMAIN-SUFFIX,aboutstephenking.foolhardywear.pro,REJECT
 DOMAIN-SUFFIX,above.50degreesintheshade.com,REJECT
@@ -4783,7 +4784,6 @@ DOMAIN-SUFFIX,al.yokumoku.jp,REJECT
 DOMAIN-SUFFIX,al.yslabo.net,REJECT
 DOMAIN-SUFFIX,al.zenjirou.jp,REJECT
 DOMAIN-SUFFIX,ala.durasite.net,REJECT
-DOMAIN-SUFFIX,aladinia.app,REJECT
 DOMAIN-SUFFIX,alamin.annawabi.com,REJECT
 DOMAIN-SUFFIX,albatros.teamground.fr,REJECT
 DOMAIN-SUFFIX,albatross.creacoon.com,REJECT
@@ -4871,6 +4871,7 @@ DOMAIN-SUFFIX,allowlisted.net,REJECT
 DOMAIN-SUFFIX,allpcsoftwares.info,REJECT
 DOMAIN-SUFFIX,alltizer.ru,REJECT
 DOMAIN-SUFFIX,allvfz.chapellerie-traclet.com,REJECT
+DOMAIN-SUFFIX,allycoop.com,REJECT
 DOMAIN-SUFFIX,almaria.fr,REJECT
 DOMAIN-SUFFIX,almhhn.pet-friends.co.kr,REJECT
 DOMAIN-SUFFIX,almofmultiple.cfd,REJECT
@@ -42099,6 +42100,7 @@ DOMAIN-SUFFIX,p.beskid4home.pl,REJECT
 DOMAIN-SUFFIX,p.ejs.dev,REJECT
 DOMAIN-SUFFIX,p.eneba.com,REJECT
 DOMAIN-SUFFIX,p.imgur.com,REJECT
+DOMAIN-SUFFIX,p.lbserver.xyz,REJECT
 DOMAIN-SUFFIX,p.megzeit.de,REJECT
 DOMAIN-SUFFIX,p.netork.ru,REJECT
 DOMAIN-SUFFIX,p.porn0hd.online,REJECT
@@ -55837,6 +55839,7 @@ DOMAIN-SUFFIX,speakplanet.fr,REJECT
 DOMAIN-SUFFIX,special-alerts.com,REJECT
 DOMAIN-SUFFIX,special.kvetinyexpres.cz,REJECT
 DOMAIN-SUFFIX,specialoffers.aol.com,REJECT
+DOMAIN-SUFFIX,specialtypin.com,REJECT
 DOMAIN-SUFFIX,specialworld.com.au,REJECT
 DOMAIN-SUFFIX,specola.coertini.com,REJECT
 DOMAIN-SUFFIX,speechpad.fr,REJECT
@@ -55846,6 +55849,7 @@ DOMAIN-SUFFIX,speederproshop-ss.checkoutera.com,REJECT
 DOMAIN-SUFFIX,speedservicenow.com,REJECT
 DOMAIN-SUFFIX,speedybytes.cfd,REJECT
 DOMAIN-SUFFIX,speedycourse.fr,REJECT
+DOMAIN-SUFFIX,speedysteaks.com,REJECT
 DOMAIN-SUFFIX,speeltuintalud.nl,REJECT
 DOMAIN-SUFFIX,spellads.com,REJECT
 DOMAIN-SUFFIX,spellpop.ir,REJECT
@@ -65392,6 +65396,7 @@ DOMAIN-SUFFIX,statok.net,REJECT
 DOMAIN-SUFFIX,stats-a.maxthon.com,REJECT
 DOMAIN-SUFFIX,stats-api.skylum.com,REJECT
 DOMAIN-SUFFIX,stats-blog.lewsion.com,REJECT
+DOMAIN-SUFFIX,stats-cdn.polyspeak.ai,REJECT
 DOMAIN-SUFFIX,stats-connect.comet.it,REJECT
 DOMAIN-SUFFIX,stats-iobit-com.us-east-1.elasticbeanstalk.com,REJECT
 DOMAIN-SUFFIX,stats-proto.pandora.com,REJECT
@@ -71694,6 +71699,7 @@ DOMAIN-SUFFIX,trafficrevenue.net,REJECT
 DOMAIN-SUFFIX,trafficsyncpro.com,REJECT
 DOMAIN-SUFFIX,traffictrack.de,REJECT
 DOMAIN-SUFFIX,traffictraders.com,REJECT
+DOMAIN-SUFFIX,traffinity.pro,REJECT
 DOMAIN-SUFFIX,traffprofit.com,REJECT
 DOMAIN-SUFFIX,traffshop.com,REJECT
 DOMAIN-SUFFIX,trafico.prensaiberica.es,REJECT
@@ -75252,6 +75258,7 @@ DOMAIN-SUFFIX,wapstart.ru,REJECT
 DOMAIN-SUFFIX,warba.warbamartltd.com,REJECT
 DOMAIN-SUFFIX,warbler.resumebuilder.dev,REJECT
 DOMAIN-SUFFIX,warbler.todoscout.com,REJECT
+DOMAIN-SUFFIX,warkedmalie.com,REJECT
 DOMAIN-SUFFIX,warlog.info,REJECT
 DOMAIN-SUFFIX,warmingpod-ss.olladeals.com,REJECT
 DOMAIN-SUFFIX,warrenmoneytrader.com,REJECT
