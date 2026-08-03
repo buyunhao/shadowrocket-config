@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/buyunhao/shadowrocket-config
-#!desc=Rules:79624 Created:2026-08-01 Source:GMOogway@f20c4bb68e83824de6f3a991564a3f99192978c9 Local@c7a61e38400c4a2586f1ab82858c8149ca7208a8 Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:79628 Created:2026-08-03 Source:GMOogway@a3f7d9da622a7b743ac79775fef6e02b0213d306 Local@3a181086d17cc5008e0aa60a77554b3c6ae2da31 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -383,6 +383,7 @@ DOMAIN-SUFFIX,310d07a348.27ec4b6fcf.com,REJECT
 DOMAIN-SUFFIX,31d13b8840.399a0014f6.com,REJECT
 DOMAIN-SUFFIX,321cba.com,REJECT
 DOMAIN-SUFFIX,32red.it,REJECT
+DOMAIN-SUFFIX,33.merivonview33.cc,REJECT
 DOMAIN-SUFFIX,3307347c72.6e694b79b9.com,REJECT
 DOMAIN-SUFFIX,333lotte.com,REJECT
 DOMAIN-SUFFIX,33648b3a5d.ee30f51e20.com,REJECT
@@ -3720,6 +3721,7 @@ DOMAIN-SUFFIX,adstream.cardboardfish.com,REJECT
 DOMAIN-SUFFIX,adstreamer.ru,REJECT
 DOMAIN-SUFFIX,adstuber.com,REJECT
 DOMAIN-SUFFIX,adsupplyads.net,REJECT
+DOMAIN-SUFFIX,adsurge.com,REJECT
 DOMAIN-SUFFIX,adsushi.de,REJECT
 DOMAIN-SUFFIX,adsv.cki.name,REJECT
 DOMAIN-SUFFIX,adsv2.autodaily.vn,REJECT
@@ -6898,7 +6900,6 @@ DOMAIN-SUFFIX,apollo.miniclip.com,REJECT
 DOMAIN-SUFFIX,apollo.plein.nl,REJECT
 DOMAIN-SUFFIX,aporasal.net,REJECT
 DOMAIN-SUFFIX,apoutong.com,REJECT
-DOMAIN-SUFFIX,app-ads-services.com,REJECT
 DOMAIN-SUFFIX,app-analysislog.sto.cn,REJECT
 DOMAIN-SUFFIX,app-analytics-ru.huami.com,REJECT
 DOMAIN-SUFFIX,app-log-lab.immomo.com,REJECT
@@ -17519,7 +17520,6 @@ DOMAIN-SUFFIX,dirty-messenger.com,REJECT
 DOMAIN-SUFFIX,dirty-tinder.com,REJECT
 DOMAIN-SUFFIX,dirtyrhino.com,REJECT
 DOMAIN-SUFFIX,disa.matribhumifashion.com,REJECT
-DOMAIN-SUFFIX,discjockeys.net,REJECT
 DOMAIN-SUFFIX,discount.jmoutfit.com,REJECT
 DOMAIN-SUFFIX,discountads.net,REJECT
 DOMAIN-SUFFIX,discourage072925.shop,REJECT
@@ -27437,6 +27437,7 @@ DOMAIN-SUFFIX,ia.5.p2l.info,REJECT
 DOMAIN-SUFFIX,ia92d.shampoobars.nl,REJECT
 DOMAIN-SUFFIX,iacas.adbureau.net,REJECT
 DOMAIN-SUFFIX,iads.staticscdn.net,REJECT
+DOMAIN-SUFFIX,iads.unitychina.cn,REJECT
 DOMAIN-SUFFIX,iadvert.net,REJECT
 DOMAIN-SUFFIX,iaefd.katespade.com,REJECT
 DOMAIN-SUFFIX,iaets.kodiakcakes.com,REJECT
@@ -27852,7 +27853,6 @@ DOMAIN-SUFFIX,img.justifiedlaboratories.com,REJECT
 DOMAIN-SUFFIX,img.oemeuro.com,REJECT
 DOMAIN-SUFFIX,img.omcprimary.outsourcing.co.jp,REJECT
 DOMAIN-SUFFIX,img.salem-net.de,REJECT
-DOMAIN-SUFFIX,img.sct.eu1.usercentrics.eu,REJECT
 DOMAIN-SUFFIX,img.service.belboon.com,REJECT
 DOMAIN-SUFFIX,img.side.mythiell.com,REJECT
 DOMAIN-SUFFIX,img.sn00.net,REJECT
@@ -29272,6 +29272,7 @@ DOMAIN-SUFFIX,junaid.thewatchmerchantbd.com,REJECT
 DOMAIN-SUFFIX,junayed.gadgetoo.com.bd,REJECT
 DOMAIN-SUFFIX,junayed.sijamart.com,REJECT
 DOMAIN-SUFFIX,junbi-tracker.com,REJECT
+DOMAIN-SUFFIX,juneworewyjyna.com,REJECT
 DOMAIN-SUFFIX,junior-a8cv.techacademy.jp,REJECT
 DOMAIN-SUFFIX,junior.cursoauxiliardeveterinario.com.br,REJECT
 DOMAIN-SUFFIX,junior.eletroflix.com,REJECT
@@ -45605,6 +45606,7 @@ DOMAIN-SUFFIX,relxmining.net,REJECT
 DOMAIN-SUFFIX,rem.rareearthmercantile.com,REJECT
 DOMAIN-SUFFIX,remark.herlan.com,REJECT
 DOMAIN-SUFFIX,remekcikkek.com,REJECT
+DOMAIN-SUFFIX,remerge.io,REJECT
 DOMAIN-SUFFIX,removeads.workers.dev,REJECT
 DOMAIN-SUFFIX,remp-campaign.golem.de,REJECT
 DOMAIN-SUFFIX,renacious.nwwadq.cn,REJECT
@@ -73293,6 +73295,8 @@ DOMAIN-SUFFIX,user-stats.rbl.ms,REJECT
 DOMAIN-SUFFIX,user.headlines.pw,REJECT
 DOMAIN-SUFFIX,user.troveron.com.br,REJECT
 DOMAIN-SUFFIX,useraction.de,REJECT
+DOMAIN-SUFFIX,usercentrics.com,REJECT
+DOMAIN-SUFFIX,usercentrics.eu,REJECT
 DOMAIN-SUFFIX,userdata.ati.su,REJECT
 DOMAIN-SUFFIX,usermetric.io,REJECT
 DOMAIN-SUFFIX,userreporting.cloud.unity3d.com,REJECT
