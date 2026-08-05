@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/buyunhao/shadowrocket-config
-#!desc=Rules:79639 Created:2026-08-04 Source:GMOogway@3a65f6c77a2c40b2381fcf8e1ae43b7cecae98fa Local@0eb84f30d609f871928b40474834b1f78dc73962 Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:79632 Created:2026-08-05 Source:GMOogway@9f2bdf3560c4f3b548ffd250c540df65f2233d57 Local@b0fef5a3b399f5cf970ceb1abed391c649c4079a Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -5530,7 +5530,6 @@ DOMAIN-SUFFIX,analytics.masat-alsaada.com,REJECT
 DOMAIN-SUFFIX,analytics.mathfel.de,REJECT
 DOMAIN-SUFFIX,analytics.mattresswarehouse.com,REJECT
 DOMAIN-SUFFIX,analytics.mawashico.com,REJECT
-DOMAIN-SUFFIX,analytics.maxx53.com,REJECT
 DOMAIN-SUFFIX,analytics.mbga.jp,REJECT
 DOMAIN-SUFFIX,analytics.mcw.nz,REJECT
 DOMAIN-SUFFIX,analytics.meituan.net,REJECT
@@ -17875,7 +17874,6 @@ DOMAIN-SUFFIX,driveniq.com,REJECT
 DOMAIN-SUFFIX,drivingschoolburlington.ca,REJECT
 DOMAIN-SUFFIX,drjzh.loveinfaith.life,REJECT
 DOMAIN-SUFFIX,drkaq.nlbeauty.bg,REJECT
-DOMAIN-SUFFIX,drlagqnl.com,REJECT
 DOMAIN-SUFFIX,drm-google-analtyic.com,REJECT
 DOMAIN-SUFFIX,drm-server-booking.com,REJECT
 DOMAIN-SUFFIX,drm-server13-login-microsoftonline.com,REJECT
@@ -18682,7 +18680,6 @@ DOMAIN-SUFFIX,ekoui.coppedau.com.au,REJECT
 DOMAIN-SUFFIX,ekpgu.alicemushrooms.com,REJECT
 DOMAIN-SUFFIX,ekrki.jessicasimpson.com,REJECT
 DOMAIN-SUFFIX,ekuhv.wearpepper.com,REJECT
-DOMAIN-SUFFIX,el.siglo.mx,REJECT
 DOMAIN-SUFFIX,elade.mensuas.com,REJECT
 DOMAIN-SUFFIX,elbfn.cliqproducts.com,REJECT
 DOMAIN-SUFFIX,elboncoin.fr,REJECT
@@ -18937,7 +18934,6 @@ DOMAIN-SUFFIX,engage.victorinsurance.co.uk,REJECT
 DOMAIN-SUFFIX,engage.westpac.co.nz,REJECT
 DOMAIN-SUFFIX,engagedhits.com,REJECT
 DOMAIN-SUFFIX,engagelab.cc,REJECT
-DOMAIN-SUFFIX,engagement.coremedia.cloud,REJECT
 DOMAIN-SUFFIX,engine-pmbk.ligastavok.ru,REJECT
 DOMAIN-SUFFIX,engine.4chan-ads.org,REJECT
 DOMAIN-SUFFIX,engine.gettopple.com,REJECT
@@ -19855,7 +19851,6 @@ DOMAIN-SUFFIX,fancyrat.calebporzio.com,REJECT
 DOMAIN-SUFFIX,fancyrat.flatuicolors.com,REJECT
 DOMAIN-SUFFIX,fancyrat.keurslager-goeminne.be,REJECT
 DOMAIN-SUFFIX,fangirlmag.com,REJECT
-DOMAIN-SUFFIX,fanless.net,REJECT
 DOMAIN-SUFFIX,fanniemae.fr,REJECT
 DOMAIN-SUFFIX,fantecio.com,REJECT
 DOMAIN-SUFFIX,fantovix.shop,REJECT
@@ -20064,7 +20059,6 @@ DOMAIN-SUFFIX,fdhqzb.longkionemedics.com,REJECT
 DOMAIN-SUFFIX,fdimages.fairfax.com.au,REJECT
 DOMAIN-SUFFIX,fdkbu.thespeakerlab.com,REJECT
 DOMAIN-SUFFIX,fdldg.trtltravel.com,REJECT
-DOMAIN-SUFFIX,fdluoxnn.com,REJECT
 DOMAIN-SUFFIX,fdmsu.greenpan.us,REJECT
 DOMAIN-SUFFIX,fdnyk.suzannesomers.com,REJECT
 DOMAIN-SUFFIX,fdolspwa.my,REJECT
@@ -21789,6 +21783,7 @@ DOMAIN-SUFFIX,getrunkhomuto.info,REJECT
 DOMAIN-SUFFIX,getrxhere.co,REJECT
 DOMAIN-SUFFIX,getspecialgifts.com,REJECT
 DOMAIN-SUFFIX,getspyfocus-ss.checkoutera.com,REJECT
+DOMAIN-SUFFIX,getter.cfd,REJECT
 DOMAIN-SUFFIX,getter.fun,REJECT
 DOMAIN-SUFFIX,gettopup.com,REJECT
 DOMAIN-SUFFIX,getvistafocus-ss.checkoutera.com,REJECT
@@ -27568,7 +27563,6 @@ DOMAIN-SUFFIX,idnhanquatang.vn,REJECT
 DOMAIN-SUFFIX,idnqg.dermaclara.com,REJECT
 DOMAIN-SUFFIX,idopm.progressjj.co.uk,REJECT
 DOMAIN-SUFFIX,idsfq.katespade.de,REJECT
-DOMAIN-SUFFIX,idsmodules.com,REJECT
 DOMAIN-SUFFIX,idsod.catholic.com,REJECT
 DOMAIN-SUFFIX,idsqb.evanalexandergrooming.com,REJECT
 DOMAIN-SUFFIX,idtvo.ezrider.nl,REJECT
@@ -28987,7 +28981,6 @@ DOMAIN-SUFFIX,jihzn.feature.com,REJECT
 DOMAIN-SUFFIX,jilks.bravelittleones.com,REJECT
 DOMAIN-SUFFIX,jillsclickcorner.com,REJECT
 DOMAIN-SUFFIX,jimbm.charlestyrwhitt.com,REJECT
-DOMAIN-SUFFIX,jinanrqz.com,REJECT
 DOMAIN-SUFFIX,jincodiks.com,REJECT
 DOMAIN-SUFFIX,jineu.goddessall.com,REJECT
 DOMAIN-SUFFIX,jink.de,REJECT
@@ -37548,7 +37541,6 @@ DOMAIN-SUFFIX,mehedi.electrohubemart.com,REJECT
 DOMAIN-SUFFIX,mehedi.iback-bd.com,REJECT
 DOMAIN-SUFFIX,mehedi.muqarraboon.com,REJECT
 DOMAIN-SUFFIX,mehqj.spartan.com,REJECT
-DOMAIN-SUFFIX,meijxqop.com,REJECT
 DOMAIN-SUFFIX,meilemall.com,REJECT
 DOMAIN-SUFFIX,meirav-il.com,REJECT
 DOMAIN-SUFFIX,meitustat.com,REJECT
@@ -38826,6 +38818,7 @@ DOMAIN-SUFFIX,mms.syracuse.com,REJECT
 DOMAIN-SUFFIX,mms.theroot.com,REJECT
 DOMAIN-SUFFIX,mn-tz.com,REJECT
 DOMAIN-SUFFIX,mn.5.p2l.info,REJECT
+DOMAIN-SUFFIX,mn.browpotware.com,REJECT
 DOMAIN-SUFFIX,mn.mankaakura.com,REJECT
 DOMAIN-SUFFIX,mn.mihonan.co.il,REJECT
 DOMAIN-SUFFIX,mn.mn.co.cu,REJECT
@@ -41539,6 +41532,7 @@ DOMAIN-SUFFIX,olcjs.chicos.com,REJECT
 DOMAIN-SUFFIX,olclm.halloweencostumes.com,REJECT
 DOMAIN-SUFFIX,olcwzr.resocia.jp,REJECT
 DOMAIN-SUFFIX,old-glasses.net,REJECT
+DOMAIN-SUFFIX,old.umcl.us,REJECT
 DOMAIN-SUFFIX,oldcname.ieasyclick.net,REJECT
 DOMAIN-SUFFIX,oldftp.otenet.gr,REJECT
 DOMAIN-SUFFIX,oleqk.owlcrate.com,REJECT
@@ -42229,7 +42223,6 @@ DOMAIN-SUFFIX,pahter.tech,REJECT
 DOMAIN-SUFFIX,pahtlf.tech,REJECT
 DOMAIN-SUFFIX,pahtpw.tech,REJECT
 DOMAIN-SUFFIX,pahtsx.tech,REJECT
-DOMAIN-SUFFIX,pahtuo.tech,REJECT
 DOMAIN-SUFFIX,pahtuz.tech,REJECT
 DOMAIN-SUFFIX,paidforfree.com,REJECT
 DOMAIN-SUFFIX,paime.com,REJECT
@@ -42248,7 +42241,6 @@ DOMAIN-SUFFIX,pajjqi.welovecouture.com,REJECT
 DOMAIN-SUFFIX,pajsb.coopsleepgoods.com,REJECT
 DOMAIN-SUFFIX,pakpolice.com,REJECT
 DOMAIN-SUFFIX,palashvai.chottoshop.com,REJECT
-DOMAIN-SUFFIX,palibzh.tech,REJECT
 DOMAIN-SUFFIX,palyazatfigyelo.info,REJECT
 DOMAIN-SUFFIX,pam.hottur.com.br,REJECT
 DOMAIN-SUFFIX,pamini.fr,REJECT
@@ -45301,6 +45293,7 @@ DOMAIN-SUFFIX,rdcuk.euforia.com,REJECT
 DOMAIN-SUFFIX,rdczjr.encasa.it,REJECT
 DOMAIN-SUFFIX,rdfnq.etrgovinica.si,REJECT
 DOMAIN-SUFFIX,rdhag.sansmatin.co.uk,REJECT
+DOMAIN-SUFFIX,rdipmrbwgvk.com,REJECT
 DOMAIN-SUFFIX,rdkct.kickgame.co.uk,REJECT
 DOMAIN-SUFFIX,rdkro.beistravel.com,REJECT
 DOMAIN-SUFFIX,rdllwd.gasjeans.com,REJECT
@@ -55542,6 +55535,7 @@ DOMAIN-SUFFIX,soloqmyl.tefcold.com,REJECT
 DOMAIN-SUFFIX,soloqmyl.tefcold.es,REJECT
 DOMAIN-SUFFIX,soloqmyl.tefcold.ru,REJECT
 DOMAIN-SUFFIX,soloqmyl.tefcold.sk,REJECT
+DOMAIN-SUFFIX,solsticeblack.com,REJECT
 DOMAIN-SUFFIX,solucionestech.personal.com.ar,REJECT
 DOMAIN-SUFFIX,soluclim.fr,REJECT
 DOMAIN-SUFFIX,solution911.com,REJECT
@@ -55644,6 +55638,7 @@ DOMAIN-SUFFIX,songs.newdelica.com,REJECT
 DOMAIN-SUFFIX,songsar.com,REJECT
 DOMAIN-SUFFIX,sonic-ui.highereducation.com,REJECT
 DOMAIN-SUFFIX,sonicsads.com,REJECT
+DOMAIN-SUFFIX,sonicsessions.net,REJECT
 DOMAIN-SUFFIX,soniksports.fr,REJECT
 DOMAIN-SUFFIX,sonne.helgahilft.com,REJECT
 DOMAIN-SUFFIX,sono.filhosehabitos.com.br,REJECT
@@ -65547,7 +65542,6 @@ DOMAIN-SUFFIX,stats.erik.joling.me,REJECT
 DOMAIN-SUFFIX,stats.erikkemp.eu,REJECT
 DOMAIN-SUFFIX,stats.etix.vn,REJECT
 DOMAIN-SUFFIX,stats.europe.newsweek.com,REJECT
-DOMAIN-SUFFIX,stats.externulls.com,REJECT
 DOMAIN-SUFFIX,stats.eyeviewdigital.com,REJECT
 DOMAIN-SUFFIX,stats.fairmont.com,REJECT
 DOMAIN-SUFFIX,stats.faluninfo.ba,REJECT
@@ -75353,7 +75347,6 @@ DOMAIN-SUFFIX,wdss.yeschef.dk,REJECT
 DOMAIN-SUFFIX,wdsst.body-sds.dk,REJECT
 DOMAIN-SUFFIX,wdxzlv.org,REJECT
 DOMAIN-SUFFIX,wdyfx.ltliang.com,REJECT
-DOMAIN-SUFFIX,wdziitkl.com,REJECT
 DOMAIN-SUFFIX,we-are-gamers.com,REJECT
 DOMAIN-SUFFIX,wealthsimple-dwvip.com,REJECT
 DOMAIN-SUFFIX,weapfuh.originalriver-tone.top,REJECT
