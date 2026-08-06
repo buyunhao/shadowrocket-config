@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/buyunhao/shadowrocket-config
-#!desc=Rules:79632 Created:2026-08-05 Source:GMOogway@9f2bdf3560c4f3b548ffd250c540df65f2233d57 Local@b0fef5a3b399f5cf970ceb1abed391c649c4079a Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:79642 Created:2026-08-06 Source:GMOogway@1a722c57064570d9b1d1bcd2664feece265e8bc0 Local@d9677608470aa3126f88b9ac354424d2df627c8d Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -17023,6 +17023,7 @@ DOMAIN-SUFFIX,dctracking.com,REJECT
 DOMAIN-SUFFIX,dcudi.basbleu.com,REJECT
 DOMAIN-SUFFIX,dcvri.gyalbraids.com,REJECT
 DOMAIN-SUFFIX,dd.daffodilday.org.nz,REJECT
+DOMAIN-SUFFIX,dd.l146.com,REJECT
 DOMAIN-SUFFIX,dd.reuters.com,REJECT
 DOMAIN-SUFFIX,dd47055762.df6733029c.com,REJECT
 DOMAIN-SUFFIX,dd8d422925.c114a33d0e.com,REJECT
@@ -19471,6 +19472,7 @@ DOMAIN-SUFFIX,events.herbarofficial.com,REJECT
 DOMAIN-SUFFIX,events.iap.unity3d.com,REJECT
 DOMAIN-SUFFIX,events.ifunny.co,REJECT
 DOMAIN-SUFFIX,events.jora.com,REJECT
+DOMAIN-SUFFIX,events.julephosting.de,REJECT
 DOMAIN-SUFFIX,events.just-eat.ch,REJECT
 DOMAIN-SUFFIX,events.just-eat.co.uk,REJECT
 DOMAIN-SUFFIX,events.just-eat.dk,REJECT
@@ -36021,6 +36023,7 @@ DOMAIN-SUFFIX,logs.gshopper.com,REJECT
 DOMAIN-SUFFIX,logs.ironsrc.mobi,REJECT
 DOMAIN-SUFFIX,logs.nebulahoroscope.com,REJECT
 DOMAIN-SUFFIX,logs.ntvplus.tv,REJECT
+DOMAIN-SUFFIX,logs.profi.ru,REJECT
 DOMAIN-SUFFIX,logs.sanchoikns.vn,REJECT
 DOMAIN-SUFFIX,logs.thethaovanhoa.vn,REJECT
 DOMAIN-SUFFIX,logs.tourister.ru,REJECT
@@ -46044,6 +46047,7 @@ DOMAIN-SUFFIX,rooster.cashforcolumbushouses.com,REJECT
 DOMAIN-SUFFIX,rooster.ohqcloud.com,REJECT
 DOMAIN-SUFFIX,rootau.rootlab.com.au,REJECT
 DOMAIN-SUFFIX,rootbuzz.com,REJECT
+DOMAIN-SUFFIX,ropeshippingcatchy.com,REJECT
 DOMAIN-SUFFIX,ropvea.surthrival.com,REJECT
 DOMAIN-SUFFIX,rorer.ru,REJECT
 DOMAIN-SUFFIX,rosa.floresya.co,REJECT
@@ -66428,6 +66432,7 @@ DOMAIN-SUFFIX,subot.hellobacsi.com,REJECT
 DOMAIN-SUFFIX,subs.vingd.com,REJECT
 DOMAIN-SUFFIX,subscribe.test.novonordiskajotest.com,REJECT
 DOMAIN-SUFFIX,subscribe.veracity.com,REJECT
+DOMAIN-SUFFIX,subscriberlists.com,REJECT
 DOMAIN-SUFFIX,subscribetest.veracity.com,REJECT
 DOMAIN-SUFFIX,subscription.accenturejo.adobesandbox.com,REJECT
 DOMAIN-SUFFIX,subscription.es.test.ajo.adobe.com,REJECT
@@ -66447,6 +66452,7 @@ DOMAIN-SUFFIX,success.lohfeldconsulting.com,REJECT
 DOMAIN-SUFFIX,success.meetsrp.com,REJECT
 DOMAIN-SUFFIX,success.mgmt3d.com,REJECT
 DOMAIN-SUFFIX,success.studioxerxes.com,REJECT
+DOMAIN-SUFFIX,successmenu.com,REJECT
 DOMAIN-SUFFIX,succulents.pasiora.de,REJECT
 DOMAIN-SUFFIX,suchanalytik.hideandsec.sh,REJECT
 DOMAIN-SUFFIX,suckdude.com,REJECT
@@ -68957,6 +68963,7 @@ DOMAIN-SUFFIX,tickets.mega-malle.de,REJECT
 DOMAIN-SUFFIX,ticketspy.fr,REJECT
 DOMAIN-SUFFIX,ticlewesimulate.cfd,REJECT
 DOMAIN-SUFFIX,tictoc.live,REJECT
+DOMAIN-SUFFIX,tidaldrops.com,REJECT
 DOMAIN-SUFFIX,tidebuy.com,REJECT
 DOMAIN-SUFFIX,tien8833.com,REJECT
 DOMAIN-SUFFIX,tienanhanh.com,REJECT
@@ -76278,6 +76285,7 @@ DOMAIN-SUFFIX,www.amerenallieshvac.com,REJECT
 DOMAIN-SUFFIX,www.americanresortresolutions.com,REJECT
 DOMAIN-SUFFIX,www.amintart.com,REJECT
 DOMAIN-SUFFIX,www.amomales.com,REJECT
+DOMAIN-SUFFIX,www.ampervid.com,REJECT
 DOMAIN-SUFFIX,www.anatol.com,REJECT
 DOMAIN-SUFFIX,www.androidstores.ru,REJECT
 DOMAIN-SUFFIX,www.andyhawk.free-online.co.uk,REJECT
@@ -76297,6 +76305,7 @@ DOMAIN-SUFFIX,www.aqualakefy.name,REJECT
 DOMAIN-SUFFIX,www.aramcom.space,REJECT
 DOMAIN-SUFFIX,www.area043.com,REJECT
 DOMAIN-SUFFIX,www.arfrepuestos.com,REJECT
+DOMAIN-SUFFIX,www.argesmedia.com,REJECT
 DOMAIN-SUFFIX,www.arknasasbluecross.com,REJECT
 DOMAIN-SUFFIX,www.artdualdesign.com,REJECT
 DOMAIN-SUFFIX,www.artssets.com,REJECT
@@ -76607,6 +76616,7 @@ DOMAIN-SUFFIX,www.emails.eilcompanies.com,REJECT
 DOMAIN-SUFFIX,www.emailspend.com,REJECT
 DOMAIN-SUFFIX,www.emarketmakers.com,REJECT
 DOMAIN-SUFFIX,www.empowermychild.com,REJECT
+DOMAIN-SUFFIX,www.emprenderimportaperu.com,REJECT
 DOMAIN-SUFFIX,www.energiazoque.com,REJECT
 DOMAIN-SUFFIX,www.eqarati.com,REJECT
 DOMAIN-SUFFIX,www.eremplacementparts.com,REJECT
