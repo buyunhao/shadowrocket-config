@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/buyunhao/shadowrocket-config
-#!desc=Rules:79642 Created:2026-08-06 Source:GMOogway@1a722c57064570d9b1d1bcd2664feece265e8bc0 Local@d9677608470aa3126f88b9ac354424d2df627c8d Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:79642 Created:2026-08-07 Source:GMOogway@1a722c57064570d9b1d1bcd2664feece265e8bc0 Local@5ce1d09aa255ba652bb934ff4ca168108c0d8359 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
