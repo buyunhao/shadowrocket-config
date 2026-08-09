@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/buyunhao/shadowrocket-config
-#!desc=Rules:79651 Created:2026-08-08 Source:GMOogway@643a07a7fd3dd37ce694326c0960835635665924 Local@ac59cf7cbf93a21ec30a7ae7a937112694c5804d Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:79654 Created:2026-08-09 Source:GMOogway@d95dd3f5b47adbd245f3b1f00a0b00101ea99fba Local@af90e9e1b4a293ba72ff39b635d0d67ac714fbf0 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -9740,6 +9740,7 @@ DOMAIN-SUFFIX,canadapost-postescanada.uwpackege.top,REJECT
 DOMAIN-SUFFIX,canadapost.helpdag.top,REJECT
 DOMAIN-SUFFIX,canadapost.postescanadad.xyz,REJECT
 DOMAIN-SUFFIX,canadapostarticle.com,REJECT
+DOMAIN-SUFFIX,canadaposteb.eu.cc,REJECT
 DOMAIN-SUFFIX,canadiandiscst.mywellnessoffer.com,REJECT
 DOMAIN-SUFFIX,canal.bareloja.com.br,REJECT
 DOMAIN-SUFFIX,canariajournalen.ads.ramsalt.com,REJECT
@@ -17535,6 +17536,7 @@ DOMAIN-SUFFIX,discovery-script.newspic.kr,REJECT
 DOMAIN-SUFFIX,discovery.newspic.kr,REJECT
 DOMAIN-SUFFIX,disneyholidays.fr,REJECT
 DOMAIN-SUFFIX,disorderstatus.ru,REJECT
+DOMAIN-SUFFIX,dispeldesign.com,REJECT
 DOMAIN-SUFFIX,display.digitalclickstime.com,REJECT
 DOMAIN-SUFFIX,display.lawbulletin.com,REJECT
 DOMAIN-SUFFIX,display.rtb-serve.com,REJECT
@@ -66582,6 +66584,7 @@ DOMAIN-SUFFIX,superlecker.info,REJECT
 DOMAIN-SUFFIX,superlinks4u.com,REJECT
 DOMAIN-SUFFIX,supernaturalart.com,REJECT
 DOMAIN-SUFFIX,superpromo24.de,REJECT
+DOMAIN-SUFFIX,supersedeaccolade.com,REJECT
 DOMAIN-SUFFIX,superstyle.ru,REJECT
 DOMAIN-SUFFIX,supertura.com,REJECT
 DOMAIN-SUFFIX,supiz.dosaze.com,REJECT
