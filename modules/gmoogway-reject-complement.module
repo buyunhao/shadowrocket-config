@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/buyunhao/shadowrocket-config
-#!desc=Rules:79654 Created:2026-08-09 Source:GMOogway@d95dd3f5b47adbd245f3b1f00a0b00101ea99fba Local@af90e9e1b4a293ba72ff39b635d0d67ac714fbf0 Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:79652 Created:2026-08-10 Source:GMOogway@c26cd10565b43ef24f39150d9ba439b62efd9784 Local@a75fcbaba5baae87cefcf79e84fb8d9269bab3c6 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -45306,7 +45306,6 @@ DOMAIN-SUFFIX,rdcuk.euforia.com,REJECT
 DOMAIN-SUFFIX,rdczjr.encasa.it,REJECT
 DOMAIN-SUFFIX,rdfnq.etrgovinica.si,REJECT
 DOMAIN-SUFFIX,rdhag.sansmatin.co.uk,REJECT
-DOMAIN-SUFFIX,rdipmrbwgvk.com,REJECT
 DOMAIN-SUFFIX,rdkct.kickgame.co.uk,REJECT
 DOMAIN-SUFFIX,rdkro.beistravel.com,REJECT
 DOMAIN-SUFFIX,rdllwd.gasjeans.com,REJECT
@@ -73069,7 +73068,6 @@ DOMAIN-SUFFIX,umguf.samialert.com,REJECT
 DOMAIN-SUFFIX,umlkp.snydersfurniture.com,REJECT
 DOMAIN-SUFFIX,umlvbe.rucipello.com,REJECT
 DOMAIN-SUFFIX,umnoho.bazaarmall.co.kr,REJECT
-DOMAIN-SUFFIX,umommy.cyou,REJECT
 DOMAIN-SUFFIX,umphek.com,REJECT
 DOMAIN-SUFFIX,umuiz.heritagecares.com,REJECT
 DOMAIN-SUFFIX,umvhu.mycalmi.com,REJECT
