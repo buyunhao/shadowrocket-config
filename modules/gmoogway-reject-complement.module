@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/buyunhao/shadowrocket-config
-#!desc=Rules:79971 Created:2026-08-12 Source:GMOogway@6a915f0e5b9f287ac07f722223028b416e918b77 Local@e884840bb04ee220ab452d3c9e91a887871d3d6a Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:79980 Created:2026-08-13 Source:GMOogway@c2f9922279b53e8d20d78ac23e713ff7bd541a7c Local@bbc01187f6d43a1a95a254ce4c46888f539284bc Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -10244,6 +10244,7 @@ DOMAIN-SUFFIX,car.walltouchbd.com,REJECT
 DOMAIN-SUFFIX,car21.net.home24.de,REJECT
 DOMAIN-SUFFIX,car40.net.home24.de,REJECT
 DOMAIN-SUFFIX,carac-terres.fr,REJECT
+DOMAIN-SUFFIX,carbonatix.com,REJECT
 DOMAIN-SUFFIX,carconnectpro-ss.checkoutera.com,REJECT
 DOMAIN-SUFFIX,card-tindung-vp.com,REJECT
 DOMAIN-SUFFIX,card-tindung.com,REJECT
@@ -10441,6 +10442,7 @@ DOMAIN-SUFFIX,ccleaner.fr,REJECT
 DOMAIN-SUFFIX,ccllt.fromrebel.ca,REJECT
 DOMAIN-SUFFIX,ccnku.meibi.mx,REJECT
 DOMAIN-SUFFIX,ccnnetwork.co,REJECT
+DOMAIN-SUFFIX,ccnsad.com,REJECT
 DOMAIN-SUFFIX,ccpmo.com,REJECT
 DOMAIN-SUFFIX,ccqhzj.kilamobler.se,REJECT
 DOMAIN-SUFFIX,ccrdms.butopea.com,REJECT
@@ -43994,6 +43996,7 @@ DOMAIN-SUFFIX,poundporter.best,REJECT
 DOMAIN-SUFFIX,pourcentfilers.com,REJECT
 DOMAIN-SUFFIX,pouy99uo.com,REJECT
 DOMAIN-SUFFIX,povtbi.automovilesalhambra.es,REJECT
+DOMAIN-SUFFIX,powderencouraged.com,REJECT
 DOMAIN-SUFFIX,power.dj.studio,REJECT
 DOMAIN-SUFFIX,power.impulsionadelivery.com.br,REJECT
 DOMAIN-SUFFIX,power.offgridpowerstation.nl,REJECT
@@ -45215,6 +45218,7 @@ DOMAIN-SUFFIX,quickbrowsersearch.com,REJECT
 DOMAIN-SUFFIX,quickchess.fr,REJECT
 DOMAIN-SUFFIX,quickfilmz.com,REJECT
 DOMAIN-SUFFIX,quicksaledeal.su,REJECT
+DOMAIN-SUFFIX,quicktattoo.com,REJECT
 DOMAIN-SUFFIX,quickvayorg.com,REJECT
 DOMAIN-SUFFIX,quiddity.goguardian.com,REJECT
 DOMAIN-SUFFIX,quietyellowday.com,REJECT
@@ -74188,6 +74192,7 @@ DOMAIN-SUFFIX,vebed.tennibot.com,REJECT
 DOMAIN-SUFFIX,vebo123.vip,REJECT
 DOMAIN-SUFFIX,vebo1s.co,REJECT
 DOMAIN-SUFFIX,vebo8386.me,REJECT
+DOMAIN-SUFFIX,vectorshirt.com,REJECT
 DOMAIN-SUFFIX,veersantrealestate.dubaii.me,REJECT
 DOMAIN-SUFFIX,vefgg.katespade.com,REJECT
 DOMAIN-SUFFIX,vegabet.net,REJECT
@@ -74662,6 +74667,7 @@ DOMAIN-SUFFIX,vinkelvej12.dk,REJECT
 DOMAIN-SUFFIX,vinoscout.fr,REJECT
 DOMAIN-SUFFIX,vinpearl1.vingroupsny.com,REJECT
 DOMAIN-SUFFIX,vins-bourgorne.fr,REJECT
+DOMAIN-SUFFIX,violetdemise.com,REJECT
 DOMAIN-SUFFIX,vioturallis.com,REJECT
 DOMAIN-SUFFIX,viowyf.khaiafi.com,REJECT
 DOMAIN-SUFFIX,vioxx.1.p2l.info,REJECT
@@ -76594,12 +76600,14 @@ DOMAIN-SUFFIX,www.backingguitar.garden,REJECT
 DOMAIN-SUFFIX,www.bahartonu.com,REJECT
 DOMAIN-SUFFIX,www.baiakstyle.com,REJECT
 DOMAIN-SUFFIX,www.balassst.com,REJECT
+DOMAIN-SUFFIX,www.ballarddesighs.com,REJECT
 DOMAIN-SUFFIX,www.balnakiel.plus.com,REJECT
 DOMAIN-SUFFIX,www.bandexperts.com,REJECT
 DOMAIN-SUFFIX,www.bangbuddy.com,REJECT
 DOMAIN-SUFFIX,www.banghra.com,REJECT
 DOMAIN-SUFFIX,www.bankofcounty.com,REJECT
 DOMAIN-SUFFIX,www.bannerbackup.com,REJECT
+DOMAIN-SUFFIX,www.banyotoptansatis.com,REJECT
 DOMAIN-SUFFIX,www.bar.ry2002.02-ry014.snpr.hotmx.hair.zaam.net,REJECT
 DOMAIN-SUFFIX,www.barjacity.com,REJECT
 DOMAIN-SUFFIX,www.basealloys.com,REJECT
@@ -76694,6 +76702,7 @@ DOMAIN-SUFFIX,www.caramail.com,REJECT
 DOMAIN-SUFFIX,www.careertake.com,REJECT
 DOMAIN-SUFFIX,www.carehigher.com,REJECT
 DOMAIN-SUFFIX,www.carolmassoterapia.com,REJECT
+DOMAIN-SUFFIX,www.casamaticoecu.com,REJECT
 DOMAIN-SUFFIX,www.cashcapitalsystem.com,REJECT
 DOMAIN-SUFFIX,www.casinorankerhub.com,REJECT
 DOMAIN-SUFFIX,www.casinostarluck.net,REJECT
