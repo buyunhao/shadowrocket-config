@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/buyunhao/shadowrocket-config
-#!desc=Rules:79975 Created:2026-08-14 Source:GMOogway@3d0a9fd747ea583c5c69241e826d74c1fb94747c Local@67b14f721a13f897bc297a12aa950e69a3fa558f Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:79981 Created:2026-08-15 Source:GMOogway@48ca16f1f8b123732696085164ad5ef1987c2df5 Local@4f4009f11aa69f88c2f0b22c91759b0b861f2edb Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -8389,6 +8389,7 @@ DOMAIN-SUFFIX,beacon.gtv-pub.com,REJECT
 DOMAIN-SUFFIX,beacon.gutefrage.net,REJECT
 DOMAIN-SUFFIX,beacon.indieclicktv.com,REJECT
 DOMAIN-SUFFIX,beacon.itmedia.jp,REJECT
+DOMAIN-SUFFIX,beacon.joinlede.com,REJECT
 DOMAIN-SUFFIX,beacon.lycos.com,REJECT
 DOMAIN-SUFFIX,beacon.nc-net.or.jp,REJECT
 DOMAIN-SUFFIX,beacon.necotracks.jp,REJECT
@@ -19820,6 +19821,7 @@ DOMAIN-SUFFIX,ezodn.com,REJECT
 DOMAIN-SUFFIX,ezoeyd.planetahuerto.pt,REJECT
 DOMAIN-SUFFIX,ezofv.gesundheit-der-frau.com,REJECT
 DOMAIN-SUFFIX,ezoicanalytics.com,REJECT
+DOMAIN-SUFFIX,ezojs.com,REJECT
 DOMAIN-SUFFIX,ezpls.wearerasa.com,REJECT
 DOMAIN-SUFFIX,ezra-il.com,REJECT
 DOMAIN-SUFFIX,ezrcd.uniforms4healthcare.com,REJECT
@@ -31019,6 +31021,7 @@ DOMAIN-SUFFIX,lineare.net,REJECT
 DOMAIN-SUFFIX,lineartechnik.item24.de,REJECT
 DOMAIN-SUFFIX,lineoflife.ru,REJECT
 DOMAIN-SUFFIX,ling.ibcppsicanalise.com.br,REJECT
+DOMAIN-SUFFIX,ling.willowmovies.com,REJECT
 DOMAIN-SUFFIX,lingintirejohny.club,REJECT
 DOMAIN-SUFFIX,lingospot.com,REJECT
 DOMAIN-SUFFIX,linicom.co.il,REJECT
@@ -36516,6 +36519,7 @@ DOMAIN-SUFFIX,lust-girls.com,REJECT
 DOMAIN-SUFFIX,lustygg.com,REJECT
 DOMAIN-SUFFIX,lusupodum.com,REJECT
 DOMAIN-SUFFIX,luttc.erogenos.com,REJECT
+DOMAIN-SUFFIX,luugy.com,REJECT
 DOMAIN-SUFFIX,luuib.sillysanta.se,REJECT
 DOMAIN-SUFFIX,luutf.longtermdenials.com,REJECT
 DOMAIN-SUFFIX,luuvanquang.com,REJECT
@@ -66304,7 +66308,6 @@ DOMAIN-SUFFIX,store.insafbookhouse.com,REJECT
 DOMAIN-SUFFIX,store.litebite.ae,REJECT
 DOMAIN-SUFFIX,store.penryair.com,REJECT
 DOMAIN-SUFFIX,store.tryravine.com,REJECT
-DOMAIN-SUFFIX,store4porn.com,REJECT
 DOMAIN-SUFFIX,storebinzdapoet.shop,REJECT
 DOMAIN-SUFFIX,storehaiyen.com,REJECT
 DOMAIN-SUFFIX,storelive.co,REJECT
@@ -76745,6 +76748,7 @@ DOMAIN-SUFFIX,www.cloudverge.uk,REJECT
 DOMAIN-SUFFIX,www.clovercraftshop.com,REJECT
 DOMAIN-SUFFIX,www.clubplanning.com,REJECT
 DOMAIN-SUFFIX,www.coconutsport.com,REJECT
+DOMAIN-SUFFIX,www.colleyvillepapershredding.com,REJECT
 DOMAIN-SUFFIX,www.combinebasic.com,REJECT
 DOMAIN-SUFFIX,www.commitlacrossecamps.com,REJECT
 DOMAIN-SUFFIX,www.communications.kra.go.ke,REJECT
@@ -79178,6 +79182,7 @@ DOMAIN-SUFFIX,yeahmobi.com,REJECT
 DOMAIN-SUFFIX,yeastinfectioncurehq.foolhardywear.pro,REJECT
 DOMAIN-SUFFIX,yeesshh.com,REJECT
 DOMAIN-SUFFIX,yelads2.life,REJECT
+DOMAIN-SUFFIX,yellowscissors.com,REJECT
 DOMAIN-SUFFIX,yepcag.mrmarvis.fr,REJECT
 DOMAIN-SUFFIX,yerbalist.31cannabis.com,REJECT
 DOMAIN-SUFFIX,yerbalist.420.com,REJECT
@@ -79521,6 +79526,7 @@ DOMAIN-SUFFIX,zamok911.com,REJECT
 DOMAIN-SUFFIX,zamxcn.dmall.co.kr,REJECT
 DOMAIN-SUFFIX,zanaflex.1.p2l.info,REJECT
 DOMAIN-SUFFIX,zannv.wearfigs.com,REJECT
+DOMAIN-SUFFIX,zanyapps.com,REJECT
 DOMAIN-SUFFIX,zap.cdn.zynga.com,REJECT
 DOMAIN-SUFFIX,zapadserver1.com,REJECT
 DOMAIN-SUFFIX,zapbox.ru,REJECT
