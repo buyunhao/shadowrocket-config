@@ -9,14 +9,14 @@
 # Source project: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
 # Source file: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list
 # Source version: 1.7.6-release
-# Source updated: 2026-07-27 01:45:52 UTC+8
-# Source-ETag: a60b45e36989ebfb74088bfe507c58d212eaaa944c51ba80d2c208698e64c297
-# Source-SHA256: c66cb32629a578e5d412ac3d461304cef969d37ea352e13cd3eb4ef8a9f62b69
+# Source updated: 2026-08-20 11:45:33 UTC+8
+# Source-ETag: ba2e88934afd07aba3b261d09e0bdd39a31cc8d541ce10fbbf98a6fb67d53c21
+# Source-SHA256: e7466e9ad3047e4ebf64be7594ae89aa4e9615cecc4a9d02ac4a24e004943b7a
 # Source license: GPL-3.0 (https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE)
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall DOMAIN-SUFFIX or DOMAIN-KEYWORD rule are omitted.
-# Source rules: 903
-# Imported rules: 769 (753 DOMAIN, 5 DOMAIN-KEYWORD, 11 DOMAIN-SUFFIX).
+# Source rules: 902
+# Imported rules: 768 (753 DOMAIN, 5 DOMAIN-KEYWORD, 10 DOMAIN-SUFFIX).
 
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
@@ -777,7 +777,6 @@ DOMAIN-SUFFIX,ad.gameley.com
 DOMAIN-SUFFIX,adintl.cn
 DOMAIN-SUFFIX,adx.adwangmai.com
 DOMAIN-SUFFIX,data.hicloud.com
-DOMAIN-SUFFIX,log.aliyuncs.com
 DOMAIN-SUFFIX,ubixioe.com
 DOMAIN-SUFFIX,vlion.cn
 DOMAIN-SUFFIX,yfanads.com
@@ -801,7 +800,7 @@ DOMAIN-KEYWORD,-normal.zijieapi.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 100389
-# Imported rules: 55519 DOMAIN-SUFFIX.
+# Imported rules: 55520 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -4721,6 +4720,7 @@ DOMAIN-SUFFIX,acjs.aliyun.com
 DOMAIN-SUFFIX,beacon-api.aliyuncs.com
 DOMAIN-SUFFIX,cdn-ads.oss-cn-shanghai.aliyuncs.com
 DOMAIN-SUFFIX,daxiu01.oss-accelerate.aliyuncs.com
+DOMAIN-SUFFIX,log.aliyuncs.com
 DOMAIN-SUFFIX,nlmrjnew.oss-cn-shanghai.aliyuncs.com
 DOMAIN-SUFFIX,www5.oss-cn-hangzhou.aliyuncs.com
 DOMAIN-SUFFIX,xpjcg.oss-accelerate.aliyuncs.com
