@@ -800,7 +800,7 @@ DOMAIN-KEYWORD,-normal.zijieapi.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 100389
-# Imported rules: 55520 DOMAIN-SUFFIX.
+# Imported rules: 55529 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -2878,6 +2878,7 @@ DOMAIN-SUFFIX,absolstats.co.za
 DOMAIN-SUFFIX,metrics.absolute.com
 DOMAIN-SUFFIX,smetrics.absolute.com
 DOMAIN-SUFFIX,marketing2.absolutelybryce.com
+DOMAIN-SUFFIX,absolutering.com
 DOMAIN-SUFFIX,metrics.absolutetotalcare.com
 DOMAIN-SUFFIX,smetrics.absolutetotalcare.com
 DOMAIN-SUFFIX,stat.absolutist.com
@@ -7616,6 +7617,7 @@ DOMAIN-SUFFIX,yourhealth.bassetthealthnews.org
 DOMAIN-SUFFIX,tr.newsletter.bassins-a-flot.fr
 DOMAIN-SUFFIX,omni.basspro.com
 DOMAIN-SUFFIX,omnis.basspro.com
+DOMAIN-SUFFIX,bastingart.com
 DOMAIN-SUFFIX,marketing.basyspro.com
 DOMAIN-SUFFIX,tr.news.pl.bata-esp.com
 DOMAIN-SUFFIX,batch.com
@@ -8337,6 +8339,7 @@ DOMAIN-SUFFIX,a.bigtennetwork.com
 DOMAIN-SUFFIX,bigtracker.com
 DOMAIN-SUFFIX,bvexmf.bigtv.ru
 DOMAIN-SUFFIX,bigwetbrush.com
+DOMAIN-SUFFIX,bigworldfashion.com
 DOMAIN-SUFFIX,webstats.bijenpatel.com
 DOMAIN-SUFFIX,analitik.bik.gov.tr
 DOMAIN-SUFFIX,x.bikaer.com
@@ -26771,6 +26774,7 @@ DOMAIN-SUFFIX,xmqrvx.jewelry-queen-shop.com
 DOMAIN-SUFFIX,jewelryedu.cn
 DOMAIN-SUFFIX,oabnmx.jewelryexchange.com
 DOMAIN-SUFFIX,jewelryforest.com
+DOMAIN-SUFFIX,jewelrysprings.com
 DOMAIN-SUFFIX,jewishadgroup.com
 DOMAIN-SUFFIX,jewishcontentnetwork.com
 DOMAIN-SUFFIX,ehauzf.jewlr.ca
@@ -27905,6 +27909,7 @@ DOMAIN-SUFFIX,solutions.kep-technologies.com
 DOMAIN-SUFFIX,kepler-37b.com
 DOMAIN-SUFFIX,images.portal.keppelelectric.com
 DOMAIN-SUFFIX,keqii.com
+DOMAIN-SUFFIX,kernellife.com
 DOMAIN-SUFFIX,analytics.kerns.co
 DOMAIN-SUFFIX,app.kernwerk.de
 DOMAIN-SUFFIX,smetrics.kerry.com
@@ -36615,6 +36620,7 @@ DOMAIN-SUFFIX,response.optimummedical.co.uk
 DOMAIN-SUFFIX,optinly.net
 DOMAIN-SUFFIX,optinmonster.com
 DOMAIN-SUFFIX,marketing.optionmetrics.com
+DOMAIN-SUFFIX,optionsnomad.com
 DOMAIN-SUFFIX,sstats.optionsxpress.com
 DOMAIN-SUFFIX,marketing.optis-world.com
 DOMAIN-SUFFIX,optistats.ovh
@@ -37335,6 +37341,7 @@ DOMAIN-SUFFIX,app.partnerboost.com
 DOMAIN-SUFFIX,smetrics.partnerbrands.com
 DOMAIN-SUFFIX,partnercash.com
 DOMAIN-SUFFIX,partnerearning.com
+DOMAIN-SUFFIX,partnerhut.com
 DOMAIN-SUFFIX,smetrics.partnermastercard.com
 DOMAIN-SUFFIX,partnermax.de
 DOMAIN-SUFFIX,partnermcafee.com
@@ -41649,6 +41656,7 @@ DOMAIN-SUFFIX,rnet.plus
 DOMAIN-SUFFIX,rng-snp-003.com
 DOMAIN-SUFFIX,rnlabs.com
 DOMAIN-SUFFIX,jdgtgb.rnz.de
+DOMAIN-SUFFIX,roaddynamics.com
 DOMAIN-SUFFIX,promo.roadie.com
 DOMAIN-SUFFIX,roadsagain.com
 DOMAIN-SUFFIX,roamhousing.com
@@ -53959,6 +53967,7 @@ DOMAIN-SUFFIX,ad.wretch.cc
 DOMAIN-SUFFIX,wretchedfloor.com
 DOMAIN-SUFFIX,axp.wric.com
 DOMAIN-SUFFIX,marketing.wrightimc.com
+DOMAIN-SUFFIX,writerhubs.com
 DOMAIN-SUFFIX,writewealth.com
 DOMAIN-SUFFIX,writingcalls.com
 DOMAIN-SUFFIX,writingfort.com
