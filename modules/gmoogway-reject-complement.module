@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:99981 Created:2026-08-23 Source:GMOogway@fd0762e657df5fbee7db8e6542525725cb0b179c Local@692e2450e93937dbb9e8ca8981fc0f36ed8187fa Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:99984 Created:2026-08-24 Source:GMOogway@56b30d9364545ab1029ae71cfbc1699c0236a318 Local@8eab8a2c2df5a59688b4dbf277dd64c8dd4a4d52 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -181,6 +181,7 @@ DOMAIN-SUFFIX,1xsultan.com,REJECT
 DOMAIN-SUFFIX,1xwkhcsp3s5.vqsave.ommasign.com,REJECT
 DOMAIN-SUFFIX,1z.x2yf75rzmg8w6mxt73it.cyou,REJECT
 DOMAIN-SUFFIX,2.amssurveys.co.uk,REJECT
+DOMAIN-SUFFIX,2.maaqkj.com,REJECT
 DOMAIN-SUFFIX,2.marketbanker.com,REJECT
 DOMAIN-SUFFIX,2.speedknow.co,REJECT
 DOMAIN-SUFFIX,2000greetings.com,REJECT
@@ -15353,6 +15354,7 @@ DOMAIN-SUFFIX,d1hfbz0n5yb6ym.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1i2v9a8xom2hy.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1i64ia3gj0ol1.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1j5bhx6uel4km.cloudfront.net,REJECT
+DOMAIN-SUFFIX,d1jbmblqtpfad4.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1jl096lp4cce0.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1k0glcmk0b5rb.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1k3dpebxhgqjc.cloudfront.net,REJECT
@@ -20848,6 +20850,7 @@ DOMAIN-SUFFIX,digitalmarketing.thalesgroup.com,REJECT
 DOMAIN-SUFFIX,digitalninjas.vattenfall.nl,REJECT
 DOMAIN-SUFFIX,digitaltestestate.peet.com.au,REJECT
 DOMAIN-SUFFIX,digitfoto.fr,REJECT
+DOMAIN-SUFFIX,digitizedcopy.com,REJECT
 DOMAIN-SUFFIX,dihiv.kloraneusa.com,REJECT
 DOMAIN-SUFFIX,dii1.bitiba.ch,REJECT
 DOMAIN-SUFFIX,dii2.bitiba.com,REJECT
