@@ -800,7 +800,7 @@ DOMAIN-KEYWORD,-normal.zijieapi.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 100194
-# Imported rules: 55552 DOMAIN-SUFFIX.
+# Imported rules: 55554 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -1182,6 +1182,7 @@ DOMAIN-SUFFIX,17un.com
 DOMAIN-SUFFIX,e.17w3a.cn
 DOMAIN-SUFFIX,m.17w3a.cn
 DOMAIN-SUFFIX,exp.17wo.cn
+DOMAIN-SUFFIX,dm.17xuexiba.com
 DOMAIN-SUFFIX,17youzi.com
 DOMAIN-SUFFIX,17zhaole.com
 DOMAIN-SUFFIX,17zheng.cn
@@ -31084,6 +31085,7 @@ DOMAIN-SUFFIX,images.connect.mandiant.com
 DOMAIN-SUFFIX,adat.mandiner.hu
 DOMAIN-SUFFIX,data.manga-passion.de
 DOMAIN-SUFFIX,utiq.manga-viewer.com
+DOMAIN-SUFFIX,mangabolt.com
 DOMAIN-SUFFIX,s3-nl-01.mangabuddy.in
 DOMAIN-SUFFIX,aiieer.mangnut2.com
 DOMAIN-SUFFIX,tr.info.mango-mobilites.fr
