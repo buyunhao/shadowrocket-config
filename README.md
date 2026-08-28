@@ -2,8 +2,6 @@
 
 一份用于 Shadowrocket 的个人分流配置，主要面向中国大陆网络环境下的日常使用场景，重点关注国内外流量分流、DNS 稳定性、Apple 服务可用性，以及 iMessage / FaceTime / iCloud 等服务的连接体验。
 
-仓库地址：<https://gitee.com/boyunhao/shadowrocket-config.git>
-
 ## 配置目标
 
 - 国内常用网站和服务尽量直连，降低延迟。
@@ -48,13 +46,13 @@ Johnshall 主规则，以及 `adblock-custom.list` 中受标记管理的 AWAvenu
 基于移动端基础配置叠加广告域名/IP 拒绝规则，订阅地址：
 
 ```text
-https://gitee.com/boyunhao/shadowrocket-config/raw/main/shadowrocket_gpt_maintain-mobile-adblock.conf
+https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/shadowrocket_gpt_maintain-mobile-adblock.conf
 ```
 
 广告规则集地址：
 
 ```text
-https://gitee.com/boyunhao/shadowrocket-config/raw/main/rules/adblock.list
+https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/rules/adblock.list
 ```
 
 `rules/adblock.list` 由 `scripts/sync_johnshall_adblock.py` 从
@@ -111,13 +109,13 @@ python3 scripts/sync_johnshall_adblock.py
 不需要代理服务、只希望使用 Shadowrocket 本地规则拦截功能的设备，应导入以下基础配置：
 
 ```text
-https://gitee.com/boyunhao/shadowrocket-config/raw/main/shadowrocket_adblock-only.conf
+https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/shadowrocket_adblock-only.conf
 ```
 
 并安装以下远程模块：
 
 ```text
-https://gitee.com/boyunhao/shadowrocket-config/raw/main/modules/adblock-only-combined.module
+https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/modules/adblock-only-combined.module
 ```
 
 基础配置不包含 `PROXY` 策略、代理节点、MITM、脚本或 URL Rewrite；模块只包含

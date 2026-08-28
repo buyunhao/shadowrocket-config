@@ -60,8 +60,8 @@ DEFAULT_EXCEPTIONS_LIST = REPO_ROOT / "rules" / "adblock-exceptions.list"
 DEFAULT_BASE_CONFIG = REPO_ROOT / "shadowrocket_gpt_maintain-mobile.conf"
 DEFAULT_ADBLOCK_CONFIG = REPO_ROOT / "shadowrocket_gpt_maintain-mobile-adblock.conf"
 ADBLOCK_RULE_URL = (
-    "https://gitee.com/boyunhao/shadowrocket-config/"
-    "raw/main/rules/adblock.list"
+    "https://raw.githubusercontent.com/buyunhao/shadowrocket-config/"
+    "main/rules/adblock.list"
 )
 ADBLOCK_RULE = f"RULE-SET,{ADBLOCK_RULE_URL},REJECT"
 AWAVENUE_BLOCK_BEGIN = "# BEGIN AUTO-GENERATED AWAvenue RULES"
