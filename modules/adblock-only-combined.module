@@ -1,12 +1,12 @@
 #!name=Adblock-only combined
-#!homepage=https://github.com/buyunhao/shadowrocket-config
+#!homepage=https://gitee.com/boyunhao/shadowrocket-config
 #!desc=Rules:194923 Adblock:115313 GMOogway:80156 Retained:79610 Covered:546
 #!adblock-sha256=380538ca1c0f3b8307739814e4d62c2d4ff1388cea873a2e7a1374a8c88bffbf
 #!gmoogway-source=699c38322ce5ca2b191e68367be01df29b6042ad
 #!gmoogway-module-sha256=1eee0d41bc9813e19fb17ffea8f5627d39984be7244da82315fc9e443efc5934
 #!sources=Johnshall, AWAvenue, anti-AD, GMOogway/shadowrocket-rules
 #!licenses=CC-BY-SA-4.0, GPL-3.0, MIT, GPL-3.0
-#!base-config=https://raw.githubusercontent.com/buyunhao/shadowrocket-config/main/shadowrocket_adblock-only.conf
+#!base-config=https://gitee.com/boyunhao/shadowrocket-config/raw/main/shadowrocket_adblock-only.conf
 #!policy=REJECT only; unmatched traffic stays direct through the base config
 [Rule]
 DOMAIN-SUFFIX,ad.12306.cn,REJECT

@@ -16,10 +16,10 @@ DEFAULT_COMPLEMENT_MODULE = (
     REPO_ROOT / "modules" / "gmoogway-reject-complement.module"
 )
 DEFAULT_OUTPUT_MODULE = REPO_ROOT / "modules" / "adblock-only-combined.module"
-HOMEPAGE = "https://github.com/buyunhao/shadowrocket-config"
+HOMEPAGE = "https://gitee.com/boyunhao/shadowrocket-config"
 BASE_CONFIG_URL = (
-    "https://raw.githubusercontent.com/buyunhao/shadowrocket-config/"
-    "main/shadowrocket_adblock-only.conf"
+    "https://gitee.com/boyunhao/shadowrocket-config/"
+    "raw/main/shadowrocket_adblock-only.conf"
 )
 ALLOWED_ADBLOCK_RULE_TYPES = {
     "DOMAIN",
