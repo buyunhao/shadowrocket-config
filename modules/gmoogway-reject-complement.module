@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:100064 Created:2026-09-05 Source:GMOogway@f61dc07dd92f47551584159a475aec39672340d1 Local@b3ecd8a174641dc1aef0e120dd739c9a906b30ec Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:100065 Created:2026-09-06 Source:GMOogway@2337615bd6742faf725b6af147062ce94deff916 Local@e6caaeb64023953dafa8cd7047a74923b8160778 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -7873,7 +7873,6 @@ DOMAIN-SUFFIX,askto.net,REJECT
 DOMAIN-SUFFIX,askubal.fr,REJECT
 DOMAIN-SUFFIX,aslkv.yarn.com,REJECT
 DOMAIN-SUFFIX,aslscc.globehunters.ie,REJECT
-DOMAIN-SUFFIX,aslucian.cyou,REJECT
 DOMAIN-SUFFIX,asmail.renkim.com,REJECT
 DOMAIN-SUFFIX,asmanmart.asmanmart.com,REJECT
 DOMAIN-SUFFIX,asmassets.mtvnservices.com,REJECT
@@ -25067,7 +25066,6 @@ DOMAIN-SUFFIX,fizzclean-ss.offeroshop.com,REJECT
 DOMAIN-SUFFIX,fjakau.innonature.eu,REJECT
 DOMAIN-SUFFIX,fjbwjb.amoils.com,REJECT
 DOMAIN-SUFFIX,fjbzf.slickhair.com,REJECT
-DOMAIN-SUFFIX,fjcgyzakpsskx.space,REJECT
 DOMAIN-SUFFIX,fjemeg.drim.es,REJECT
 DOMAIN-SUFFIX,fjetd.wilko.com,REJECT
 DOMAIN-SUFFIX,fjfpl.echosales.ca,REJECT
@@ -25661,7 +25659,6 @@ DOMAIN-SUFFIX,frtyi.com,REJECT
 DOMAIN-SUFFIX,frtyo.com,REJECT
 DOMAIN-SUFFIX,fructa.nl,REJECT
 DOMAIN-SUFFIX,frugraoqlo.com,REJECT
-DOMAIN-SUFFIX,fruiterporchesmaple.cfd,REJECT
 DOMAIN-SUFFIX,fruitlauncher.com,REJECT
 DOMAIN-SUFFIX,fruity.redpitaya.com,REJECT
 DOMAIN-SUFFIX,frus.alforce.shop,REJECT
@@ -34831,6 +34828,7 @@ DOMAIN-SUFFIX,hyena.fershad.com,REJECT
 DOMAIN-SUFFIX,hyena.kitafund.com,REJECT
 DOMAIN-SUFFIX,hyena.m1guelpf.blog,REJECT
 DOMAIN-SUFFIX,hyena.wearegray.co,REJECT
+DOMAIN-SUFFIX,hyhrqbdxmjtjvc.com,REJECT
 DOMAIN-SUFFIX,hymjlc.360cashmere.com,REJECT
 DOMAIN-SUFFIX,hynjc.spacecampwellness.com,REJECT
 DOMAIN-SUFFIX,hyper-boundary-gate.net.mydays.de,REJECT
@@ -39194,6 +39192,7 @@ DOMAIN-SUFFIX,ljevv.dermeleve.com,REJECT
 DOMAIN-SUFFIX,ljfii.alepel.com,REJECT
 DOMAIN-SUFFIX,ljhoc.destify.com,REJECT
 DOMAIN-SUFFIX,ljjskttqximu.in,REJECT
+DOMAIN-SUFFIX,ljmdffrtnyzpe.site,REJECT
 DOMAIN-SUFFIX,ljnhu.natureflow-pets.com,REJECT
 DOMAIN-SUFFIX,ljrgbx.charleselie94.fr,REJECT
 DOMAIN-SUFFIX,ljryik.bewithyou.jp,REJECT
@@ -53670,6 +53669,7 @@ DOMAIN-SUFFIX,passportindex.fr,REJECT
 DOMAIN-SUFFIX,passpport.com,REJECT
 DOMAIN-SUFFIX,passt.cleens.co.uk,REJECT
 DOMAIN-SUFFIX,pastesbin.com,REJECT
+DOMAIN-SUFFIX,pastlerduscleswiper.cyou,REJECT
 DOMAIN-SUFFIX,path.americansavinghacks.com,REJECT
 DOMAIN-SUFFIX,path.autosavingsusa.com,REJECT
 DOMAIN-SUFFIX,path.financesaverstoday.com,REJECT
@@ -55640,7 +55640,6 @@ DOMAIN-SUFFIX,pvwfz.tonimay.com.au,REJECT
 DOMAIN-SUFFIX,pwdplz.com,REJECT
 DOMAIN-SUFFIX,pwfkn.thepopcornfactory.com,REJECT
 DOMAIN-SUFFIX,pwfwng.doncarlosresort.com,REJECT
-DOMAIN-SUFFIX,pwfyctstfkhcz.space,REJECT
 DOMAIN-SUFFIX,pwirmg.supernurse.co.jp,REJECT
 DOMAIN-SUFFIX,pwjiov.certideal.es,REJECT
 DOMAIN-SUFFIX,pwk.tweedekamer.nl,REJECT
@@ -84204,6 +84203,7 @@ DOMAIN-SUFFIX,success.lohfeldconsulting.com,REJECT
 DOMAIN-SUFFIX,success.meetsrp.com,REJECT
 DOMAIN-SUFFIX,success.mgmt3d.com,REJECT
 DOMAIN-SUFFIX,success.studioxerxes.com,REJECT
+DOMAIN-SUFFIX,successoutcome.com,REJECT
 DOMAIN-SUFFIX,succulents.pasiora.de,REJECT
 DOMAIN-SUFFIX,suchanalytik.hideandsec.sh,REJECT
 DOMAIN-SUFFIX,suckdude.com,REJECT
@@ -84309,6 +84309,7 @@ DOMAIN-SUFFIX,sun.sunnahersopan.com,REJECT
 DOMAIN-SUFFIX,sunburgh.com,REJECT
 DOMAIN-SUFFIX,suncitykhuyenmai.click,REJECT
 DOMAIN-SUFFIX,sunfarm.net,REJECT
+DOMAIN-SUFFIX,sunflaggroup.com,REJECT
 DOMAIN-SUFFIX,sunhe.jinr.ru,REJECT
 DOMAIN-SUFFIX,sunmaker.com,REJECT
 DOMAIN-SUFFIX,sunmedia.tv,REJECT
