@@ -9,14 +9,14 @@
 # Source project: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
 # Source file: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list
 # Source version: 1.7.6-release
-# Source updated: 2026-09-08 21:10:07 UTC+8
-# Source-ETag: d0bd0310c78ab4e6badaf686a3ade30b55c5e9945cf2cbddd6b5e8315c487693
-# Source-SHA256: 984a16c0c68bfb31822e493ce3012bd923c88592d26e2ba864be21160530acc9
+# Source updated: 2026-09-09 23:35:30 UTC+8
+# Source-ETag: 339fc178610e15b72a404b7d0f98af0e1d011811cdb5811245fc5491d05216b1
+# Source-SHA256: 1546582998dd8fb0e49795ad47e35c89211089bcf798b4f71c865bf3b2b5ee71
 # Source license: GPL-3.0 (https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE)
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall DOMAIN-SUFFIX or DOMAIN-KEYWORD rule are omitted.
-# Source rules: 948
-# Imported rules: 809 (792 DOMAIN, 5 DOMAIN-KEYWORD, 12 DOMAIN-SUFFIX).
+# Source rules: 952
+# Imported rules: 813 (797 DOMAIN, 4 DOMAIN-KEYWORD, 12 DOMAIN-SUFFIX).
 
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
@@ -56,7 +56,6 @@ DOMAIN,ad.shunchangzhixing.com
 DOMAIN,ad.tencentmusic.com
 DOMAIN,ad.toutiao.com
 DOMAIN,ad.v3mh.com
-DOMAIN,ad.weibo.com
 DOMAIN,ad.winrar.com.cn
 DOMAIN,ad.ximalaya.com
 DOMAIN,ad.xunkids.com
@@ -84,9 +83,11 @@ DOMAIN,adimg.uve.weibo.com
 DOMAIN,adjust.cn
 DOMAIN,adks.hpplay.cn
 DOMAIN,adlink-api.huan.tv
+DOMAIN,adlog.vivo.com.cn
 DOMAIN,adm.funshion.com
 DOMAIN,admarketing.yahoo.net
 DOMAIN,admobile.top
+DOMAIN,adreq.vivo.com.cn
 DOMAIN,ads-api-o.api.leiniao.com
 DOMAIN,ads-api.tiktok.com
 DOMAIN,ads-api.twitter.com
@@ -181,7 +182,9 @@ DOMAIN,adx.appsdk.com.cn
 DOMAIN,adx.sogaha.cn
 DOMAIN,adx.tuia.cn
 DOMAIN,adxlog-adnet.vivo.com.cn
+DOMAIN,adxlog.vivo.com.cn
 DOMAIN,adxserver.ad.cmvideo.cn
+DOMAIN,adxstatic.vivo.com.cn
 DOMAIN,aegis.qq.com
 DOMAIN,aem.dentsuchina.cn
 DOMAIN,agn.aty.sohu.com
@@ -272,6 +275,7 @@ DOMAIN,bj-td-menta-01-callback.advlion.com
 DOMAIN,bj.ad.track.66mobi.com
 DOMAIN,books-analytics-events.apple.com
 DOMAIN,bootpreload.uve.weibo.com
+DOMAIN,brandadsstatic.vivo.com.cn
 DOMAIN,browser.events.data.msn.cn
 DOMAIN,browser.events.data.msn.com
 DOMAIN,browsercfg-drcn.cloud.dbankcloud.cn
@@ -335,6 +339,7 @@ DOMAIN,download.changhong.upgrade2.huan.tv
 DOMAIN,downloadxml.changhong.upgrade2.huan.tv
 DOMAIN,dsp-x.jd.com
 DOMAIN,dsp.fcbox.com
+DOMAIN,dsplog-adnet.vivo.com.cn
 DOMAIN,dualstack-logs.amap.com
 DOMAIN,dxp.baidu.com
 DOMAIN,dyp2p-ali.douyucdn.cn
@@ -408,7 +413,6 @@ DOMAIN,iadctest.qwapi.com
 DOMAIN,iadmoo.apple.com
 DOMAIN,iadmusicmat.music.126.net
 DOMAIN,iadsdk.apple.com
-DOMAIN,iadworkbench.apple.com
 DOMAIN,image-ad.sm.cn
 DOMAIN,image.hpplay.cn
 DOMAIN,images.outbrainimg.com
@@ -611,7 +615,7 @@ DOMAIN,rtb.voiceads.cn
 DOMAIN,s1.cdn-sg.advlion.com
 DOMAIN,saad.ms.zhangyue.net
 DOMAIN,saas.hpplay.cn
-DOMAIN,safebrowsing.urlsec.gg.com
+DOMAIN,safebrowsing.urlsec.qq.com
 DOMAIN,saxysec.com
 DOMAIN,scs.openspeech.cn
 DOMAIN,sdk-ab-config.qquanquan.com
@@ -721,6 +725,7 @@ DOMAIN,track.uc.cn
 DOMAIN,tracker-prd.aldi.com.cn
 DOMAIN,tracker.ai.xiaomi.com
 DOMAIN,tracker.gitee.com
+DOMAIN,tracking-adnet.vivo.com.cn
 DOMAIN,tracking.rus.miui.com
 DOMAIN,tuiguang.meitu.com
 DOMAIN,tvapp.hpplay.cn
@@ -826,7 +831,6 @@ DOMAIN-KEYWORD,-ad.sm.cn
 DOMAIN-KEYWORD,-ad.video.yximgs.com
 DOMAIN-KEYWORD,-ad.wtzw.com
 DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
-DOMAIN-KEYWORD,-normal.zijieapi.com
 # END AUTO-GENERATED AWAvenue RULES
 
 # BEGIN AUTO-GENERATED anti-AD RULES
@@ -841,7 +845,7 @@ DOMAIN-KEYWORD,-normal.zijieapi.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 98100
-# Imported rules: 55599 DOMAIN-SUFFIX.
+# Imported rules: 55601 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -56036,9 +56040,11 @@ DOMAIN-SUFFIX,ad.zijieapi.com
 DOMAIN-SUFFIX,ads3-normal-hl.zijieapi.com
 DOMAIN-SUFFIX,ads3-normal-lf.zijieapi.com
 DOMAIN-SUFFIX,ads3-normal-lq.zijieapi.com
+DOMAIN-SUFFIX,ads3-normal.zijieapi.com
 DOMAIN-SUFFIX,ads5-normal-hl.zijieapi.com
 DOMAIN-SUFFIX,ads5-normal-lf.zijieapi.com
 DOMAIN-SUFFIX,ads5-normal-lq.zijieapi.com
+DOMAIN-SUFFIX,ads5-normal.zijieapi.com
 DOMAIN-SUFFIX,applog.zijieapi.com
 DOMAIN-SUFFIX,log.zijieapi.com
 DOMAIN-SUFFIX,mcs.zijieapi.com
