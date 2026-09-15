@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:100141 Created:2026-09-14 Source:GMOogway@88de8a79212fc9223bba4607160b73b2f74423db Local@d90504f770067e61022d9b48562f56f70a94f70e Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:100130 Created:2026-09-15 Source:GMOogway@8ddd301dc211f8cf36830fa995665370e01b2c3c Local@5db79d7110f79aba8cd7da71ece7adeea6ae4f1f Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -6179,7 +6179,6 @@ DOMAIN-SUFFIX,apaclandingpage.ajo12apac.adls.adobevlab.com,REJECT
 DOMAIN-SUFFIX,apaclandingpage.ajo1apac.adls.adobevlab.com,REJECT
 DOMAIN-SUFFIX,apaclandingpage.ajoplatformapac.adobevlab.com,REJECT
 DOMAIN-SUFFIX,apaff.oneplus.com,REJECT
-DOMAIN-SUFFIX,apathicpictish.cyou,REJECT
 DOMAIN-SUFFIX,apbjukta.com,REJECT
 DOMAIN-SUFFIX,apcdp.apnews.com,REJECT
 DOMAIN-SUFFIX,apconsultantgroup.com,REJECT
@@ -8231,7 +8230,6 @@ DOMAIN-SUFFIX,aurasport.net,REJECT
 DOMAIN-SUFFIX,aureate.com,REJECT
 DOMAIN-SUFFIX,auredzeon.com,REJECT
 DOMAIN-SUFFIX,aurelia-il.com,REJECT
-DOMAIN-SUFFIX,aureliatmeses.com,REJECT
 DOMAIN-SUFFIX,aurora.presentesgeek.com,REJECT
 DOMAIN-SUFFIX,auspolice.com,REJECT
 DOMAIN-SUFFIX,aussiemethod.com,REJECT
@@ -11556,7 +11554,6 @@ DOMAIN-SUFFIX,ccllt.fromrebel.ca,REJECT
 DOMAIN-SUFFIX,ccnku.meibi.mx,REJECT
 DOMAIN-SUFFIX,ccnnetwork.co,REJECT
 DOMAIN-SUFFIX,ccnsad.com,REJECT
-DOMAIN-SUFFIX,ccoyaovoli.qpon,REJECT
 DOMAIN-SUFFIX,ccpmo.com,REJECT
 DOMAIN-SUFFIX,ccqhzj.kilamobler.se,REJECT
 DOMAIN-SUFFIX,ccrdms.butopea.com,REJECT
@@ -21681,7 +21678,6 @@ DOMAIN-SUFFIX,dvdienmayxanh.com,REJECT
 DOMAIN-SUFFIX,dvedq.shesbirdie.com,REJECT
 DOMAIN-SUFFIX,dvehu.percivalclo.com,REJECT
 DOMAIN-SUFFIX,dvfbnhan.com,REJECT
-DOMAIN-SUFFIX,dvhytcaqofphn.space,REJECT
 DOMAIN-SUFFIX,dvlmn.swolverine.com,REJECT
 DOMAIN-SUFFIX,dvmhm.gratsi.com,REJECT
 DOMAIN-SUFFIX,dvosr.joinprimehealth.com,REJECT
@@ -35243,7 +35239,6 @@ DOMAIN-SUFFIX,iiutq.xyz,REJECT
 DOMAIN-SUFFIX,iivmm.coolinastore.com,REJECT
 DOMAIN-SUFFIX,iixjse.nvisioncenters.com,REJECT
 DOMAIN-SUFFIX,iizqf.mobilemob.com.au,REJECT
-DOMAIN-SUFFIX,iizrvewryttzk.space,REJECT
 DOMAIN-SUFFIX,ij43rr.8ukcoz69e5lt9yq5o5g32kcptgvlzoqe.cyou,REJECT
 DOMAIN-SUFFIX,ijaabm.accessonline.com,REJECT
 DOMAIN-SUFFIX,ijaabm.golfchannel.com,REJECT
@@ -49254,7 +49249,6 @@ DOMAIN-SUFFIX,morganbank.online,REJECT
 DOMAIN-SUFFIX,morganbank.pw,REJECT
 DOMAIN-SUFFIX,morganbank.site,REJECT
 DOMAIN-SUFFIX,morganbankk.com,REJECT
-DOMAIN-SUFFIX,mornecoleendeloo.cfd,REJECT
 DOMAIN-SUFFIX,morning-croissant.fr,REJECT
 DOMAIN-SUFFIX,morning-maps.com,REJECT
 DOMAIN-SUFFIX,moro-douga.link,REJECT
@@ -53836,7 +53830,6 @@ DOMAIN-SUFFIX,pdsssl.gmarket.co.kr,REJECT
 DOMAIN-SUFFIX,pdtrc.fadedstore.com,REJECT
 DOMAIN-SUFFIX,pduiz.juiceplus.com,REJECT
 DOMAIN-SUFFIX,pdwlus.mlahart.com,REJECT
-DOMAIN-SUFFIX,pdxtdgbtwvesv.site,REJECT
 DOMAIN-SUFFIX,pe.5.p2l.info,REJECT
 DOMAIN-SUFFIX,peach-analytics.vercel.app,REJECT
 DOMAIN-SUFFIX,peafowl.prod.fyi,REJECT
@@ -53965,7 +53958,6 @@ DOMAIN-SUFFIX,pfmram.slamjam.com,REJECT
 DOMAIN-SUFFIX,pfoha.catalystpet.com,REJECT
 DOMAIN-SUFFIX,pforv.verdantlyfe.com,REJECT
 DOMAIN-SUFFIX,pfqfc.skoutorganic.com,REJECT
-DOMAIN-SUFFIX,pftjfsupjpxd.com,REJECT
 DOMAIN-SUFFIX,pfucg.nothingnew.com,REJECT
 DOMAIN-SUFFIX,pfudp.saltair.com,REJECT
 DOMAIN-SUFFIX,pfulof.dickiesworkwear.com,REJECT
@@ -54199,7 +54191,6 @@ DOMAIN-SUFFIX,pillar.ivyleagueadmissionsecrets.com,REJECT
 DOMAIN-SUFFIX,pillar.ucadmissionsecrets.com,REJECT
 DOMAIN-SUFFIX,pillexplorer.com,REJECT
 DOMAIN-SUFFIX,pillowpets.fr,REJECT
-DOMAIN-SUFFIX,pimoverfee.com,REJECT
 DOMAIN-SUFFIX,pimpmypr.de,REJECT
 DOMAIN-SUFFIX,pineapple.kuddl.com,REJECT
 DOMAIN-SUFFIX,pinetech.vn,REJECT
@@ -55685,7 +55676,6 @@ DOMAIN-SUFFIX,pvmng.prolonlife.com,REJECT
 DOMAIN-SUFFIX,pvpti222.com,REJECT
 DOMAIN-SUFFIX,pvrpx.eatprima.com,REJECT
 DOMAIN-SUFFIX,pvrrx.yumwoof.com,REJECT
-DOMAIN-SUFFIX,pvszyovqkuwyn.space,REJECT
 DOMAIN-SUFFIX,pvt2202--deab86120ff311f1b0c142dde27851f2.web.val.run,REJECT
 DOMAIN-SUFFIX,pvtjt.ancestralsupplements.com,REJECT
 DOMAIN-SUFFIX,pvtvv.halfdaytravel.com,REJECT
@@ -86844,7 +86834,6 @@ DOMAIN-SUFFIX,terik.site,REJECT
 DOMAIN-SUFFIX,termite.queerburners.org,REJECT
 DOMAIN-SUFFIX,tern.daffy.org,REJECT
 DOMAIN-SUFFIX,tern.xebel.co,REJECT
-DOMAIN-SUFFIX,terndzbaritzpw.com,REJECT
 DOMAIN-SUFFIX,terravisionpro-ss.checkoutera.com,REJECT
 DOMAIN-SUFFIX,terricole.fr,REJECT
 DOMAIN-SUFFIX,tes.designernapratica.com.br,REJECT
