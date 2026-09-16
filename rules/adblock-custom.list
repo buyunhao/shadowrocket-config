@@ -845,7 +845,7 @@ DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 99610
-# Imported rules: 55626 DOMAIN-SUFFIX.
+# Imported rules: 55627 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -5462,6 +5462,7 @@ DOMAIN-SUFFIX,emails.animalplanet.com
 DOMAIN-SUFFIX,links.animalplanet.com
 DOMAIN-SUFFIX,link.animefanz.app
 DOMAIN-SUFFIX,eta.animenewsnetwork.com
+DOMAIN-SUFFIX,animesalt.cx
 DOMAIN-SUFFIX,animeteatr.ru
 DOMAIN-SUFFIX,analytics.animexx.de
 DOMAIN-SUFFIX,dinocraft-test.animocabrands.com
