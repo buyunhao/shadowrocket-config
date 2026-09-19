@@ -845,7 +845,7 @@ DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 99982
-# Imported rules: 55645 DOMAIN-SUFFIX.
+# Imported rules: 55651 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -15956,6 +15956,7 @@ DOMAIN-SUFFIX,a8clk.cart.dr-vegefru.com
 DOMAIN-SUFFIX,aeewjq.dr-vegefru.com
 DOMAIN-SUFFIX,sadobemetrics.dr.dk
 DOMAIN-SUFFIX,dr999.cc
+DOMAIN-SUFFIX,dragonbats.com
 DOMAIN-SUFFIX,op.dragonfru.it
 DOMAIN-SUFFIX,plausible.dragonfru.it
 DOMAIN-SUFFIX,144.dragonparking.com
@@ -20317,6 +20318,7 @@ DOMAIN-SUFFIX,info.frenchgerleman.com
 DOMAIN-SUFFIX,stats.frenlo.com
 DOMAIN-SUFFIX,da.freo.nl
 DOMAIN-SUFFIX,images.service.freo.nl
+DOMAIN-SUFFIX,frequentflesh.com
 DOMAIN-SUFFIX,tracking.marketing.frequentis.com
 DOMAIN-SUFFIX,wl.bl.frequentvalues.com.au
 DOMAIN-SUFFIX,go.frescofrigo.app
@@ -21728,6 +21730,7 @@ DOMAIN-SUFFIX,wlxhzn.godfreys.com.au
 DOMAIN-SUFFIX,godhat.com
 DOMAIN-SUFFIX,godiciardstia.com
 DOMAIN-SUFFIX,one.godigit.com
+DOMAIN-SUFFIX,godseedband.com
 DOMAIN-SUFFIX,app.godtlevert.no
 DOMAIN-SUFFIX,app.goduke.com
 DOMAIN-SUFFIX,t.goduke.com
@@ -22752,6 +22755,7 @@ DOMAIN-SUFFIX,handsomeyam.com
 DOMAIN-SUFFIX,images.response.handt.co.uk
 DOMAIN-SUFFIX,marketing.handt.co.uk
 DOMAIN-SUFFIX,test.handy-alarm.com
+DOMAIN-SUFFIX,handyincrease.com
 DOMAIN-SUFFIX,stats.handyvertrag.de
 DOMAIN-SUFFIX,hgzqxe.hanesbrandsinc.jp
 DOMAIN-SUFFIX,rgzrys.hangikredi.com
@@ -42283,6 +42287,7 @@ DOMAIN-SUFFIX,s.sachem.ca
 DOMAIN-SUFFIX,invite-test.sadapay.pk
 DOMAIN-SUFFIX,invite.sadapay.pk
 DOMAIN-SUFFIX,sadjk.com
+DOMAIN-SUFFIX,sadloaf.com
 DOMAIN-SUFFIX,k5tmk4.sadobo.com
 DOMAIN-SUFFIX,ea.sadyr.es
 DOMAIN-SUFFIX,app.engineering.sae.org
@@ -43830,6 +43835,7 @@ DOMAIN-SUFFIX,showyoursite.com
 DOMAIN-SUFFIX,af.shozankan-shop.com
 DOMAIN-SUFFIX,marketing.shpfinancial.com
 DOMAIN-SUFFIX,shpg.org
+DOMAIN-SUFFIX,shredform.com
 DOMAIN-SUFFIX,images.learn.shredit.com
 DOMAIN-SUFFIX,omxodt.shredoptics.com
 DOMAIN-SUFFIX,shredquiz.com
