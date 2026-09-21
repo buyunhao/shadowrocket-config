@@ -9,14 +9,14 @@
 # Source project: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
 # Source file: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list
 # Source version: 1.7.6-release
-# Source updated: 2026-09-09 23:35:30 UTC+8
-# Source-ETag: 339fc178610e15b72a404b7d0f98af0e1d011811cdb5811245fc5491d05216b1
-# Source-SHA256: 1546582998dd8fb0e49795ad47e35c89211089bcf798b4f71c865bf3b2b5ee71
+# Source updated: 2026-09-20 20:30:39 UTC+8
+# Source-ETag: 29a2012412eaca4486fd0030c200f6b6b8a83334593507e7f273c3df5d8615a6
+# Source-SHA256: 034cc0746e65dfa8c93cf66b8bb7845b27fbb1b373b281bb40f20f8235449866
 # Source license: GPL-3.0 (https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE)
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall DOMAIN-SUFFIX or DOMAIN-KEYWORD rule are omitted.
-# Source rules: 952
-# Imported rules: 813 (797 DOMAIN, 4 DOMAIN-KEYWORD, 12 DOMAIN-SUFFIX).
+# Source rules: 963
+# Imported rules: 824 (808 DOMAIN, 4 DOMAIN-KEYWORD, 12 DOMAIN-SUFFIX).
 
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
@@ -85,6 +85,7 @@ DOMAIN,adks.hpplay.cn
 DOMAIN,adlink-api.huan.tv
 DOMAIN,adlog.vivo.com.cn
 DOMAIN,adm.funshion.com
+DOMAIN,adm.zhangyuyidong.cn
 DOMAIN,admarketing.yahoo.net
 DOMAIN,admobile.top
 DOMAIN,adreq.vivo.com.cn
@@ -139,6 +140,7 @@ DOMAIN,adsfs.heytapimage.com
 DOMAIN,adsfs.oppomobile.com
 DOMAIN,adslvfile.qq.com
 DOMAIN,adsmart.konka.com
+DOMAIN,adsmartget.datads.cn
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,adsmoloco.com
 DOMAIN,adsp.xunlei.com
@@ -332,6 +334,7 @@ DOMAIN,data.mistat.rus.xiaomi.com
 DOMAIN,data.mistat.xiaomi.com
 DOMAIN,datacollection.uve.weibo.com
 DOMAIN,dc.sigmob.cn
+DOMAIN,de.ad.gameley.com
 DOMAIN,dlogs.bwton.com
 DOMAIN,dm.toutiao.com
 DOMAIN,domain.aishengji.com
@@ -432,6 +435,7 @@ DOMAIN,irc.qubiankeji.com
 DOMAIN,ixav-cse.avlyun.com
 DOMAIN,janapi.jd.com
 DOMAIN,jiguang.cn
+DOMAIN,jp.ad.gameley.com
 DOMAIN,jpush.cn
 DOMAIN,jpush.html5.qq.com
 DOMAIN,jpush.io
@@ -533,6 +537,7 @@ DOMAIN,monitor.music.qq.com
 DOMAIN,monitor.uu.qq.com
 DOMAIN,monsetting.toutiao.com
 DOMAIN,mores.toponad.com
+DOMAIN,mpcfg.fancydsp.com
 DOMAIN,msdk.voiceads.cn
 DOMAIN,mssdk.volces.com
 DOMAIN,mssdk.zijieapi.com
@@ -620,21 +625,26 @@ DOMAIN,saxysec.com
 DOMAIN,scs.openspeech.cn
 DOMAIN,sdk-ab-config.qquanquan.com
 DOMAIN,sdk-cache.video.ptqy.gitv.tv
+DOMAIN,sdk-track.66mobi.com
 DOMAIN,sdk.1rtb.net
+DOMAIN,sdk.adhuanxiao.com
 DOMAIN,sdk.adx.adwangmai.com
 DOMAIN,sdk.aqyad.com
 DOMAIN,sdk.beizi.biz
 DOMAIN,sdk.cferw.com
 DOMAIN,sdk.e.qq.com
 DOMAIN,sdk.hzsanjiaomao.com
+DOMAIN,sdk.hzzfcm.com
 DOMAIN,sdk.markmedia.com.cn
 DOMAIN,sdk.mobads.adwangmai.com
+DOMAIN,sdk.zhangyuyidong.cn
 DOMAIN,sdkapi.cloooud.com
 DOMAIN,sdkapp.uve.weibo.com
 DOMAIN,sdkauth.hpplay.cn
 DOMAIN,sdkconf.avlyun.com
 DOMAIN,sdkconfig.play.aiseet.atianqi.com
 DOMAIN,sdkconfig.video.qq.com
+DOMAIN,sdklog.zhangyuyidong.cn
 DOMAIN,sdkoptedge.chinanetcenter.com
 DOMAIN,sdkreport.e.qq.com
 DOMAIN,sdktmp.hubcloud.com.cn
@@ -801,6 +811,7 @@ DOMAIN,wxsnsad.tc.qq.com
 DOMAIN,wxsnsdy.tc.qq.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
+DOMAIN,xadsmartget.adgain.cn
 DOMAIN,xcx.dcad01.com
 DOMAIN,xiaomi-dtv.m.cn.miaozhen.com
 DOMAIN,xlog.jd.com
@@ -838,14 +849,14 @@ DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
 # Imported source: anti-AD (Surge format)
 # Source project: https://github.com/privacy-protection-tools/anti-AD
 # Source file: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt
-# Source version: 20260920045249
-# Source-ETag: 8455f1075231b8e7254bf1bee7ef29150f729e11b68ef3c6c4504874205c47b2
-# Source-SHA256: 551c7822a1a7047d3d412f4b1298b0d27fe9012750ca8d9367933676ba51bb43
+# Source version: 20260920180534
+# Source-ETag: 2254638d00c8f5b961f8b42f9e3f6a5570fe53b0353baa262af37c5004de1750
+# Source-SHA256: 86a341bac785a9287f511242389d0fa387d0de876a1416f157a305df085c60c3
 # Source license: MIT (https://github.com/privacy-protection-tools/anti-AD/blob/master/LICENSE)
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 100732
-# Imported rules: 55677 DOMAIN-SUFFIX.
+# Imported rules: 55676 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -13505,7 +13516,6 @@ DOMAIN-SUFFIX,appointments.covenanthealth.org
 DOMAIN-SUFFIX,discover.covenanthealthcare.com
 DOMAIN-SUFFIX,metrics.coventryhealthcare.com
 DOMAIN-SUFFIX,analytics.cloud.coveo.com
-DOMAIN-SUFFIX,analytics.org.coveo.com
 DOMAIN-SUFFIX,app.cover.com
 DOMAIN-SUFFIX,ccmd.coveredca.com
 DOMAIN-SUFFIX,s.coveredsys.cn
@@ -49329,7 +49339,7 @@ DOMAIN-SUFFIX,transactionale.com
 DOMAIN-SUFFIX,hnibej.transat.com
 DOMAIN-SUFFIX,tck.fr.transavia.com
 DOMAIN-SUFFIX,tk.transavia.com
-DOMAIN-SUFFIX,transcend.io
+DOMAIN-SUFFIX,telemetry.transcend.io
 DOMAIN-SUFFIX,info.transcontinental-printing.com
 DOMAIN-SUFFIX,marketing.transcore.com
 DOMAIN-SUFFIX,telemetry.svc.transifex.net
