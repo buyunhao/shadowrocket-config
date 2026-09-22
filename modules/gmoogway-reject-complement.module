@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:100163 Created:2026-09-21 Source:GMOogway@924490fff9fe8fe8ec7ecdedd11e58d8962342a3 Local@973066dc6c02e6d3d6e369b712fa74101074bdd8 Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:100158 Created:2026-09-22 Source:GMOogway@924490fff9fe8fe8ec7ecdedd11e58d8962342a3 Local@27f0261c7da5db9183b701fd712f29eca976db14 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -23787,7 +23787,6 @@ DOMAIN-SUFFIX,ew1.reg.bigdata.ssp.samsung.com,REJECT
 DOMAIN-SUFFIX,ewch.ewheels.ch,REJECT
 DOMAIN-SUFFIX,ewd.powermoves.com.au,REJECT
 DOMAIN-SUFFIX,ewea.fr,REJECT
-DOMAIN-SUFFIX,ewgyjwsygrxgp.space,REJECT
 DOMAIN-SUFFIX,ewmgkx.packtowl.com,REJECT
 DOMAIN-SUFFIX,ewnkic.hoiku-box.net,REJECT
 DOMAIN-SUFFIX,ewoirpdb.helsam.dk,REJECT
@@ -24231,7 +24230,6 @@ DOMAIN-SUFFIX,fatcatrewards.com,REJECT
 DOMAIN-SUFFIX,fathomdns.com,REJECT
 DOMAIN-SUFFIX,fatlossremedies.com,REJECT
 DOMAIN-SUFFIX,fatpop.net,REJECT
-DOMAIN-SUFFIX,fauldspelikeyellows.qpon,REJECT
 DOMAIN-SUFFIX,favbt.theweeklyedition.com,REJECT
 DOMAIN-SUFFIX,favor080227.shop,REJECT
 DOMAIN-SUFFIX,favor1.fractal.jp,REJECT
@@ -48513,7 +48511,6 @@ DOMAIN-SUFFIX,mfkxm.grateful-fred.com,REJECT
 DOMAIN-SUFFIX,mfmls.mikesbikes.com,REJECT
 DOMAIN-SUFFIX,mfmqk.redbubble.com,REJECT
 DOMAIN-SUFFIX,mfqdo.jpcycles.com,REJECT
-DOMAIN-SUFFIX,mfrqkycjttyqk.website,REJECT
 DOMAIN-SUFFIX,mftkh.trustcache.com,REJECT
 DOMAIN-SUFFIX,mfvoa.etrgovinca.hu,REJECT
 DOMAIN-SUFFIX,mfwmud.winelivery.com,REJECT
@@ -52791,7 +52788,6 @@ DOMAIN-SUFFIX,owa.agriprim.se,REJECT
 DOMAIN-SUFFIX,owa.any.run,REJECT
 DOMAIN-SUFFIX,owabgxis.wp.pl,REJECT
 DOMAIN-SUFFIX,owawms.entrereves.co.kr,REJECT
-DOMAIN-SUFFIX,owdcmpcr.com,REJECT
 DOMAIN-SUFFIX,owhnky.tranbi.com,REJECT
 DOMAIN-SUFFIX,owipkz.lotuff.co.kr,REJECT
 DOMAIN-SUFFIX,owl.gregwolanski.com,REJECT
@@ -92448,7 +92444,6 @@ DOMAIN-SUFFIX,upltew.iwellps.com,REJECT
 DOMAIN-SUFFIX,upmiles-vpbank.com,REJECT
 DOMAIN-SUFFIX,uposz.procoffeegear.com,REJECT
 DOMAIN-SUFFIX,uppro.ru,REJECT
-DOMAIN-SUFFIX,upqkbrzsglhtv.site,REJECT
 DOMAIN-SUFFIX,uprgd.takitambo.com,REJECT
 DOMAIN-SUFFIX,uproar.com,REJECT
 DOMAIN-SUFFIX,uproar.fortunecity.com,REJECT
