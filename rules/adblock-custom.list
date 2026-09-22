@@ -8,15 +8,15 @@
 # Imported source: AWAvenue Ads Rule (QuantumultX format)
 # Source project: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
 # Source file: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list
-# Source version: 1.7.6-release
-# Source updated: 2026-09-20 20:30:39 UTC+8
-# Source-ETag: 29a2012412eaca4486fd0030c200f6b6b8a83334593507e7f273c3df5d8615a6
-# Source-SHA256: 034cc0746e65dfa8c93cf66b8bb7845b27fbb1b373b281bb40f20f8235449866
+# Source version: 1.7.8-release
+# Source updated: 2026-09-21 21:56:59 UTC+8
+# Source-ETag: 4c67330c84fbc0805fef29aa29cbd6f208847694c74d1ca5a74071e4b758ef69
+# Source-SHA256: 59378edf73adfa0594af99b1c73a454947b1c5ef1aa5762642edbf90496f94bd
 # Source license: GPL-3.0 (https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE)
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall DOMAIN-SUFFIX or DOMAIN-KEYWORD rule are omitted.
-# Source rules: 963
-# Imported rules: 824 (808 DOMAIN, 4 DOMAIN-KEYWORD, 12 DOMAIN-SUFFIX).
+# Source rules: 965
+# Imported rules: 826 (810 DOMAIN, 4 DOMAIN-KEYWORD, 12 DOMAIN-SUFFIX).
 
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
@@ -583,6 +583,8 @@ DOMAIN,pcdn.yximgs.com
 DOMAIN,pcm-img.zhls.qq.com
 DOMAIN,pgdt.gtimg.cn
 DOMAIN,pgdt.ugdtimg.com
+DOMAIN,pica-a-display.diwodiwo.xyz
+DOMAIN,pica-ad-api.diwodiwo.xyz
 DOMAIN,pig.pupuapi.com
 DOMAIN,pin.hpplay.cn
 DOMAIN,pixon.ads-pixiv.net
