@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:100388 Created:2026-10-04 Source:GMOogway@10df13545975347e5f877fae231756be3e03bf2a Local@da05cd99db889d4a01d8fb45d34ac493ce1281ef Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:100384 Created:2026-10-05 Source:GMOogway@10df13545975347e5f877fae231756be3e03bf2a Local@021423135dbdec214f13b47336a4265c25f3d349 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -5050,7 +5050,6 @@ DOMAIN-SUFFIX,analytic.angiang.gov.vn,REJECT
 DOMAIN-SUFFIX,analytic.baodantoc.vn,REJECT
 DOMAIN-SUFFIX,analytic.haramain.shop,REJECT
 DOMAIN-SUFFIX,analytic.imlive.com,REJECT
-DOMAIN-SUFFIX,analytic.is,REJECT
 DOMAIN-SUFFIX,analytic.kim-tetzlaff.dk,REJECT
 DOMAIN-SUFFIX,analytic.magland.ir,REJECT
 DOMAIN-SUFFIX,analytic.proxyme.link,REJECT
@@ -5148,7 +5147,6 @@ DOMAIN-SUFFIX,analytics.any.do,REJECT
 DOMAIN-SUFFIX,analytics.anylight.app,REJECT
 DOMAIN-SUFFIX,analytics.aorgn.com,REJECT
 DOMAIN-SUFFIX,analytics.apotekhjartat.se,REJECT
-DOMAIN-SUFFIX,analytics.app.funnelish.com,REJECT
 DOMAIN-SUFFIX,analytics.applycreatures.com,REJECT
 DOMAIN-SUFFIX,analytics.apps.seabroadnet.com,REJECT
 DOMAIN-SUFFIX,analytics.appsbnet.com.br,REJECT
@@ -59879,7 +59877,6 @@ DOMAIN-SUFFIX,scgou.littlepassports.com,REJECT
 DOMAIN-SUFFIX,schemas.microsoft.akadns.net,REJECT
 DOMAIN-SUFFIX,schlaukopf.fr,REJECT
 DOMAIN-SUFFIX,schnee.skiamade.com,REJECT
-DOMAIN-SUFFIX,scholarsark.com,REJECT
 DOMAIN-SUFFIX,schoorsteen.geenstijl.nl,REJECT
 DOMAIN-SUFFIX,schouder.somt.nl,REJECT
 DOMAIN-SUFFIX,schpa.newroadadvertising.com,REJECT
@@ -86396,7 +86393,6 @@ DOMAIN-SUFFIX,tapit.com,REJECT
 DOMAIN-SUFFIX,tapixesa.pro,REJECT
 DOMAIN-SUFFIX,tapjoy.net,REJECT
 DOMAIN-SUFFIX,tapone.jp,REJECT
-DOMAIN-SUFFIX,tapoutmusic.com,REJECT
 DOMAIN-SUFFIX,tapsense.com,REJECT
 DOMAIN-SUFFIX,tapstat.ru,REJECT
 DOMAIN-SUFFIX,tapulsads.ru,REJECT
