@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:100384 Created:2026-10-05 Source:GMOogway@10df13545975347e5f877fae231756be3e03bf2a Local@021423135dbdec214f13b47336a4265c25f3d349 Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:100382 Created:2026-10-06 Source:GMOogway@ec226311dd6a1c6d0fced2bc87cd363adce210b4 Local@ea5f35a7672bf89a882bd1cabfa546422dee8f84 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -11692,6 +11692,7 @@ DOMAIN-SUFFIX,cdn.adt512.com,REJECT
 DOMAIN-SUFFIX,cdn.adt523.net,REJECT
 DOMAIN-SUFFIX,cdn.adt532.com,REJECT
 DOMAIN-SUFFIX,cdn.advisible.com,REJECT
+DOMAIN-SUFFIX,cdn.adwebcode.gr,REJECT
 DOMAIN-SUFFIX,cdn.affiliatable.io,REJECT
 DOMAIN-SUFFIX,cdn.afwpc.com,REJECT
 DOMAIN-SUFFIX,cdn.agajx.com,REJECT
@@ -33663,7 +33664,6 @@ DOMAIN-SUFFIX,gw.vixenplus.com,REJECT
 DOMAIN-SUFFIX,gw.wifey.com,REJECT
 DOMAIN-SUFFIX,gwddp.iltutto.com.au,REJECT
 DOMAIN-SUFFIX,gwdsyh.toyotacenter.ru,REJECT
-DOMAIN-SUFFIX,gwen.insertcoin.se,REJECT
 DOMAIN-SUFFIX,gwene.com.slackware.alien.blog,REJECT
 DOMAIN-SUFFIX,gweqyd.fitadium.com,REJECT
 DOMAIN-SUFFIX,gwfyn.ptmassagespringfieldmo.com,REJECT
@@ -52618,7 +52618,6 @@ DOMAIN-SUFFIX,opentelemetry-collector.shared-services.us-east-1.general.prod.wil
 DOMAIN-SUFFIX,openunder.net,REJECT
 DOMAIN-SUFFIX,openx.com,REJECT
 DOMAIN-SUFFIX,openx.financialpublishers.nl,REJECT
-DOMAIN-SUFFIX,openx.gamereactor.dk,REJECT
 DOMAIN-SUFFIX,openx.jaktsidan.se,REJECT
 DOMAIN-SUFFIX,openx.mondiale.co.uk,REJECT
 DOMAIN-SUFFIX,openx.motgame.vn,REJECT
@@ -56460,7 +56459,6 @@ DOMAIN-SUFFIX,quiddity.goguardian.com,REJECT
 DOMAIN-SUFFIX,quietyellowday.com,REJECT
 DOMAIN-SUFFIX,quik-serv.com,REJECT
 DOMAIN-SUFFIX,quirinale.fr,REJECT
-DOMAIN-SUFFIX,quitcertify.com,REJECT
 DOMAIN-SUFFIX,quitmyjob.xyz,REJECT
 DOMAIN-SUFFIX,quitzon.net,REJECT
 DOMAIN-SUFFIX,quiz.resolucaoonline.com,REJECT
