@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:100382 Created:2026-10-06 Source:GMOogway@ec226311dd6a1c6d0fced2bc87cd363adce210b4 Local@ea5f35a7672bf89a882bd1cabfa546422dee8f84 Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:100388 Created:2026-10-07 Source:GMOogway@0c00daf7bbaf1f2a68a0e3cedd175bcfcc10d465 Local@626cce79af1b82c2540ed4f89ec8c3f178821d81 Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -7352,6 +7352,7 @@ DOMAIN-SUFFIX,apm-log-upload-os.hoyoverse.com,REJECT
 DOMAIN-SUFFIX,apm-native.redbascket.com,REJECT
 DOMAIN-SUFFIX,apm.bama.ir,REJECT
 DOMAIN-SUFFIX,apm.relationshipone.com,REJECT
+DOMAIN-SUFFIX,apm.volccdn.com,REJECT
 DOMAIN-SUFFIX,apm.yahoo.co.jp,REJECT
 DOMAIN-SUFFIX,apmplus.ap-southeast-1.volces.com,REJECT
 DOMAIN-SUFFIX,apohk.moventashop.com,REJECT
@@ -14322,6 +14323,7 @@ DOMAIN-SUFFIX,creative.ytboob.live,REJECT
 DOMAIN-SUFFIX,creativeassets.asosservices.com,REJECT
 DOMAIN-SUFFIX,creativedot.net,REJECT
 DOMAIN-SUFFIX,creatives.goldseek.com,REJECT
+DOMAIN-SUFFIX,creatives.rgadvert.com,REJECT
 DOMAIN-SUFFIX,creatives.x2lt.com,REJECT
 DOMAIN-SUFFIX,creativlonk.fr,REJECT
 DOMAIN-SUFFIX,creatopy-adtag-production.b-cdn.net,REJECT
@@ -23839,6 +23841,7 @@ DOMAIN-SUFFIX,evrica.omonim.com,REJECT
 DOMAIN-SUFFIX,evroteplo.ru,REJECT
 DOMAIN-SUFFIX,evs.data.ciceksepeti.com,REJECT
 DOMAIN-SUFFIX,evs.segment.complex.com,REJECT
+DOMAIN-SUFFIX,evs.segwww.incident.io,REJECT
 DOMAIN-SUFFIX,evsembu.com,REJECT
 DOMAIN-SUFFIX,evss.evinyolu.net,REJECT
 DOMAIN-SUFFIX,evt.ilovepdf.com,REJECT
@@ -25456,6 +25459,7 @@ DOMAIN-SUFFIX,foundersfcuinsurance.fmservice.com,REJECT
 DOMAIN-SUFFIX,foundtr.com,REJECT
 DOMAIN-SUFFIX,fourier.aliexpress.com,REJECT
 DOMAIN-SUFFIX,fourmiliere.formy.be,REJECT
+DOMAIN-SUFFIX,fourthdistributeexpecting.com,REJECT
 DOMAIN-SUFFIX,fourtuneo.fr,REJECT
 DOMAIN-SUFFIX,foutuneo.fr,REJECT
 DOMAIN-SUFFIX,fowl.teamyap.app,REJECT
@@ -26542,6 +26546,7 @@ DOMAIN-SUFFIX,gem.pl,REJECT
 DOMAIN-SUFFIX,gemrla.natuurhuisje.be,REJECT
 DOMAIN-SUFFIX,gemtrackers.com,REJECT
 DOMAIN-SUFFIX,gemtun.ctnewsjunkie.com,REJECT
+DOMAIN-SUFFIX,geniusclickad.cc,REJECT
 DOMAIN-SUFFIX,geniusdisplay.com,REJECT
 DOMAIN-SUFFIX,genmonet.com,REJECT
 DOMAIN-SUFFIX,genova.gas-up.it,REJECT
@@ -57366,7 +57371,6 @@ DOMAIN-SUFFIX,rfvrd.infinitediscs.com,REJECT
 DOMAIN-SUFFIX,rfzmu.genseebeauty.com,REJECT
 DOMAIN-SUFFIX,rg-be.ru,REJECT
 DOMAIN-SUFFIX,rg.radgolf.com,REJECT
-DOMAIN-SUFFIX,rgadvert.com,REJECT
 DOMAIN-SUFFIX,rgbppxtvieoytnoej.org,REJECT
 DOMAIN-SUFFIX,rgbut.papermart.com,REJECT
 DOMAIN-SUFFIX,rgcatr.7scents.hu,REJECT
@@ -79363,6 +79367,7 @@ DOMAIN-SUFFIX,st.portfoliobuilder.team,REJECT
 DOMAIN-SUFFIX,st.primopiano.com,REJECT
 DOMAIN-SUFFIX,st.prindo.at,REJECT
 DOMAIN-SUFFIX,st.prindo.de,REJECT
+DOMAIN-SUFFIX,st.putler.com,REJECT
 DOMAIN-SUFFIX,st.q-alshefa.com,REJECT
 DOMAIN-SUFFIX,st.rahm.de,REJECT
 DOMAIN-SUFFIX,st.rapidium.com.br,REJECT
@@ -94088,6 +94093,7 @@ DOMAIN-SUFFIX,visitor.pixplug.in,REJECT
 DOMAIN-SUFFIX,visitor.sokuja.net,REJECT
 DOMAIN-SUFFIX,visitors.asadis.net,REJECT
 DOMAIN-SUFFIX,visits.iloveuobgold.com,REJECT
+DOMAIN-SUFFIX,visualcommservices.com,REJECT
 DOMAIN-SUFFIX,visualsonics.fr,REJECT
 DOMAIN-SUFFIX,visualtag.visual.rio.br,REJECT
 DOMAIN-SUFFIX,visummer.com,REJECT
