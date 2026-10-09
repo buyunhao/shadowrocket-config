@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:100394 Created:2026-10-08 Source:GMOogway@291ce5cd808e849bc90a319d65912045cdc9070c Local@ac12566ce2a44494757eb29f1aa6ad3cfbf56ab1 Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:100399 Created:2026-10-09 Source:GMOogway@4b92e7e1c583af2d90c8721b265e60946c5fde0e Local@d830eb43676262b89724776cebbc4a9539ade04a Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -906,7 +906,6 @@ DOMAIN-SUFFIX,a.giantart.com,REJECT
 DOMAIN-SUFFIX,a.gripi.online,REJECT
 DOMAIN-SUFFIX,a.grums.se,REJECT
 DOMAIN-SUFFIX,a.gugent.xyz,REJECT
-DOMAIN-SUFFIX,a.guidehub.lol,REJECT
 DOMAIN-SUFFIX,a.gzupload.com,REJECT
 DOMAIN-SUFFIX,a.hansetherm.de,REJECT
 DOMAIN-SUFFIX,a.healthy-publishing.com,REJECT
@@ -1653,6 +1652,7 @@ DOMAIN-SUFFIX,accounts.secure-ua.website,REJECT
 DOMAIN-SUFFIX,accounts.ukr.net.ssl2.in,REJECT
 DOMAIN-SUFFIX,accountsections.com,REJECT
 DOMAIN-SUFFIX,accrogers-overview.com,REJECT
+DOMAIN-SUFFIX,acdn.newshuntads.com,REJECT
 DOMAIN-SUFFIX,ace.naver.com,REJECT
 DOMAIN-SUFFIX,aceadsys.net,REJECT
 DOMAIN-SUFFIX,acesso.imobiliariarspicarras.com.br,REJECT
@@ -6246,6 +6246,7 @@ DOMAIN-SUFFIX,api-meta.mercelsantos.com.br,REJECT
 DOMAIN-SUFFIX,api-meta.petitcolore.com.br,REJECT
 DOMAIN-SUFFIX,api-napoli.store.sscnapoli.it,REJECT
 DOMAIN-SUFFIX,api-notify.markarch.com,REJECT
+DOMAIN-SUFFIX,api-sdk-tracking.beaconbank.jp,REJECT
 DOMAIN-SUFFIX,api-sdk.beaconbank.jp,REJECT
 DOMAIN-SUFFIX,api-shrek.net.jumia.com.gh,REJECT
 DOMAIN-SUFFIX,api-stape.bennimoda.com.br,REJECT
@@ -15133,6 +15134,7 @@ DOMAIN-SUFFIX,d.gordetmedrw.no,REJECT
 DOMAIN-SUFFIX,d.gordetmedrw.se,REJECT
 DOMAIN-SUFFIX,d.greatmarketing.ai,REJECT
 DOMAIN-SUFFIX,d.grey.co,REJECT
+DOMAIN-SUFFIX,d.ground.news,REJECT
 DOMAIN-SUFFIX,d.growify.ai,REJECT
 DOMAIN-SUFFIX,d.guidedascentcoaching.com,REJECT
 DOMAIN-SUFFIX,d.haaltheorie.nl,REJECT
@@ -15524,7 +15526,6 @@ DOMAIN-SUFFIX,d2nzjxafm0iowq.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d2o8i1jpfoso49.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d2o9ozfswytaqz.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d2oa97wrxvxm7y.cloudfront.net,REJECT
-DOMAIN-SUFFIX,d2pf0ys5xus6n.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d2pppxxtaciku9.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d2qmp7jjpd79k7.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d2qxmykuaro8s3.cloudfront.net,REJECT
@@ -19570,6 +19571,7 @@ DOMAIN-SUFFIX,data.perfektmarket.com.pl,REJECT
 DOMAIN-SUFFIX,data.perlamachaen.vip,REJECT
 DOMAIN-SUFFIX,data.petbarn.test.ajo.adobe.com,REJECT
 DOMAIN-SUFFIX,data.petbox.pl,REJECT
+DOMAIN-SUFFIX,data.petri.com,REJECT
 DOMAIN-SUFFIX,data.petsecur.nl,REJECT
 DOMAIN-SUFFIX,data.pfh.de,REJECT
 DOMAIN-SUFFIX,data.phenomestraps.com,REJECT
@@ -30121,6 +30123,7 @@ DOMAIN-SUFFIX,gtm.greenupdesign.com.br,REJECT
 DOMAIN-SUFFIX,gtm.gridhaussystems.co.uk,REJECT
 DOMAIN-SUFFIX,gtm.gridx.lu,REJECT
 DOMAIN-SUFFIX,gtm.gringaschool.com,REJECT
+DOMAIN-SUFFIX,gtm.ground.news,REJECT
 DOMAIN-SUFFIX,gtm.groupsoftware.com.br,REJECT
 DOMAIN-SUFFIX,gtm.growarq.com,REJECT
 DOMAIN-SUFFIX,gtm.grpcorretora.com.br,REJECT
@@ -33862,7 +33865,6 @@ DOMAIN-SUFFIX,handico.vaytienmat-nhanh24h.com,REJECT
 DOMAIN-SUFFIX,handler.rgstats.com,REJECT
 DOMAIN-SUFFIX,handmade.prettyserendipity.co.uk,REJECT
 DOMAIN-SUFFIX,handred.ru,REJECT
-DOMAIN-SUFFIX,handskeeping.com,REJECT
 DOMAIN-SUFFIX,handy.starmobile.de,REJECT
 DOMAIN-SUFFIX,hangairsoft.com,REJECT
 DOMAIN-SUFFIX,hanghaiqt.com,REJECT
@@ -36888,6 +36890,7 @@ DOMAIN-SUFFIX,jenkins.rottne.com,REJECT
 DOMAIN-SUFFIX,jenkinsc2ig.csr21.net.rewe.de,REJECT
 DOMAIN-SUFFIX,jenno.adsb4all.com,REJECT
 DOMAIN-SUFFIX,jenny.jenny-app.com,REJECT
+DOMAIN-SUFFIX,jentii.online,REJECT
 DOMAIN-SUFFIX,jeoway.com,REJECT
 DOMAIN-SUFFIX,jep.juanestebanpe.com,REJECT
 DOMAIN-SUFFIX,jerry.proweb.net,REJECT
@@ -39102,6 +39105,7 @@ DOMAIN-SUFFIX,liberatiuon.fr,REJECT
 DOMAIN-SUFFIX,liberaztion.fr,REJECT
 DOMAIN-SUFFIX,liberland.fr,REJECT
 DOMAIN-SUFFIX,liberty.gedads.com,REJECT
+DOMAIN-SUFFIX,libi-wear.com,REJECT
 DOMAIN-SUFFIX,library.roadring.info,REJECT
 DOMAIN-SUFFIX,librateam.net,REJECT
 DOMAIN-SUFFIX,libro.doraeliasegura.com,REJECT
@@ -46856,6 +46860,7 @@ DOMAIN-SUFFIX,measuresgtm.gotorq.com,REJECT
 DOMAIN-SUFFIX,measuring-pixel-service.alza.cz,REJECT
 DOMAIN-SUFFIX,meatspin.biz,REJECT
 DOMAIN-SUFFIX,meatspin.com,REJECT
+DOMAIN-SUFFIX,meatusbyway.cfd,REJECT
 DOMAIN-SUFFIX,mebjj.jaxxon.com,REJECT
 DOMAIN-SUFFIX,meble.sofy24.pl,REJECT
 DOMAIN-SUFFIX,mecash.ru,REJECT
@@ -52178,7 +52183,6 @@ DOMAIN-SUFFIX,oimg.mob.cnbc.com,REJECT
 DOMAIN-SUFFIX,oimg.mobile.cnbc.com,REJECT
 DOMAIN-SUFFIX,oimg.qa.m.cnbc.com,REJECT
 DOMAIN-SUFFIX,oinhg.pacificroots.com,REJECT
-DOMAIN-SUFFIX,oio.porntez.com,REJECT
 DOMAIN-SUFFIX,oipvs.banknoteworld.com,REJECT
 DOMAIN-SUFFIX,oirtwc.juwelo.es,REJECT
 DOMAIN-SUFFIX,ois.is,REJECT
@@ -54016,7 +54020,6 @@ DOMAIN-SUFFIX,pearldiver.io,REJECT
 DOMAIN-SUFFIX,pearlfeet.fr,REJECT
 DOMAIN-SUFFIX,pears.contractorcalculator.co.uk,REJECT
 DOMAIN-SUFFIX,pebble.nextra-strategy.de,REJECT
-DOMAIN-SUFFIX,pecannerous.com,REJECT
 DOMAIN-SUFFIX,pecukirom.com,REJECT
 DOMAIN-SUFFIX,peepcloud.joinpeep.io,REJECT
 DOMAIN-SUFFIX,peever.myzen.co.uk,REJECT
@@ -56562,6 +56565,7 @@ DOMAIN-SUFFIX,qzwhkc.cleverdeals.de,REJECT
 DOMAIN-SUFFIX,qzzle.formulandcanada.com,REJECT
 DOMAIN-SUFFIX,qzzusj.bygghjemme.no,REJECT
 DOMAIN-SUFFIX,r-ad.linkshare.jp,REJECT
+DOMAIN-SUFFIX,r-tag.coeteco.jp,REJECT
 DOMAIN-SUFFIX,r.aachener-zeitung.de,REJECT
 DOMAIN-SUFFIX,r.ad1.ru,REJECT
 DOMAIN-SUFFIX,r.anamagnani.com.br,REJECT
@@ -85730,6 +85734,7 @@ DOMAIN-SUFFIX,tag.escolademodacacavalcante.com,REJECT
 DOMAIN-SUFFIX,tag.eu.flashforge.com,REJECT
 DOMAIN-SUFFIX,tag.farmatecrs.com.br,REJECT
 DOMAIN-SUFFIX,tag.fastpatchdrywallrepair.com,REJECT
+DOMAIN-SUFFIX,tag.flvcdn.net,REJECT
 DOMAIN-SUFFIX,tag.fmscycles.com,REJECT
 DOMAIN-SUFFIX,tag.foreverfierce.com,REJECT
 DOMAIN-SUFFIX,tag.franquiahomeangels.com.br,REJECT
