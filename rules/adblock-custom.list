@@ -858,7 +858,7 @@ DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 101281
-# Imported rules: 55798 DOMAIN-SUFFIX.
+# Imported rules: 55799 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -20658,7 +20658,6 @@ DOMAIN-SUFFIX,sw88.fxchannel.pl
 DOMAIN-SUFFIX,info.fxcm-chinese.com
 DOMAIN-SUFFIX,metric.fxdd.com
 DOMAIN-SUFFIX,a8.fxism.jp
-DOMAIN-SUFFIX,fxmrkvkeskzgh.online
 DOMAIN-SUFFIX,a.fxnetworks.com
 DOMAIN-SUFFIX,b.fxnetworks.com
 DOMAIN-SUFFIX,sw88.fxnetworks.com
@@ -26878,6 +26877,7 @@ DOMAIN-SUFFIX,ohsyat.jdsports.it
 DOMAIN-SUFFIX,ezobam.jdsports.nl
 DOMAIN-SUFFIX,app.communications.jdsu.com
 DOMAIN-SUFFIX,pic.jdunion.com
+DOMAIN-SUFFIX,qiji1.jdwx.info
 DOMAIN-SUFFIX,logging.je-apps.com
 DOMAIN-SUFFIX,t9k3a.jeanpaulfortin.com
 DOMAIN-SUFFIX,a8cv.jeansmate.co.jp
@@ -55864,6 +55864,7 @@ DOMAIN-SUFFIX,utma.ywpxp.cn
 DOMAIN-SUFFIX,wzj.ywrjgzs.com
 DOMAIN-SUFFIX,ywwm.net
 DOMAIN-SUFFIX,123.ywxww.net
+DOMAIN-SUFFIX,adsclick.yx.js.cn
 DOMAIN-SUFFIX,ssl.yx4818.cn
 DOMAIN-SUFFIX,lishi.yxbao.com
 DOMAIN-SUFFIX,lishi1.yxbao.com
