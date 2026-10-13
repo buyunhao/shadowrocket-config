@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:102421 Created:2026-10-12 Source:GMOogway@927f632118c1c985dd474a4f528c2c5f73da240b Local@8dd0b87713d90b66d5a2ebe7d460feb8b5e3622f Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:102427 Created:2026-10-13 Source:GMOogway@b7f205e6b87204296e933b95c285b18e51ae1d86 Local@677a96ce2a3e2feb868689abce0828517b541b7f Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -1029,7 +1029,6 @@ DOMAIN-SUFFIX,a46e0368.forwarding-request-consent.pages.dev,REJECT
 DOMAIN-SUFFIX,a504afac3d.a11d5f507e.com,REJECT
 DOMAIN-SUFFIX,a59714c768.689fe98d0d.com,REJECT
 DOMAIN-SUFFIX,a613.redbluffdailynews.com,REJECT
-DOMAIN-SUFFIX,a61b348d4c.4d2e234099.com,REJECT
 DOMAIN-SUFFIX,a666.vn,REJECT
 DOMAIN-SUFFIX,a66fcca10a.fef49e81cc.com,REJECT
 DOMAIN-SUFFIX,a6a1c6ffd0.35c82e35f3.com,REJECT
@@ -8156,6 +8155,7 @@ DOMAIN-SUFFIX,atelier.atelierxterieur.com,REJECT
 DOMAIN-SUFFIX,atemda.com,REJECT
 DOMAIN-SUFFIX,ateofakist.cfd,REJECT
 DOMAIN-SUFFIX,atfcj.buypetals.com,REJECT
+DOMAIN-SUFFIX,atgroup-link.id,REJECT
 DOMAIN-SUFFIX,ath.arthurmaisnegocios.com.br,REJECT
 DOMAIN-SUFFIX,athena.accsc.com.au,REJECT
 DOMAIN-SUFFIX,athena.api.kwalee.com,REJECT
@@ -13235,6 +13235,7 @@ DOMAIN-SUFFIX,cobge.rosewe.com,REJECT
 DOMAIN-SUFFIX,cobrand.ria.com,REJECT
 DOMAIN-SUFFIX,cochin.net.anwalt.de,REJECT
 DOMAIN-SUFFIX,cocjl.statefortyeight.com,REJECT
+DOMAIN-SUFFIX,cockatielcafe.com,REJECT
 DOMAIN-SUFFIX,cockroach.head4work.com.au,REJECT
 DOMAIN-SUFFIX,cococx.com,REJECT
 DOMAIN-SUFFIX,coconut.flyingsquirrelsports.ca,REJECT
@@ -14562,6 +14563,7 @@ DOMAIN-SUFFIX,crossadsapi.ecomobileapp.com,REJECT
 DOMAIN-SUFFIX,crossboardmobile.com,REJECT
 DOMAIN-SUFFIX,crosspromotion-us.avosapps.us,REJECT
 DOMAIN-SUFFIX,crosspromotion.weplayer.cc,REJECT
+DOMAIN-SUFFIX,crossseasent.com,REJECT
 DOMAIN-SUFFIX,crouslyon.fr,REJECT
 DOMAIN-SUFFIX,crouteintendersinbringer.monster,REJECT
 DOMAIN-SUFFIX,crow.centresustains.com,REJECT
@@ -20743,6 +20745,7 @@ DOMAIN-SUFFIX,dbh5.milb.com,REJECT
 DOMAIN-SUFFIX,dbhtk.orlybeauty.co.uk,REJECT
 DOMAIN-SUFFIX,dbios.org,REJECT
 DOMAIN-SUFFIX,dbjnzp.estellabartlett.com,REJECT
+DOMAIN-SUFFIX,dblarson.com,REJECT
 DOMAIN-SUFFIX,dblmj.shopavara.com,REJECT
 DOMAIN-SUFFIX,dbmgc.marleylilly.com,REJECT
 DOMAIN-SUFFIX,dbpjf.bbvital.co,REJECT
@@ -35556,6 +35559,7 @@ DOMAIN-SUFFIX,hunt.pirschershop.de,REJECT
 DOMAIN-SUFFIX,huntclubst.huntclubchiropractic.com,REJECT
 DOMAIN-SUFFIX,hunterdelivery.com,REJECT
 DOMAIN-SUFFIX,hunterers.com,REJECT
+DOMAIN-SUFFIX,huntfishbrag.store,REJECT
 DOMAIN-SUFFIX,huntmad.com,REJECT
 DOMAIN-SUFFIX,hup.huppatzdigital.com.au,REJECT
 DOMAIN-SUFFIX,huprz.nardurna.com,REJECT
@@ -39379,6 +39383,7 @@ DOMAIN-SUFFIX,lavov.theperfectblueprint.com,REJECT
 DOMAIN-SUFFIX,lawlowvat.net,REJECT
 DOMAIN-SUFFIX,laxifoot.fr,REJECT
 DOMAIN-SUFFIX,laxsson.com,REJECT
+DOMAIN-SUFFIX,layarotaku.id,REJECT
 DOMAIN-SUFFIX,layer.co.il,REJECT
 DOMAIN-SUFFIX,layerprotect.com,REJECT
 DOMAIN-SUFFIX,layoutfill.com,REJECT
@@ -88165,6 +88170,7 @@ DOMAIN-SUFFIX,tanieaukcje.com,REJECT
 DOMAIN-SUFFIX,taniezakupy.pl,REJECT
 DOMAIN-SUFFIX,tanio-najtaniej.com,REJECT
 DOMAIN-SUFFIX,tanmqm.andrewandco.co.kr,REJECT
+DOMAIN-SUFFIX,tantegacor88.link,REJECT
 DOMAIN-SUFFIX,tantractium.com,REJECT
 DOMAIN-SUFFIX,tanvir.efooddokan.com,REJECT
 DOMAIN-SUFFIX,tanzid.thetrugro.com,REJECT
