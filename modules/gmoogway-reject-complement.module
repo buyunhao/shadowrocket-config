@@ -1,8 +1,8 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:104458 Created:2026-10-16 Source:GMOogway@5971b440c4bdbf4538548db7e4dc383ab6926ce6 Local@0558933dd0cc167255b28bfcd659cbe696d0f922 Filter:not fully covered and no DIRECT/PROXY overlap
-# Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/5971b440c4bdbf4538548db7e4dc383ab6926ce6/sr_reject_list.module
-# Source SHA-256: 807cc4dc03b75db4b7845545dd695d8d96bd2ef9cb9cf20f6689e5857bc867ac
+#!desc=Rules:104456 Created:2026-10-17 Source:GMOogway@e70efb8692b0d499518a3db73dccd15923f7c641 Local@2ac6ef08279b45b9c68dbe353ae4ce9476c069a0 Filter:not fully covered and no DIRECT/PROXY overlap
+# Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/e70efb8692b0d499518a3db73dccd15923f7c641/sr_reject_list.module
+# Source SHA-256: 0d24060505f04eb4d65fe38f43916d5d79df48f77f636900f4784dd6e160de59
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -3939,6 +3939,7 @@ DOMAIN-SUFFIX,adtags.pro,REJECT
 DOMAIN-SUFFIX,adtarget.fcbarcelona.co.de,REJECT
 DOMAIN-SUFFIX,adtarget.fcbrookies.cat,REJECT
 DOMAIN-SUFFIX,adtarget.market,REJECT
+DOMAIN-SUFFIX,adtasukaru.com,REJECT
 DOMAIN-SUFFIX,adtcdn.unidadeditorial.es,REJECT
 DOMAIN-SUFFIX,adtd.douglas.bg,REJECT
 DOMAIN-SUFFIX,adtd.douglas.es,REJECT
@@ -5241,6 +5242,7 @@ DOMAIN-SUFFIX,ambien.ourtablets.com,REJECT
 DOMAIN-SUFFIX,ambient-platform.com,REJECT
 DOMAIN-SUFFIX,ambientdsp.com,REJECT
 DOMAIN-SUFFIX,amd.sellingsimplified.net,REJECT
+DOMAIN-SUFFIX,amdcwiptibfy.in,REJECT
 DOMAIN-SUFFIX,amedjvl.dpp-shop.com,REJECT
 DOMAIN-SUFFIX,amer.rel.msn.com,REJECT
 DOMAIN-SUFFIX,americankitchen.fr,REJECT
@@ -14147,6 +14149,7 @@ DOMAIN-SUFFIX,config.safedk.com,REJECT
 DOMAIN-SUFFIX,config.sdk.kochava.dewrain.life,REJECT
 DOMAIN-SUFFIX,config.tattilashes.com,REJECT
 DOMAIN-SUFFIX,config.toto.zipoapps.com,REJECT
+DOMAIN-SUFFIX,config.trackingplan.com,REJECT
 DOMAIN-SUFFIX,config.venuesearchlondon.com,REJECT
 DOMAIN-SUFFIX,configuration.ttpsdk.info,REJECT
 DOMAIN-SUFFIX,confirm1509account4715.com,REJECT
@@ -22431,7 +22434,6 @@ DOMAIN-SUFFIX,dorianbaroque.org,REJECT
 DOMAIN-SUFFIX,dorli.thehealthclique.co,REJECT
 DOMAIN-SUFFIX,dormir.dormax.pt,REJECT
 DOMAIN-SUFFIX,dormouse.consentkit.com,REJECT
-DOMAIN-SUFFIX,dorsalapp.com,REJECT
 DOMAIN-SUFFIX,dorsitan.shop,REJECT
 DOMAIN-SUFFIX,dos.velek.com,REJECT
 DOMAIN-SUFFIX,dosawes.com,REJECT
@@ -22552,7 +22554,6 @@ DOMAIN-SUFFIX,drive.oparup.com,REJECT
 DOMAIN-SUFFIX,drivenetwork.online,REJECT
 DOMAIN-SUFFIX,drivenetwork.ru,REJECT
 DOMAIN-SUFFIX,driveniq.com,REJECT
-DOMAIN-SUFFIX,drivenmove.com,REJECT
 DOMAIN-SUFFIX,drivetrain.gearrista.dk,REJECT
 DOMAIN-SUFFIX,drivingschoolburlington.ca,REJECT
 DOMAIN-SUFFIX,drjzh.loveinfaith.life,REJECT
@@ -23296,7 +23297,6 @@ DOMAIN-SUFFIX,earzow.com,REJECT
 DOMAIN-SUFFIX,eas.mediekompaniet.com,REJECT
 DOMAIN-SUFFIX,easewave.digital,REJECT
 DOMAIN-SUFFIX,easter-analytics.com,REJECT
-DOMAIN-SUFFIX,eastpalms.com,REJECT
 DOMAIN-SUFFIX,easy-monetization.s3.yandex.net,REJECT
 DOMAIN-SUFFIX,easy-pay.info,REJECT
 DOMAIN-SUFFIX,easy-web-stats.com,REJECT
@@ -24693,6 +24693,7 @@ DOMAIN-SUFFIX,eu-global.com,REJECT
 DOMAIN-SUFFIX,eu-onrt-stsdk.vivoglobal.com,REJECT
 DOMAIN-SUFFIX,eu-ort-stsdk.vivoglobal.com,REJECT
 DOMAIN-SUFFIX,eu-stsdk.vivoglobal.com,REJECT
+DOMAIN-SUFFIX,eu-tracks.trackingplan.com,REJECT
 DOMAIN-SUFFIX,eu-west-1-cluster1.net.mydays.de,REJECT
 DOMAIN-SUFFIX,eu.bus-exclusive.com,REJECT
 DOMAIN-SUFFIX,eu.groupondata.com,REJECT
@@ -25264,7 +25265,6 @@ DOMAIN-SUFFIX,externalprivacy.com,REJECT
 DOMAIN-SUFFIX,extole.io,REJECT
 DOMAIN-SUFFIX,extra.wijck.com,REJECT
 DOMAIN-SUFFIX,extrablocks.ru,REJECT
-DOMAIN-SUFFIX,extracover.net,REJECT
 DOMAIN-SUFFIX,extractsight.com,REJECT
 DOMAIN-SUFFIX,extrahoney.net,REJECT
 DOMAIN-SUFFIX,extrashop.fr,REJECT
@@ -25481,7 +25481,6 @@ DOMAIN-SUFFIX,fancyrat.keurslager-goeminne.be,REJECT
 DOMAIN-SUFFIX,fandangomediasettlement.e.epiqnotification.com,REJECT
 DOMAIN-SUFFIX,fangirlmag.com,REJECT
 DOMAIN-SUFFIX,fanniemae.fr,REJECT
-DOMAIN-SUFFIX,fanpapers.com,REJECT
 DOMAIN-SUFFIX,fantecio.com,REJECT
 DOMAIN-SUFFIX,fantovix.shop,REJECT
 DOMAIN-SUFFIX,fanza.yoshiclub.xyz,REJECT
@@ -26636,7 +26635,6 @@ DOMAIN-SUFFIX,flower.800flower.ae,REJECT
 DOMAIN-SUFFIX,flower.bg,REJECT
 DOMAIN-SUFFIX,flowers.californiaflowers.ro,REJECT
 DOMAIN-SUFFIX,flowers.moex.com,REJECT
-DOMAIN-SUFFIX,flowerybunch.com,REJECT
 DOMAIN-SUFFIX,flowpubdom.info,REJECT
 DOMAIN-SUFFIX,flpfl.sokolovelaw.com,REJECT
 DOMAIN-SUFFIX,flqjc.wearmntd.ca,REJECT
@@ -39882,7 +39880,6 @@ DOMAIN-SUFFIX,kra.lamaisonduboncafe.com,REJECT
 DOMAIN-SUFFIX,kra.louisabracq.com,REJECT
 DOMAIN-SUFFIX,kra.zadovadanse.com,REJECT
 DOMAIN-SUFFIX,kraft.superkraftmat.no,REJECT
-DOMAIN-SUFFIX,kraken.rambler.ru,REJECT
 DOMAIN-SUFFIX,krakenfolio.com,REJECT
 DOMAIN-SUFFIX,krakragames.com,REJECT
 DOMAIN-SUFFIX,krasisa.info,REJECT
@@ -46768,6 +46765,7 @@ DOMAIN-SUFFIX,log.lovense-api.com,REJECT
 DOMAIN-SUFFIX,log.ma-jin.jp,REJECT
 DOMAIN-SUFFIX,log.make50.com,REJECT
 DOMAIN-SUFFIX,log.mappy.net,REJECT
+DOMAIN-SUFFIX,log.mopo.de,REJECT
 DOMAIN-SUFFIX,log.mp3.zing.vn,REJECT
 DOMAIN-SUFFIX,log.news.zing.vn,REJECT
 DOMAIN-SUFFIX,log.newsvine.com,REJECT
@@ -47115,6 +47113,7 @@ DOMAIN-SUFFIX,lord.piercingxxl.com,REJECT
 DOMAIN-SUFFIX,lord.piercingxxl.de,REJECT
 DOMAIN-SUFFIX,lord.piercingxxl.fr,REJECT
 DOMAIN-SUFFIX,lord.piercingxxl.pl,REJECT
+DOMAIN-SUFFIX,lordhq.biz,REJECT
 DOMAIN-SUFFIX,lordofads.com,REJECT
 DOMAIN-SUFFIX,lore.joalheria360.com.br,REJECT
 DOMAIN-SUFFIX,lore.loriele.com,REJECT
@@ -52474,7 +52473,6 @@ DOMAIN-SUFFIX,mytraf.ru,REJECT
 DOMAIN-SUFFIX,mytrd.orion.at,REJECT
 DOMAIN-SUFFIX,myvisualiq.net,REJECT
 DOMAIN-SUFFIX,myw.business-unicorn.com,REJECT
-DOMAIN-SUFFIX,myweb3id.io,REJECT
 DOMAIN-SUFFIX,mywifiext.fr,REJECT
 DOMAIN-SUFFIX,mz.menzline.com,REJECT
 DOMAIN-SUFFIX,mz91004124881stpe.4level1.com,REJECT
@@ -93463,7 +93461,6 @@ DOMAIN-SUFFIX,tracker.marcomp.com.br,REJECT
 DOMAIN-SUFFIX,tracker.mattel.com,REJECT
 DOMAIN-SUFFIX,tracker.meiryelias.com,REJECT
 DOMAIN-SUFFIX,tracker.mida-app.io,REJECT
-DOMAIN-SUFFIX,tracker.mtrtb.com,REJECT
 DOMAIN-SUFFIX,tracker.myth.dev,REJECT
 DOMAIN-SUFFIX,tracker.napconcursos.com.br,REJECT
 DOMAIN-SUFFIX,tracker.nortrez.com,REJECT
@@ -94605,6 +94602,7 @@ DOMAIN-SUFFIX,trackqar.buzz,REJECT
 DOMAIN-SUFFIX,trackrt.restovantausa.com,REJECT
 DOMAIN-SUFFIX,tracks.davidkingsbury.co.uk,REJECT
 DOMAIN-SUFFIX,tracks.new-statement.com,REJECT
+DOMAIN-SUFFIX,tracks.trackingplan.com,REJECT
 DOMAIN-SUFFIX,trackserver.fundacaolemann.org.br,REJECT
 DOMAIN-SUFFIX,tracksurf.daooda.com,REJECT
 DOMAIN-SUFFIX,trackszn.median.eu,REJECT
