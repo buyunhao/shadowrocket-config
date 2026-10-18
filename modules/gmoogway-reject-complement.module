@@ -1,8 +1,8 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:104456 Created:2026-10-17 Source:GMOogway@e70efb8692b0d499518a3db73dccd15923f7c641 Local@2ac6ef08279b45b9c68dbe353ae4ce9476c069a0 Filter:not fully covered and no DIRECT/PROXY overlap
-# Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/e70efb8692b0d499518a3db73dccd15923f7c641/sr_reject_list.module
-# Source SHA-256: 0d24060505f04eb4d65fe38f43916d5d79df48f77f636900f4784dd6e160de59
+#!desc=Rules:104460 Created:2026-10-18 Source:GMOogway@5a50c3909d6117021ffc78a23129fc0c613bfc40 Local@3f1391ea9344a389529182372174f5eb351f0d28 Filter:not fully covered and no DIRECT/PROXY overlap
+# Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/5a50c3909d6117021ffc78a23129fc0c613bfc40/sr_reject_list.module
+# Source SHA-256: b4bd8a8103c854fcb381591e08ae3814128dfe81c71fd934ebdd1fd70d0d7b91
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -2118,6 +2118,7 @@ DOMAIN-SUFFIX,ad-us.24hstatic.com,REJECT
 DOMAIN-SUFFIX,ad-vice.biz,REJECT
 DOMAIN-SUFFIX,ad-virtua.net,REJECT
 DOMAIN-SUFFIX,ad-x.co.uk,REJECT
+DOMAIN-SUFFIX,ad.001zb.com,REJECT
 DOMAIN-SUFFIX,ad.1k3.com,REJECT
 DOMAIN-SUFFIX,ad.23blogs.com,REJECT
 DOMAIN-SUFFIX,ad.24h.com.vn,REJECT
@@ -26275,6 +26276,7 @@ DOMAIN-SUFFIX,finacehoisomb.com,REJECT
 DOMAIN-SUFFIX,finad.de,REJECT
 DOMAIN-SUFFIX,final01.watchhubbd.com,REJECT
 DOMAIN-SUFFIX,final02.watchhubbd.com,REJECT
+DOMAIN-SUFFIX,finalleague.com,REJECT
 DOMAIN-SUFFIX,finance-offer.com,REJECT
 DOMAIN-SUFFIX,finance.siemens-info.com,REJECT
 DOMAIN-SUFFIX,finance.stockwire.de,REJECT
@@ -26507,6 +26509,7 @@ DOMAIN-SUFFIX,five.younusacademy.com,REJECT
 DOMAIN-SUFFIX,five.zunezbd.com,REJECT
 DOMAIN-SUFFIX,fivebigbooms.cashed.gg,REJECT
 DOMAIN-SUFFIX,fivecdm.com,REJECT
+DOMAIN-SUFFIX,fiveplusthree.com,REJECT
 DOMAIN-SUFFIX,fixbonus.com,REJECT
 DOMAIN-SUFFIX,fixwap.net,REJECT
 DOMAIN-SUFFIX,fixxermorsel.za.com,REJECT
@@ -27644,6 +27647,7 @@ DOMAIN-SUFFIX,gamelights.ru,REJECT
 DOMAIN-SUFFIX,gamengirls.com,REJECT
 DOMAIN-SUFFIX,gameover-shop.de,REJECT
 DOMAIN-SUFFIX,gamergirl.pro,REJECT
+DOMAIN-SUFFIX,gamerhunk.com,REJECT
 DOMAIN-SUFFIX,gamerz123.com,REJECT
 DOMAIN-SUFFIX,games.superappbox.com,REJECT
 DOMAIN-SUFFIX,gamesaffiliate.de,REJECT
