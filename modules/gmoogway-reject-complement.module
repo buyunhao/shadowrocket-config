@@ -1,8 +1,8 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:104460 Created:2026-10-18 Source:GMOogway@5a50c3909d6117021ffc78a23129fc0c613bfc40 Local@3f1391ea9344a389529182372174f5eb351f0d28 Filter:not fully covered and no DIRECT/PROXY overlap
-# Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/5a50c3909d6117021ffc78a23129fc0c613bfc40/sr_reject_list.module
-# Source SHA-256: b4bd8a8103c854fcb381591e08ae3814128dfe81c71fd934ebdd1fd70d0d7b91
+#!desc=Rules:104462 Created:2026-10-19 Source:GMOogway@c257b3d185627c7fa75671d37fa1fc6e6ae7b6a0 Local@930613199cabcd33976c9943532562f06a36af64 Filter:not fully covered and no DIRECT/PROXY overlap
+# Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/c257b3d185627c7fa75671d37fa1fc6e6ae7b6a0/sr_reject_list.module
+# Source SHA-256: 761475d1a5d693c59c695e6a895b3de5731e5295be95ad42d0aa911992236aa4
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -24207,7 +24207,6 @@ DOMAIN-SUFFIX,enalytics.fr,REJECT
 DOMAIN-SUFFIX,enawsu.adzuna.co.uk,REJECT
 DOMAIN-SUFFIX,enbpvt.com,REJECT
 DOMAIN-SUFFIX,encar21.net.rewe.de,REJECT
-DOMAIN-SUFFIX,enchanted-station.com,REJECT
 DOMAIN-SUFFIX,endgl.cgenetool.com,REJECT
 DOMAIN-SUFFIX,endibejc.apayewallet.it,REJECT
 DOMAIN-SUFFIX,endicia.fr,REJECT
@@ -26575,6 +26574,7 @@ DOMAIN-SUFFIX,flashing.proedgeroof.com,REJECT
 DOMAIN-SUFFIX,flashmovingsmoney-online.weebly.com,REJECT
 DOMAIN-SUFFIX,flashrasultats.fr,REJECT
 DOMAIN-SUFFIX,flask.us.nextdoor.com,REJECT
+DOMAIN-SUFFIX,flatpebble.com,REJECT
 DOMAIN-SUFFIX,flavg.drinkfreespirits.com,REJECT
 DOMAIN-SUFFIX,flbox.net,REJECT
 DOMAIN-SUFFIX,flcirh.kuvings.jp,REJECT
@@ -27082,6 +27082,7 @@ DOMAIN-SUFFIX,frdoki.teaceremony.work,REJECT
 DOMAIN-SUFFIX,frdoki.ukiyo-e.work,REJECT
 DOMAIN-SUFFIX,frdoki.weddinghall.work,REJECT
 DOMAIN-SUFFIX,frdoki.woodcut.work,REJECT
+DOMAIN-SUFFIX,freakywacko.com,REJECT
 DOMAIN-SUFFIX,frecnhweb.fr,REJECT
 DOMAIN-SUFFIX,fredlx.skinnypig.xyz,REJECT
 DOMAIN-SUFFIX,free-4paid.com,REJECT
@@ -29218,6 +29219,7 @@ DOMAIN-SUFFIX,gravitron.chron.com,REJECT
 DOMAIN-SUFFIX,gray-csr12.net.abomix.de,REJECT
 DOMAIN-SUFFIX,gray.rw.net.rewe.de,REJECT
 DOMAIN-SUFFIX,gray.unlikebuck.com,REJECT
+DOMAIN-SUFFIX,graychalk.com,REJECT
 DOMAIN-SUFFIX,grayu0l056hf2.net.rewe.de,REJECT
 DOMAIN-SUFFIX,grayyqgxx5v1.net.rewe.de,REJECT
 DOMAIN-SUFFIX,grcbp.paceathletic.com,REJECT
