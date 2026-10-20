@@ -175,7 +175,7 @@ https://www.apple.com/library/test/success.html
 
 ### General
 
-`skip-proxy` 和 `tun-excluded-routes` 应尽量只排除局域网、本机、保留地址和组播地址。不要把大量公网中国 IP 段放入 TUN 排除路由，否则可能绕过 Shadowrocket 的规则系统，导致分流不可控。
+`skip-proxy` 用于系统代理例外，`tun-excluded-routes` 用于 TUN 旁路路由。公网旁路应限定为明确需要绕行的服务器 `/32`，不要把大量公网 IP 段排除，否则可能绕过 Shadowrocket 的规则系统，导致分流不可控。
 
 常见排除范围包括：
 
@@ -189,6 +189,23 @@ https://www.apple.com/library/test/success.html
 224.0.0.0/4
 255.255.255.255/32
 ```
+
+### FFSB 与 Shadowrocket 共存
+
+三份维护配置的 `skip-proxy` 包含 2026-10-20 本机 FFSB 下发的 25 项专线域名，
+覆盖 Claude 服务、`ip.net.coffee`、`api.ipify.org`、`icanhazip.com`、
+`ifconfig.me` 及 FFSB 服务域名。这样遵循系统代理设置的浏览器可交由
+macOS 的 FFSB 专用 DNS 和路由处理。未加入 `*.claude.ai`，
+因为 `downloads.claude.ai` 不在当前专线清单内。
+
+`185.180.19.201/32`、`185.180.19.82/32`、`147.93.172.146/32`
+同时列入 TUN 旁路和精确 IP 直连规则；只有 `DIRECT` 规则不等于绕过 TUN。
+Claude 原有 `PROXY` 规则保留，不添加 Claude 域名 `DIRECT`。
+FFSB 依赖系统中的分域 DNS 配置，因此不要直接将本配置改为所有 DNS 远端解析。
+
+本配置需与正在运行且已下发域名路由的 FFSB 配合。更新后检查三台服务器的路由、
+FFSB 专线出口和普通代理出口；不能仅凭 FFSB 的控制连接 `Connected` 判断专线可用。
+专线清单或服务器改变时需同步调整。其他设备的实际兼容性需单独验证。
 
 ### DNS
 
