@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:104462 Created:2026-10-19 Source:GMOogway@c257b3d185627c7fa75671d37fa1fc6e6ae7b6a0 Local@930613199cabcd33976c9943532562f06a36af64 Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:104454 Created:2026-10-20 Source:GMOogway@c257b3d185627c7fa75671d37fa1fc6e6ae7b6a0 Local@2a9b9f681c8dac6a7774373ba9be86176c1ee152 Filter:not fully covered and no DIRECT/PROXY overlap
 # Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/c257b3d185627c7fa75671d37fa1fc6e6ae7b6a0/sr_reject_list.module
 # Source SHA-256: 761475d1a5d693c59c695e6a895b3de5731e5295be95ad42d0aa911992236aa4
 [Rule]
@@ -9386,7 +9386,6 @@ DOMAIN-SUFFIX,bea2.feestwinkelxl.be,REJECT
 DOMAIN-SUFFIX,bea2.feestwinkelxl.nl,REJECT
 DOMAIN-SUFFIX,beacon-fullpage-predictor.goguardian.com,REJECT
 DOMAIN-SUFFIX,beacon.carfax.com,REJECT
-DOMAIN-SUFFIX,beacon.cdnpure.com,REJECT
 DOMAIN-SUFFIX,beacon.digima.com,REJECT
 DOMAIN-SUFFIX,beacon.ehow.com,REJECT
 DOMAIN-SUFFIX,beacon.elairaspirit.com,REJECT
@@ -26275,7 +26274,6 @@ DOMAIN-SUFFIX,finacehoisomb.com,REJECT
 DOMAIN-SUFFIX,finad.de,REJECT
 DOMAIN-SUFFIX,final01.watchhubbd.com,REJECT
 DOMAIN-SUFFIX,final02.watchhubbd.com,REJECT
-DOMAIN-SUFFIX,finalleague.com,REJECT
 DOMAIN-SUFFIX,finance-offer.com,REJECT
 DOMAIN-SUFFIX,finance.siemens-info.com,REJECT
 DOMAIN-SUFFIX,finance.stockwire.de,REJECT
@@ -26508,7 +26506,6 @@ DOMAIN-SUFFIX,five.younusacademy.com,REJECT
 DOMAIN-SUFFIX,five.zunezbd.com,REJECT
 DOMAIN-SUFFIX,fivebigbooms.cashed.gg,REJECT
 DOMAIN-SUFFIX,fivecdm.com,REJECT
-DOMAIN-SUFFIX,fiveplusthree.com,REJECT
 DOMAIN-SUFFIX,fixbonus.com,REJECT
 DOMAIN-SUFFIX,fixwap.net,REJECT
 DOMAIN-SUFFIX,fixxermorsel.za.com,REJECT
@@ -26574,7 +26571,6 @@ DOMAIN-SUFFIX,flashing.proedgeroof.com,REJECT
 DOMAIN-SUFFIX,flashmovingsmoney-online.weebly.com,REJECT
 DOMAIN-SUFFIX,flashrasultats.fr,REJECT
 DOMAIN-SUFFIX,flask.us.nextdoor.com,REJECT
-DOMAIN-SUFFIX,flatpebble.com,REJECT
 DOMAIN-SUFFIX,flavg.drinkfreespirits.com,REJECT
 DOMAIN-SUFFIX,flbox.net,REJECT
 DOMAIN-SUFFIX,flcirh.kuvings.jp,REJECT
@@ -27082,7 +27078,6 @@ DOMAIN-SUFFIX,frdoki.teaceremony.work,REJECT
 DOMAIN-SUFFIX,frdoki.ukiyo-e.work,REJECT
 DOMAIN-SUFFIX,frdoki.weddinghall.work,REJECT
 DOMAIN-SUFFIX,frdoki.woodcut.work,REJECT
-DOMAIN-SUFFIX,freakywacko.com,REJECT
 DOMAIN-SUFFIX,frecnhweb.fr,REJECT
 DOMAIN-SUFFIX,fredlx.skinnypig.xyz,REJECT
 DOMAIN-SUFFIX,free-4paid.com,REJECT
@@ -27648,7 +27643,6 @@ DOMAIN-SUFFIX,gamelights.ru,REJECT
 DOMAIN-SUFFIX,gamengirls.com,REJECT
 DOMAIN-SUFFIX,gameover-shop.de,REJECT
 DOMAIN-SUFFIX,gamergirl.pro,REJECT
-DOMAIN-SUFFIX,gamerhunk.com,REJECT
 DOMAIN-SUFFIX,gamerz123.com,REJECT
 DOMAIN-SUFFIX,games.superappbox.com,REJECT
 DOMAIN-SUFFIX,gamesaffiliate.de,REJECT
@@ -29219,7 +29213,6 @@ DOMAIN-SUFFIX,gravitron.chron.com,REJECT
 DOMAIN-SUFFIX,gray-csr12.net.abomix.de,REJECT
 DOMAIN-SUFFIX,gray.rw.net.rewe.de,REJECT
 DOMAIN-SUFFIX,gray.unlikebuck.com,REJECT
-DOMAIN-SUFFIX,graychalk.com,REJECT
 DOMAIN-SUFFIX,grayu0l056hf2.net.rewe.de,REJECT
 DOMAIN-SUFFIX,grayyqgxx5v1.net.rewe.de,REJECT
 DOMAIN-SUFFIX,grcbp.paceathletic.com,REJECT
@@ -53093,7 +53086,6 @@ DOMAIN-SUFFIX,nepalon.com,REJECT
 DOMAIN-SUFFIX,nepls.pmdbeauty.com,REJECT
 DOMAIN-SUFFIX,nepveu.outstore.com.br,REJECT
 DOMAIN-SUFFIX,nerkj.mrantenna.com.au,REJECT
-DOMAIN-SUFFIX,nervousstroke.com,REJECT
 DOMAIN-SUFFIX,nesdoegb.pollenkoll.se,REJECT
 DOMAIN-SUFFIX,nest.economies.com,REJECT
 DOMAIN-SUFFIX,nest.fxnewstoday.ae,REJECT
