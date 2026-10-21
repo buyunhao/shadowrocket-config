@@ -858,7 +858,7 @@ DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
 # Deduplication: exact duplicates and rules semantically covered by a broader
 # Johnshall or AWAvenue DOMAIN-SUFFIX / DOMAIN-KEYWORD rule are omitted.
 # Source rules: 103677
-# Imported rules: 55863 DOMAIN-SUFFIX.
+# Imported rules: 55864 DOMAIN-SUFFIX.
 
 DOMAIN-SUFFIX,000dn.com
 DOMAIN-SUFFIX,0013.cc
@@ -24286,6 +24286,7 @@ DOMAIN-SUFFIX,smetric.htionlineplus.de
 DOMAIN-SUFFIX,txt.htltn.com
 DOMAIN-SUFFIX,htm1.ch
 DOMAIN-SUFFIX,analytics.dev.htmedia.in
+DOMAIN-SUFFIX,yahoo-homepage.html-load.com
 DOMAIN-SUFFIX,stats.htmlcsstoimage.com
 DOMAIN-SUFFIX,htnote.info
 DOMAIN-SUFFIX,stats.htp.org
