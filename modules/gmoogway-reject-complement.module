@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:106849 Created:2026-10-21 Source:GMOogway@5cbc034267d4e01e89ca04a3bf9f31ff202c68de Local@ceb45313fc05304d0afcbf5617080bdc079eb6eb Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:106847 Created:2026-10-22 Source:GMOogway@5cbc034267d4e01e89ca04a3bf9f31ff202c68de Local@d016f5f44c288a2b073f7f393065321fa965cac7 Filter:not fully covered and no DIRECT/PROXY overlap
 # Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/5cbc034267d4e01e89ca04a3bf9f31ff202c68de/sr_reject_list.module
 # Source SHA-256: 62a94e7d95d957c7a5bfb29ac77ba0a16111a75ffe36777a64637e5fd4f2174f
 [Rule]
@@ -35,7 +35,6 @@ DOMAIN-SUFFIX,079301eaff0975107716716fd1cb0dcd.com,REJECT
 DOMAIN-SUFFIX,0816bvh.ru,REJECT
 DOMAIN-SUFFIX,08ro35delw.ru,REJECT
 DOMAIN-SUFFIX,0916video.ru,REJECT
-DOMAIN-SUFFIX,096e812029.f5fee30b56.com,REJECT
 DOMAIN-SUFFIX,0a186254d0.cf25ba90cc.com,REJECT
 DOMAIN-SUFFIX,0a4717b2d2.731cf893fe.com,REJECT
 DOMAIN-SUFFIX,0b14ec78e5.4a1dcfa305.com,REJECT
@@ -603,7 +602,6 @@ DOMAIN-SUFFIX,34bogatirya.ru,REJECT
 DOMAIN-SUFFIX,356.freeonlinegayporn.com,REJECT
 DOMAIN-SUFFIX,359ee5b1d7.790e74d0c5.com,REJECT
 DOMAIN-SUFFIX,35a92e241c.30ea3091fb.com,REJECT
-DOMAIN-SUFFIX,35vtr.x9wy12ljtk8yz9nmrlzop2cculy1mrlwte.cfd,REJECT
 DOMAIN-SUFFIX,360.anatic.net,REJECT
 DOMAIN-SUFFIX,360adshost.com,REJECT
 DOMAIN-SUFFIX,3615407.xyz,REJECT
