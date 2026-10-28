@@ -87,6 +87,25 @@ anti-AD 再按 Johnshall 与已保留的 AWAvenue 规则去重。具体来源版
 python3 scripts/sync_johnshall_adblock.py
 ```
 
+同步前会单独校验 Johnshall：源文件中的 `adblock rules refresh time` 不能早于
+上次接受的源时间，去重后的单源规则数不能较上次减少超过 30%。源日期缺失、格式
+无效或基线元数据损坏也会停止同步。检查在读取其他上游和写入任何目标文件之前
+完成；异常时以非零状态退出，保留现有文件，后续提交与发布应随之停止。
+`--allow-large-shrink` 仅适用于合并后的总规则数，不能绕过上述 Johnshall 检查。
+
+成功同步会在 `adblock.list` 头部记录 `Johnshall-Source-Updated` 和
+`Johnshall-Rule-Count`，时间按上游源文件的原始格式比较，不使用 HTTP 响应时间或
+文件修改时间代替。已有旧格式列表缺少这两项元数据时会停止，不能自动将当次源
+内容当成可信基线。首次迁移需提供一份已核实正常的 Johnshall 原始源文件：
+
+```bash
+python3 scripts/sync_johnshall_adblock.py --johnshall-baseline /path/to/verified-sr_ad_only.conf
+```
+
+该文件只用于读取比较基线，不会被修改；新源通过检查后才写入目标文件和基线
+元数据，之后恢复使用普通同步命令。此参数不能覆盖已有的基线元数据。全新安装
+尚无输出文件时只校验源格式与最低规则数量，并将首次成功的源作为后续比较基线。
+
 该命令会完成以下工作：
 
 1. 下载、规范化并校验 Johnshall、AWAvenue 和 anti-AD 三份上游规则。

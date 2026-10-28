@@ -11,6 +11,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import urllib.request
+from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 
 
@@ -37,6 +39,10 @@ ANTI_AD_SOURCE_LICENSE = (
 )
 CHUNK_SIZE = 512 * 1024
 MIN_RULE_COUNT = 10_000
+JOHNSHALL_MIN_RETAINED_PERCENT = 70
+JOHNSHALL_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
+JOHNSHALL_DATE_HEADER = "Johnshall-Source-Updated"
+JOHNSHALL_COUNT_HEADER = "Johnshall-Rule-Count"
 AWAVENUE_MIN_RULE_COUNT = 500
 ANTI_AD_MIN_RULE_COUNT = 50_000
 ALLOWED_RULE_TYPES = {
@@ -195,6 +201,101 @@ def normalize_rules(source: str) -> list[str]:
         )
 
     return rules
+
+
+@dataclass(frozen=True)
+class JohnshallState:
+    updated_at: datetime
+    rule_count: int
+
+
+def comment_value(content: str, key: str) -> str | None:
+    prefix = f"# {key}:"
+    values = [
+        line.strip()[len(prefix):].strip()
+        for line in content.splitlines()
+        if line.strip().lower().startswith(prefix.lower())
+    ]
+    if len(values) > 1:
+        raise RuntimeError(f"Johnshall 元数据 {key} 重复，已停止同步")
+    return values[0] if values else None
+
+
+def parse_johnshall_date(value: str | None) -> datetime:
+    if not value:
+        raise RuntimeError("Johnshall 缺少源刷新时间，已停止同步")
+    try:
+        updated_at = datetime.strptime(value, JOHNSHALL_DATE_FORMAT)
+        if updated_at.strftime(JOHNSHALL_DATE_FORMAT) != value:
+            raise ValueError(value)
+    except ValueError as error:
+        raise RuntimeError(f"Johnshall 源刷新时间格式异常：{value}") from error
+    return updated_at
+
+
+def johnshall_source_state(source: str, rule_count: int) -> JohnshallState:
+    updated_at = parse_johnshall_date(
+        comment_value(source, "adblock rules refresh time")
+    )
+    return JohnshallState(updated_at, rule_count)
+
+
+def load_johnshall_baseline(
+    output: Path, baseline_source: Path | None = None
+) -> JohnshallState | None:
+    """Read accepted metadata, or bootstrap legacy output from a trusted source."""
+    existing = output.read_text(encoding="utf-8-sig") if output.exists() else None
+    updated = comment_value(existing or "", JOHNSHALL_DATE_HEADER)
+    count = comment_value(existing or "", JOHNSHALL_COUNT_HEADER)
+    if updated is not None or count is not None:
+        if baseline_source is not None:
+            raise RuntimeError(
+                "--johnshall-baseline 只用于旧格式初始化，不能覆盖已有基线"
+            )
+        if (
+            not count
+            or not count.isascii()
+            or not count.isdecimal()
+            or int(count) <= 0
+        ):
+            raise RuntimeError("Johnshall 基线规则数量缺失或无效，已停止同步")
+        return JohnshallState(parse_johnshall_date(updated), int(count))
+
+    if baseline_source is not None:
+        source = baseline_source.read_text(encoding="utf-8-sig")
+        rules = normalize_rules(source)
+        return johnshall_source_state(source, len(rules))
+    if existing is not None:
+        raise RuntimeError(
+            "现有列表缺少 Johnshall 源日期和单源规则数，已停止同步；"
+            "请用 --johnshall-baseline 指定已核实正常的 Johnshall 原始源文件"
+        )
+    return None
+
+
+def validate_johnshall_source(
+    current: JohnshallState, baseline: JohnshallState | None
+) -> None:
+    """Reject regressions before complements or output files are generated."""
+    if baseline is None:
+        return
+    errors: list[str] = []
+    if current.updated_at < baseline.updated_at:
+        errors.append(
+            "Johnshall 源日期倒退："
+            f"{baseline.updated_at:{JOHNSHALL_DATE_FORMAT}} → "
+            f"{current.updated_at:{JOHNSHALL_DATE_FORMAT}}"
+        )
+    if (
+        current.rule_count * 100
+        < baseline.rule_count * JOHNSHALL_MIN_RETAINED_PERCENT
+    ):
+        errors.append(
+            f"Johnshall 单源规则从 {baseline.rule_count} 降至 {current.rule_count}，"
+            f"缩减超过 {100 - JOHNSHALL_MIN_RETAINED_PERCENT}%"
+        )
+    if errors:
+        raise RuntimeError("；".join(errors) + "；已停止同步，未写入任何文件")
 
 
 def normalize_awavenue_rules(source: str) -> tuple[list[str], dict[str, str]]:
@@ -574,6 +675,7 @@ def render(
     etag: str,
     rules: list[str],
     *,
+    johnshall_state: JohnshallState,
     custom_count: int,
     exception_count: int,
     matched_exception_count: int,
@@ -584,6 +686,8 @@ def render(
         f"# Source: {SOURCE_URL}",
         f"# Source-ETag: {etag or 'unknown'}",
         f"# Source-SHA256: {digest}",
+        f"# {JOHNSHALL_DATE_HEADER}: {johnshall_state.updated_at:{JOHNSHALL_DATE_FORMAT}}",
+        f"# {JOHNSHALL_COUNT_HEADER}: {johnshall_state.rule_count}",
         "# Source project: Johnshall/Shadowrocket-ADBlock-Rules-Forever",
         f"# Source license: CC BY-SA 4.0 ({SOURCE_LICENSE})",
         "# Secondary source: AWAvenue Ads Rule (managed in rules/adblock-custom.list)",
@@ -656,16 +760,24 @@ def main() -> int:
     parser.add_argument("--base-config", type=Path, default=DEFAULT_BASE_CONFIG)
     parser.add_argument("--adblock-config", type=Path, default=DEFAULT_ADBLOCK_CONFIG)
     parser.add_argument(
+        "--johnshall-baseline",
+        type=Path,
+        help="仅供旧格式初始化：已核实正常的 Johnshall 原始源文件",
+    )
+    parser.add_argument(
         "--allow-large-shrink",
         action="store_true",
-        help="允许新规则数量低于现有文件的 70%%",
+        help="允许合并后的总规则数低于现有文件的 70%%；不能绕过 Johnshall 单源检查",
     )
     args = parser.parse_args()
 
+    johnshall_baseline = load_johnshall_baseline(args.output, args.johnshall_baseline)
     exception_rules = normalize_local_rules(args.exceptions_list)
     source_bytes, etag = fetch_source()
     source = source_bytes.decode("utf-8-sig")
     upstream_rules = normalize_rules(source)
+    johnshall_state = johnshall_source_state(source, len(upstream_rules))
+    validate_johnshall_source(johnshall_state, johnshall_baseline)
     awavenue_source_bytes, awavenue_etag = fetch_awavenue_source()
     awavenue_source = awavenue_source_bytes.decode("utf-8-sig")
     awavenue_rules, awavenue_metadata = normalize_awavenue_rules(awavenue_source)
@@ -726,6 +838,7 @@ def main() -> int:
         source_bytes,
         etag,
         rules,
+        johnshall_state=johnshall_state,
         custom_count=len(custom_rules),
         exception_count=len(exception_rules),
         matched_exception_count=matched_exception_count,
