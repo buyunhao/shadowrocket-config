@@ -1,6 +1,6 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:111229 Created:2026-10-27 Source:GMOogway@f1a1ce7199b5f3774b4b41926a838bcf87654336 Local@734a137e624ca4a39b7e1bda947d08e1ff66d659 Filter:not fully covered and no DIRECT/PROXY overlap
+#!desc=Rules:111222 Created:2026-10-28 Source:GMOogway@f1a1ce7199b5f3774b4b41926a838bcf87654336 Local@554fddc838e41569696b49e8e72e9985faec29c8 Filter:not fully covered and no DIRECT/PROXY overlap
 # Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/f1a1ce7199b5f3774b4b41926a838bcf87654336/sr_reject_list.module
 # Source SHA-256: a0938d37743f362ab75f824aa7e87215089942ae7e3fa6ecc63661692f8f04dd
 [Rule]
@@ -11,7 +11,6 @@ DOMAIN-SUFFIX,000c34b44b.1c3139f0ca.com,REJECT
 DOMAIN-SUFFIX,006.freecounters.co.uk,REJECT
 DOMAIN-SUFFIX,0088shop.com,REJECT
 DOMAIN-SUFFIX,009855.com,REJECT
-DOMAIN-SUFFIX,00a154c916.48dd51f81a.com,REJECT
 DOMAIN-SUFFIX,00c6c88efd.e5ad8b54ee.com,REJECT
 DOMAIN-SUFFIX,00ef400e98.3a1ebd5d26.com,REJECT
 DOMAIN-SUFFIX,0101011.com,REJECT
@@ -920,7 +919,6 @@ DOMAIN-SUFFIX,6w1.sharedlinkconnect.com,REJECT
 DOMAIN-SUFFIX,6who4to62x56k6.w16flzftb66fmilzr1y7b.cyou,REJECT
 DOMAIN-SUFFIX,6xmgu8ocyqj9ujfv8vbqv.y6c6518mol6ye73.cyou,REJECT
 DOMAIN-SUFFIX,7.jwclay.com,REJECT
-DOMAIN-SUFFIX,7.lueb6cprrr2q5v.cfd,REJECT
 DOMAIN-SUFFIX,7.pohmg9cfe3yier7.cyou,REJECT
 DOMAIN-SUFFIX,7.seventhings.com,REJECT
 DOMAIN-SUFFIX,7.wveylhgybnc2679f.cyou,REJECT
@@ -15551,7 +15549,6 @@ DOMAIN-SUFFIX,cp.edl.co.kr,REJECT
 DOMAIN-SUFFIX,cp.forest-host.cc,REJECT
 DOMAIN-SUFFIX,cp.liferan.pro,REJECT
 DOMAIN-SUFFIX,cp.sobhatrivandrum.in,REJECT
-DOMAIN-SUFFIX,cp.txuiz8ko6y7h1nynkc2km81b.cfd,REJECT
 DOMAIN-SUFFIX,cpa-tc.com,REJECT
 DOMAIN-SUFFIX,cpa.greenp.kr,REJECT
 DOMAIN-SUFFIX,cpacrack.com,REJECT
@@ -29087,7 +29084,6 @@ DOMAIN-SUFFIX,g650.delcotimes.com,REJECT
 DOMAIN-SUFFIX,g679.t27ozz9gomomctb4t9wo28ib.cyou,REJECT
 DOMAIN-SUFFIX,g6nmrcqlx.qvq6kkeobmqunp4etfg.cyou,REJECT
 DOMAIN-SUFFIX,g7.com.tw,REJECT
-DOMAIN-SUFFIX,g889couw.rhhr8j29prowl23k2xv4.cfd,REJECT
 DOMAIN-SUFFIX,g8nwwiert7lb.jjjfh8y6o9gjhxq9.cyou,REJECT
 DOMAIN-SUFFIX,g944xcrw.o6cbjty2gb4jcfpv3698.cyou,REJECT
 DOMAIN-SUFFIX,g986.themorningsun.com,REJECT
@@ -55945,7 +55941,6 @@ DOMAIN-SUFFIX,mglsk.com,REJECT
 DOMAIN-SUFFIX,mgnkr.navygear.com,REJECT
 DOMAIN-SUFFIX,mgnqf.ortholazer.com,REJECT
 DOMAIN-SUFFIX,mgopc.ddrbbqsupply.com,REJECT
-DOMAIN-SUFFIX,mgp.jiroxkqcnymkrgm.cfd,REJECT
 DOMAIN-SUFFIX,mgpl.fr,REJECT
 DOMAIN-SUFFIX,mgpnz.shopakira.com,REJECT
 DOMAIN-SUFFIX,mgr.biltmorehotel.com,REJECT
@@ -59783,7 +59778,6 @@ DOMAIN-SUFFIX,oldcname.ieasyclick.net,REJECT
 DOMAIN-SUFFIX,oldftp.otenet.gr,REJECT
 DOMAIN-SUFFIX,oleqk.owlcrate.com,REJECT
 DOMAIN-SUFFIX,olfdr.dxl.com,REJECT
-DOMAIN-SUFFIX,olg8ykv79ez.yir788l7myrcivlyipj3glgr.cfd,REJECT
 DOMAIN-SUFFIX,olhel.decoratorswarehouse.com,REJECT
 DOMAIN-SUFFIX,olho.easybuilder.com.br,REJECT
 DOMAIN-SUFFIX,olhrj.americanvisionwindowsaz.com,REJECT
@@ -108531,7 +108525,6 @@ DOMAIN-SUFFIX,x8.cho-chin.com,REJECT
 DOMAIN-SUFFIX,x822.mrt.com,REJECT
 DOMAIN-SUFFIX,x888x.myserver.org,REJECT
 DOMAIN-SUFFIX,x8pngknmmcn.klzf3q7xrolpel2.cyou,REJECT
-DOMAIN-SUFFIX,x8wu2u1fk88t.cbw1m4lir4761t.cfd,REJECT
 DOMAIN-SUFFIX,x9lxz5bz.i9czfiyk9rrylbw48l.cyou,REJECT
 DOMAIN-SUFFIX,x9mig9p2t.1xjqnc1qtn2ct1ghh.cyou,REJECT
 DOMAIN-SUFFIX,x9t78gmg37.wnkox16mercn2zxu.cyou,REJECT
