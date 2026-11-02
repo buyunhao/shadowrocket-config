@@ -1,8 +1,8 @@
 #!name=GMOogway REJECT complement
 #!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:111260 Created:2026-11-01 Source:GMOogway@f3d27fd05ccd1c2b77847d4bdacab1ef6ebecc36 Local@d3427208fff422c721fbdb14419f3f5bb6926081 Filter:not fully covered and no DIRECT/PROXY overlap
-# Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/f3d27fd05ccd1c2b77847d4bdacab1ef6ebecc36/sr_reject_list.module
-# Source SHA-256: e8ea49d0f5f68a537c5d1ecbe466921bc9da79952ab1499baa51f0733a0c57df
+#!desc=Rules:111260 Created:2026-11-02 Source:GMOogway@1ac67fff39868b192ef40ce8ffeccd146c42cc68 Local@d6114ce52417891eb958fa9bc6ebf184ba198d3d Filter:not fully covered and no DIRECT/PROXY overlap
+# Source URL: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/1ac67fff39868b192ef40ce8ffeccd146c42cc68/sr_reject_list.module
+# Source SHA-256: e9a10ddbf8226afeb1ce031a0c66c6001875af6c6ef0552853335dcac80a3f4a
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
 DOMAIN-SUFFIX,0.nextyourcontent.com,REJECT
@@ -95799,6 +95799,7 @@ DOMAIN-SUFFIX,ta.terre-ambre.fr,REJECT
 DOMAIN-SUFFIX,ta.toprework.vn,REJECT
 DOMAIN-SUFFIX,tabcp.tryshavest.com,REJECT
 DOMAIN-SUFFIX,tabligheirani.ir,REJECT
+DOMAIN-SUFFIX,taboola-display.com,REJECT
 DOMAIN-SUFFIX,taboola.com.cn,REJECT
 DOMAIN-SUFFIX,taboola.com.edgekey.net,REJECT
 DOMAIN-SUFFIX,taco.wahaca.co.uk,REJECT
@@ -103356,7 +103357,6 @@ DOMAIN-SUFFIX,uslimsofbr.cfd,REJECT
 DOMAIN-SUFFIX,usmivka.smilepatchesbg.com,REJECT
 DOMAIN-SUFFIX,usoasopersbe.xyz,REJECT
 DOMAIN-SUFFIX,usr.trava.io,REJECT
-DOMAIN-SUFFIX,usrpubtrck.com,REJECT
 DOMAIN-SUFFIX,usstat.icocofun.com,REJECT
 DOMAIN-SUFFIX,usswrite.com,REJECT
 DOMAIN-SUFFIX,ustat.pro,REJECT
