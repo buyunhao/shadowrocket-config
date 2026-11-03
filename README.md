@@ -123,6 +123,46 @@ python3 scripts/sync_johnshall_adblock.py --johnshall-baseline /path/to/verified
 这意味着东财子域名优先直连，即使其中个别域名也出现在广告表中；这是明确的可用性取舍，
 不是待修复的规则顺序问题。
 
+### GMOogway REJECT 补集模块维护
+
+补集保留 GMOogway 中所有未被广告列表完整覆盖、且与三份配置的显式 DIRECT/PROXY
+域名范围无交集的规则。较宽的源规则仅被更窄子域部分覆盖时必须保留；域名关系按 DNS
+标签判断。`DOMAIN` 不能完整覆盖 `DOMAIN-SUFFIX`；固定源后缀含广告 `DOMAIN-KEYWORD`
+时可判为完整覆盖。KEYWORD 能在合法子域前缀出现时也属于范围相交，因此“完全缺失”
+可能为 0；这只影响统计分类，不会把部分重叠规则排除。
+
+第一阶段已发布并核实 HEAD 与远端一致后，记录完整 `BASELINE_COMMIT`。从 GMOogway
+当前 master 获取完整 `SOURCE_COMMIT`，按该固定提交地址下载 `sr_reject_list.module`，
+将源文件、提交号、下载地址和 SHA-256 保存在本次独立临时目录。不得复用旧候选或统计。
+
+以下命令的变量须由本次实际工具输出赋值；日期按 Asia/Taipei。生成器只写临时候选，
+不能覆盖正式模块和基线。校验器不导入生成器，使用独立解析和反转 DNS 标签排序索引
+重算全部结果；`--install` 仅在验证通过且基线、原模块未变化时原子替换正式模块。
+
+```bash
+python3 scripts/build_gmoogway_complement.py \
+  --source "$RUN_DIR/sr_reject_list.module" --source-commit "$SOURCE_COMMIT" \
+  --baseline-commit "$BASELINE_COMMIT" --date "$RUN_DATE" \
+  --output "$RUN_DIR/candidate.module" --stats "$RUN_DIR/generation.json"
+python3 scripts/verify_gmoogway_complement.py \
+  --source "$RUN_DIR/sr_reject_list.module" --source-commit "$SOURCE_COMMIT" \
+  --baseline-commit "$BASELINE_COMMIT" --date "$RUN_DATE" \
+  --module "$RUN_DIR/candidate.module" --stats "$RUN_DIR/validation.json" --install
+git diff --check
+python3 -m unittest tests.test_gmoogway_complement tests.test_sync_johnshall_adblock
+```
+
+`generation.json` 和 `validation.json` 分别记录独立计算的完整覆盖、部分重叠、完全缺失、
+DIRECT/PROXY 及双冲突数。后三种范围统计均在排除完整覆盖后、排除路由冲突前计数；
+源与基线哈希、源提交、基线提交及产物哈希也有记录。两份统计的共同字段必须一致。
+若实现或校验失败，应定位、修复并重跑，不能直接发布失败候选。未知源类型或格式应停止，
+不能默默跳过。不重新下载依赖，不改变代理/VPN/权限。
+
+阶段二只提交 `modules/gmoogway-reject-complement.module`，中文提交信息为
+`更新无路由冲突的广告补集模块`。推送后从模块的 GitHub Raw 地址回读，核对 SHA-256
+与本地一致、HEAD 等于最新 origin/main。生成器和校验器不自行联网、暂存、提交或推送。
+规则增量相对各阶段开始的有效规则集合计算；注释和元数据不计，派生配置不重复计数。
+
 ### 全直连去广告配置与组合模块
 
 不需要代理服务、只希望使用 Shadowrocket 本地规则拦截功能的设备，应导入以下基础配置：
