@@ -116,12 +116,14 @@ def parse_adblock_rules(content: str) -> list[Rule]:
 
 
 def parse_complement_rules(content: str) -> tuple[list[Rule], str]:
-    if "Filter:not fully covered and no DIRECT/PROXY overlap" not in content:
+    lines = content.splitlines()
+    metadata = "\n".join(line for line in lines if line.lstrip().startswith("#!"))
+    if "Filter:not fully covered and no DIRECT/PROXY overlap" not in metadata:
         raise RuntimeError(
             "GMOogway 补集缺少 DIRECT/PROXY 冲突过滤标记"
         )
 
-    source_match = GMOOGWAY_SOURCE_RE.search(content)
+    source_match = GMOOGWAY_SOURCE_RE.search(metadata)
     if not source_match:
         raise RuntimeError("GMOogway 补集缺少有效的上游提交记录")
 
@@ -129,9 +131,9 @@ def parse_complement_rules(content: str) -> tuple[list[Rule], str]:
     rules: list[Rule] = []
     seen: set[str] = set()
 
-    for line_number, raw_line in enumerate(content.splitlines(), start=1):
+    for line_number, raw_line in enumerate(lines, start=1):
         line = raw_line.strip()
-        if not line or line.startswith("#!"):
+        if not line or line.startswith("#"):
             continue
         if line.startswith("[") and line.endswith("]"):
             if line != "[Rule]":

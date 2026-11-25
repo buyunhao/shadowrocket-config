@@ -17,7 +17,9 @@ IP-CIDR,192.0.2.0/24,no-resolve
         complement = """\
 #!name=test
 #!desc=Source:GMOogway@0123456789abcdef0123456789abcdef01234567 Filter:not fully covered and no DIRECT/PROXY overlap
+# Source URL: https://example.com/rules.module
 [Rule]
+# DOMAIN-SUFFIX,disabled.example,REJECT
 DOMAIN-SUFFIX,sub.example.com,REJECT
 DOMAIN-SUFFIX,metrics-tracker.test,REJECT
 DOMAIN-SUFFIX,exact-only.example,REJECT
@@ -35,6 +37,7 @@ DOMAIN-SUFFIX,keep.example,REJECT
         self.assertIn("IP-CIDR,192.0.2.0/24,REJECT,no-resolve", output)
         self.assertIn("DOMAIN-SUFFIX,exact-only.example,REJECT", output)
         self.assertIn("DOMAIN-SUFFIX,keep.example,REJECT", output)
+        self.assertNotIn("disabled.example", output)
         self.assertNotIn("DOMAIN-SUFFIX,sub.example.com,REJECT", output)
         self.assertNotIn("DOMAIN-SUFFIX,metrics-tracker.test,REJECT", output)
         rule_lines = output.split("[Rule]\n", maxsplit=1)[1].splitlines()
@@ -49,10 +52,21 @@ DOMAIN-SUFFIX,keep.example,REJECT
         complement = """\
 #!name=test
 #!desc=Source:GMOogway@0123456789abcdef0123456789abcdef01234567
+# Filter:not fully covered and no DIRECT/PROXY overlap
 [Rule]
 DOMAIN-SUFFIX,ads.example,REJECT
 """
         with self.assertRaisesRegex(RuntimeError, "冲突过滤标记"):
+            build.parse_complement_rules(complement)
+
+    def test_complement_requires_source_commit_in_metadata(self):
+        complement = """\
+#!desc=Filter:not fully covered and no DIRECT/PROXY overlap
+# Source:GMOogway@0123456789abcdef0123456789abcdef01234567
+[Rule]
+DOMAIN-SUFFIX,ads.example,REJECT
+"""
+        with self.assertRaisesRegex(RuntimeError, "上游提交记录"):
             build.parse_complement_rules(complement)
 
     def test_write_if_changed_is_idempotent(self):
