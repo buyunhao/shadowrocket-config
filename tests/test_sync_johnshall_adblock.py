@@ -394,6 +394,36 @@ DOMAIN-KEYWORD,-sponsor-,reject
             with self.assertRaisesRegex(RuntimeError, "规则数量与声明不符"):
                 sync.normalize_awavenue_rules(source)
 
+    def test_normalize_awavenue_rules_accepts_ipv4_cidr_and_no_resolve(self):
+        source = self.SOURCE.replace("#Total lines: 3", "#Total lines: 4").replace(
+            "DOMAIN-KEYWORD,-sponsor-,reject",
+            "DOMAIN-KEYWORD,-sponsor-,reject\n"
+            "IP-CIDR,192.0.2.0/24,reject,no-resolve",
+        )
+
+        with patch.object(sync, "AWAVENUE_MIN_RULE_COUNT", 4):
+            rules, _ = sync.normalize_awavenue_rules(source)
+
+        self.assertEqual(
+            rules[-1], "IP-CIDR,192.0.2.0/24,no-resolve"
+        )
+
+    def test_normalize_awavenue_rules_rejects_invalid_or_unknown_cidr_fields(self):
+        invalid_cidr = self.SOURCE.replace("#Total lines: 3", "#Total lines: 4").replace(
+            "DOMAIN-KEYWORD,-sponsor-,reject",
+            "DOMAIN-KEYWORD,-sponsor-,reject\nIP-CIDR,192.0.2.1/24,reject",
+        )
+        unknown_modifier = invalid_cidr.replace(
+            "IP-CIDR,192.0.2.1/24,reject",
+            "IP-CIDR,192.0.2.0/24,reject,unexpected",
+        )
+
+        with patch.object(sync, "AWAVENUE_MIN_RULE_COUNT", 4):
+            with self.assertRaisesRegex(RuntimeError, "无效的 IPv4 CIDR"):
+                sync.normalize_awavenue_rules(invalid_cidr)
+            with self.assertRaisesRegex(RuntimeError, "未知 IP-CIDR 修饰字段"):
+                sync.normalize_awavenue_rules(unknown_modifier)
+
     def test_semantic_deduplication_uses_johnshall_suffixes_and_keywords(self):
         imported, covered = sync.deduplicate_rules(
             [

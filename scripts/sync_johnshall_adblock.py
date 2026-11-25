@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import ipaddress
 import urllib.request
 from dataclasses import dataclass
 from datetime import datetime
@@ -56,6 +57,7 @@ AWAVENUE_ALLOWED_RULE_TYPES = {
     "DOMAIN",
     "DOMAIN-KEYWORD",
     "DOMAIN-SUFFIX",
+    "IP-CIDR",
 }
 ANTI_AD_ALLOWED_RULE_TYPES = {"DOMAIN-SUFFIX"}
 USER_AGENT = "shadowrocket-config-adblock-sync/1.0"
@@ -336,6 +338,19 @@ def normalize_awavenue_rules(source: str) -> tuple[list[str], dict[str, str]]:
             raise RuntimeError(f"AWAvenue 第 {line_number} 行缺少匹配值")
 
         value = value.lower()
+        if rule_type == "IP-CIDR":
+            try:
+                network = ipaddress.IPv4Network(value, strict=True)
+            except ValueError as error:
+                raise RuntimeError(
+                    f"AWAvenue 第 {line_number} 行包含无效的 IPv4 CIDR：{value}"
+                ) from error
+            if modifiers not in ([], ["no-resolve"]):
+                raise RuntimeError(
+                    f"AWAvenue 第 {line_number} 行包含未知 IP-CIDR 修饰字段：{line}"
+                )
+            value = str(network)
+            modifiers = [modifier.lower() for modifier in modifiers]
         normalized = ",".join([rule_type, value, *modifiers])
         if normalized not in seen:
             seen.add(normalized)
